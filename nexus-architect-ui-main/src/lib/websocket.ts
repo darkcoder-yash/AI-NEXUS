@@ -64,7 +64,7 @@ export class NexusWebSocket {
   private maxReconnectAttempts: number = 5;
   private connectionStatus: 'disconnected' | 'connecting' | 'connected' = 'disconnected';
 
-  constructor(url: string = 'ws://localhost:4001') {
+  constructor(url: string = import.meta.env.VITE_WS_URL || 'ws://localhost:4001') {
     this.url = url;
     // Don't auto-connect in constructor - wait for explicit connection
   }

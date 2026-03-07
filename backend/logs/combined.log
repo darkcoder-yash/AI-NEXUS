@@ -340,3 +340,16 @@
 {"timestamp":"2026-03-07T09:03:32.203Z","level":"info","requestId":"a02870e1-6bcb-4386-94f9-eaffb286b5e2","userId":"test-user-id","message":"Generation complete","metadata":{"finalResponseLength":768}}
 {"timestamp":"2026-03-07T09:03:32.204Z","level":"info","requestId":"8705f935-7a7f-4bf8-bedb-787b64015e10","userId":"test-user-id","message":"Finished processing for request 8705f935-7a7f-4bf8-bedb-787b64015e10","metadata":{}}
 {"timestamp":"2026-03-07T10:46:18.316Z","level":"info","requestId":"startup","userId":"system","message":"Express server listening on port 4000","metadata":{}}
+{"timestamp":"2026-03-07T10:46:24.200Z","level":"info","requestId":"startup","userId":"system","message":"Express server listening on port 4000","metadata":{}}
+{"timestamp":"2026-03-07T10:47:55.209Z","level":"info","requestId":"2f865cb9-d4bd-4998-bff9-b51e4e604ded","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-07T10:47:55.684Z","level":"info","requestId":"5d14922b-f664-4f29-8679-4b5fd4a27fb9","message":"[WS] Incoming Message [2f865cb9-d4bd-4998-bff9-b51e4e604ded]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-07T10:50:52.808Z","level":"info","requestId":"35b18b4c-8e24-49b5-a07c-da600f9985fc","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-07T10:50:52.867Z","level":"info","requestId":"2845d282-1fe1-4ec9-90bb-235b50a86b6a","message":"[WS] Incoming Message [35b18b4c-8e24-49b5-a07c-da600f9985fc]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-07T10:52:04.039Z","level":"info","requestId":"35b18b4c-8e24-49b5-a07c-da600f9985fc","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-07T10:52:04.420Z","level":"info","requestId":"aaf0d70e-e46a-4538-8e4d-a8964d94e6ac","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-07T10:52:04.850Z","level":"info","requestId":"4dcc4cf5-d7b5-4a8c-a355-26aae3cfd731","message":"[WS] Incoming Message [aaf0d70e-e46a-4538-8e4d-a8964d94e6ac]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-07T10:53:00.163Z","level":"info","requestId":"25d796ee-4585-4b65-b062-26aeb350020b","userId":"test-user-id","message":"[WS] Incoming Message [aaf0d70e-e46a-4538-8e4d-a8964d94e6ac]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-07T11:07:13.286Z","level":"info","requestId":"2f865cb9-d4bd-4998-bff9-b51e4e604ded","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-07T11:07:13.513Z","level":"info","requestId":"3b6986e1-2d83-4ee2-b8a8-a77d9ef2c07c","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-07T11:07:13.544Z","level":"info","requestId":"8a358a86-f27b-47ef-933c-817d6d9a119b","message":"[WS] Incoming Message [3b6986e1-2d83-4ee2-b8a8-a77d9ef2c07c]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-07T11:07:52.510Z","level":"info","requestId":"3b244dfc-f5df-4e41-8e45-f9cac07319e2","userId":"test-user-id","message":"[WS] Incoming Message [3b6986e1-2d83-4ee2-b8a8-a77d9ef2c07c]:","metadata":{"type":"AUTH"}}
