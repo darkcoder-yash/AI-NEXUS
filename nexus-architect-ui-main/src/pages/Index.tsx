@@ -6,9 +6,9 @@ import { CognitivePanel } from '@/components/CognitivePanel';
 import { KnowledgeGraph } from '@/components/KnowledgeGraph';
 import { PatternInsights } from '@/components/PatternInsights';
 import { SettingsPanel } from '@/components/SettingsPanel';
-import { LoginPage } from '@/components/LoginPage';
 import { useAppStore } from '@/store/useAppStore';
 import { useAuthStore } from '@/store/useAuthStore';
+import { Navigate } from 'react-router-dom';
 
 const panels: Record<string, React.ComponentType> = {
   dashboard: Dashboard,
@@ -25,7 +25,7 @@ const Index = () => {
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
   const Panel = panels[activePanel] || Dashboard;
 
-  if (!isAuthenticated) return <LoginPage />;
+  if (!isAuthenticated) return <Navigate to="/login" replace />;
 
   return (
     <div className="flex h-screen w-full overflow-hidden bg-[#000407] transition-colors duration-500 relative">

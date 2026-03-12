@@ -303,6 +303,15 @@
   color: #00E6FF;
   text-shadow: 0 0 15px rgba(0, 230, 255, 0.6);
 }
+
+.logo-glow {
+  filter: drop-shadow(0 0 10px rgba(0, 230, 255, 0.5));
+  transition: filter 0.3s ease;
+}
+.logo-glow:hover {
+  filter: drop-shadow(0 0 20px rgba(0, 230, 255, 0.8));
+}
+
 .brand-subtitle {
   font-family: 'Exo', sans-serif;
   font-size: 9px;

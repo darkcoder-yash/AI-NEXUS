@@ -66,12 +66,12 @@ export function LoginPage() {
             <motion.div
               animate={{ rotateY: 360 }}
               transition={{ repeat: Infinity, duration: 8, ease: "linear" }}
-              className="w-20 h-20 mx-auto rounded-3xl bg-teal-500/10 flex items-center justify-center border border-teal-500/20 shadow-2xl shadow-teal-500/5"
+              className="w-20 h-20 mx-auto rounded-3xl bg-teal-500/10 flex items-center justify-center border border-teal-500/20 shadow-2xl shadow-teal-500/5 overflow-hidden"
             >
-              <Cpu className="w-10 h-10 text-teal-400" />
+              <img src="/logo.png" alt="AI Nexus Logo" className="w-12 h-12 object-contain logo-glow" onError={(e) => e.currentTarget.style.display = 'none'} />
             </motion.div>
             <div>
-              <h1 className="text-4xl font-black tracking-tighter text-white">AI NEXUS</h1>
+              <h1 className="text-4xl font-black tracking-tighter text-white">AI <span className="text-teal-400">NEXUS</span></h1>
               <p className="text-[10px] text-teal-500 uppercase tracking-[0.5em] font-bold mt-3">Quantum Operating Layer</p>
             </div>
           </div>

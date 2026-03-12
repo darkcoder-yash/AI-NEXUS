@@ -39,8 +39,7 @@ export default function AiNexusLanding() {
     setLogs(prev => [...prev, 'ESTABLISHING SECURE UPLINK...', 'AUTHORIZING HUMAN DIRECTIVE...']);
     
     setTimeout(() => {
-      loginDemo();
-      navigate('/nexus');
+      navigate('/login');
     }, 2000);
   };
 
@@ -61,12 +60,15 @@ export default function AiNexusLanding() {
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
-            className="flex flex-col"
+            className="flex items-center gap-4"
           >
-            <div className="brand-title">
-              AI <span className="brand-nexus">NEXUS</span>
+            <img src="/logo.png" alt="AI Nexus Logo" className="w-12 h-12 object-contain logo-glow" onError={(e) => e.currentTarget.style.display = 'none'} />
+            <div className="flex flex-col">
+              <div className="brand-title">
+                AI <span className="brand-nexus">NEXUS</span>
+              </div>
+              <div className="brand-subtitle">Cognitive Intelligence System</div>
             </div>
-            <div className="brand-subtitle">Cognitive Intelligence System</div>
           </motion.div>
 
           <nav className="hidden lg:flex gap-16">

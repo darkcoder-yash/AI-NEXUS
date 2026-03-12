@@ -43,8 +43,8 @@ export function AppSidebar() {
       
       {/* Top Branding */}
       <div className="p-8 flex items-center gap-5 min-h-[110px] relative z-10">
-        <div className="w-10 h-10 rounded-sm bg-[#00E6FF]/5 flex items-center justify-center border border-[#00E6FF]/20 shrink-0 shadow-[0_0_15px_rgba(0,230,255,0.1)]">
-          <div className="w-2.5 h-2.5 rounded-full bg-[#00E6FF] animate-pulse shadow-[0_0_10px_rgba(0,230,255,0.8)]" />
+        <div className="w-10 h-10 rounded-sm bg-[#00E6FF]/5 flex items-center justify-center border border-[#00E6FF]/20 shrink-0 shadow-[0_0_15px_rgba(0,230,255,0.1)] overflow-hidden">
+          <img src="/logo.png" alt="Logo" className="w-7 h-7 object-contain" onError={(e) => e.currentTarget.style.display = 'none'} />
         </div>
         {!collapsed && (
           <motion.div 
