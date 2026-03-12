@@ -28,13 +28,18 @@ const Index = () => {
   if (!isAuthenticated) return <LoginPage />;
 
   return (
-    <div className="flex h-screen w-full overflow-hidden bg-background transition-colors duration-300">
+    <div className="flex h-screen w-full overflow-hidden bg-[#000407] transition-colors duration-500 relative">
+      <div className="nu-scanlines opacity-[0.03]" />
+      <div className="nu-vignette" />
+      
       <AppSidebar />
+      
       <main className="flex-1 overflow-hidden relative">
-        {/* Background Ambient Glow */}
-        <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden z-0 opacity-20 dark:opacity-100">
-          <div className="absolute -top-[20%] -left-[10%] w-[60%] h-[60%] bg-primary/5 rounded-full blur-[120px]" />
-          <div className="absolute -bottom-[20%] -right-[10%] w-[60%] h-[60%] bg-blue-500/5 rounded-full blur-[120px]" />
+        {/* Cinematic Background Atmosphere */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+          <div className="absolute -top-[10%] -left-[5%] w-[50%] h-[50%] bg-[#00E6FF]/5 rounded-full blur-[150px] animate-pulse" />
+          <div className="absolute top-[20%] right-[-10%] w-[40%] h-[40%] bg-[#2AF6FF]/3 rounded-full blur-[120px]" />
+          <div className="absolute -bottom-[15%] left-[20%] w-[60%] h-[40%] bg-[#00E6FF]/2 rounded-full blur-[180px]" />
         </div>
         
         <div className="relative z-10 h-full">

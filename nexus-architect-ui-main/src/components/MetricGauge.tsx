@@ -1,3 +1,6 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+
 interface MetricGaugeProps {
   label: string;
   value: number;
@@ -6,41 +9,77 @@ interface MetricGaugeProps {
   color?: 'blue' | 'purple' | 'cyan' | 'green' | 'orange' | 'red';
 }
 
-const colorMap = {
-  blue: 'text-neon-blue',
-  purple: 'text-neon-purple',
-  cyan: 'text-neon-cyan',
-  green: 'text-neon-green',
-  orange: 'text-neon-orange',
-  red: 'text-neon-red',
-};
+export const MetricGauge: React.FC<MetricGaugeProps> = ({ 
+  label, 
+  value, 
+  max = 100, 
+  unit = '%',
+  color = 'cyan'
+}) => {
+  const percentage = Math.min(Math.max((value / max) * 100, 0), 100);
+  
+  const colorMap = {
+    blue: '#2AF6FF',
+    purple: '#BF00FF',
+    cyan: '#00E6FF',
+    green: '#00FF9D',
+    orange: '#FF9D00',
+    red: '#FF0055'
+  };
 
-const bgMap = {
-  blue: 'bg-neon-blue',
-  purple: 'bg-neon-purple',
-  cyan: 'bg-neon-cyan',
-  green: 'bg-neon-green',
-  orange: 'bg-neon-orange',
-  red: 'bg-neon-red',
-};
-
-export function MetricGauge({ label, value, max = 100, unit = '%', color = 'blue' }: MetricGaugeProps) {
-  const pct = Math.min(100, (value / max) * 100);
+  const activeColor = colorMap[color];
 
   return (
-    <div className="space-y-2">
-      <div className="flex justify-between items-center">
-        <span className="text-xs text-muted-foreground uppercase tracking-wider">{label}</span>
-        <span className={`text-sm font-mono font-semibold ${colorMap[color]}`}>
-          {typeof value === 'number' ? Math.round(value) : value}{unit}
+    <div className="space-y-3 w-full">
+      <div className="flex justify-between items-end">
+        <span className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-500 font-orbitron">
+          {label}
         </span>
+        <div className="flex items-baseline gap-1">
+          <motion.span 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-lg font-black font-orbitron"
+            style={{ color: activeColor, textShadow: `0 0 10px ${activeColor}44` }}
+          >
+            {value}
+          </motion.span>
+          <span className="text-[10px] font-bold text-slate-600">{unit}</span>
+        </div>
       </div>
-      <div className="h-1.5 bg-muted rounded-full overflow-hidden">
-        <div
-          className={`h-full rounded-full ${bgMap[color]} transition-all duration-500 ease-out`}
-          style={{ width: `${pct}%`, boxShadow: `0 0 8px hsl(var(--neon-${color}) / 0.5)` }}
-        />
+      
+      <div className="relative h-1.5 w-full bg-white/5 rounded-full overflow-hidden border border-white/5">
+        {/* Background segments for tech look */}
+        <div className="absolute inset-0 flex justify-between px-1">
+          {[...Array(10)].map((_, i) => (
+            <div key={i} className="w-px h-full bg-white/10" />
+          ))}
+        </div>
+        
+        {/* Progress Bar */}
+        <motion.div
+          initial={{ width: 0 }}
+          animate={{ width: `${percentage}%` }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="relative h-full rounded-full"
+          style={{ 
+            backgroundColor: activeColor,
+            boxShadow: `0 0 15px ${activeColor}88`
+          }}
+        >
+          {/* Animated scanning light */}
+          <motion.div 
+            animate={{ x: ['-100%', '400%'] }}
+            transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
+            className="absolute inset-0 w-1/4 h-full bg-gradient-to-r from-transparent via-white/40 to-transparent"
+          />
+        </motion.div>
+      </div>
+      
+      <div className="flex justify-between text-[8px] font-bold text-slate-700 tracking-tighter uppercase">
+        <span>Min_Level</span>
+        <span>Operational_Cap_Max</span>
       </div>
     </div>
   );
-}
+};

@@ -554,3 +554,15 @@
 {"timestamp":"2026-03-12T12:35:19.584Z","level":"info","requestId":"a8ecaba9-a8c0-429f-a1aa-2f29f0228148","message":"New WebSocket connection initiated","metadata":{}}
 {"timestamp":"2026-03-12T12:35:19.588Z","level":"info","requestId":"5c31a7f3-042a-4e5c-a5d6-43eee1aa1d7c","message":"[WS] Incoming Message [b4391fb6-9b05-4b69-9c88-7907fef00a92]:","metadata":{"type":"AUTH"}}
 {"timestamp":"2026-03-12T12:35:19.600Z","level":"info","requestId":"bc6afafa-ee5d-451d-b406-aeb1cc1620bc","message":"[WS] Incoming Message [a8ecaba9-a8c0-429f-a1aa-2f29f0228148]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-12T12:35:23.503Z","level":"info","requestId":"startup","userId":"system","message":"Express server listening on port 4000","metadata":{}}
+{"timestamp":"2026-03-12T12:35:25.576Z","level":"info","requestId":"65cbfd6f-d5ab-42a2-8286-20ca47d822a5","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-12T12:35:25.580Z","level":"info","requestId":"ba6e360c-bf09-4fbc-a88c-c962c6cff94b","message":"[WS] Incoming Message [65cbfd6f-d5ab-42a2-8286-20ca47d822a5]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-12T12:35:25.584Z","level":"info","requestId":"6b23e8f9-bfd2-4563-aba0-d7d9af40b0be","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-12T12:35:25.589Z","level":"info","requestId":"21e8d70a-aecc-4a3c-a9d6-65a0a057cf26","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-12T12:35:25.591Z","level":"info","requestId":"0d5f0456-c709-48f9-9248-764b9088e2c1","message":"[WS] Incoming Message [6b23e8f9-bfd2-4563-aba0-d7d9af40b0be]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-12T12:35:25.594Z","level":"info","requestId":"9b815205-9b17-4f0f-9c6f-03001abbd795","message":"[WS] Incoming Message [21e8d70a-aecc-4a3c-a9d6-65a0a057cf26]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-12T12:35:42.159Z","level":"info","requestId":"0a69fc18-a1c3-4d15-aaac-49c05df5dc63","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-12T12:35:42.206Z","level":"info","requestId":"9b828413-bb86-4e85-a850-b8bdf4493941","message":"[WS] Incoming Message [0a69fc18-a1c3-4d15-aaac-49c05df5dc63]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-12T12:35:45.251Z","level":"info","requestId":"bd78041d-4997-4ea0-82c9-7a95f561371b","userId":"test-user-id","message":"[WS] Incoming Message [0a69fc18-a1c3-4d15-aaac-49c05df5dc63]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-12T12:36:05.895Z","level":"info","requestId":"0a69fc18-a1c3-4d15-aaac-49c05df5dc63","userId":"test-user-id","message":"Transcribing audio buffer of size 162977","metadata":{}}
+{"timestamp":"2026-03-12T12:36:10.458Z","level":"info","requestId":"0a69fc18-a1c3-4d15-aaac-49c05df5dc63","userId":"test-user-id","message":"Transcription successful: Can I get the schedule of next five days Can I get...","metadata":{}}

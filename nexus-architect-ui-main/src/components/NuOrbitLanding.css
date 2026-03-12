@@ -1,0 +1,304 @@
+:root {
+  --nu-teal: #071A1F;
+  --nu-midnight: #06141A;
+  --nu-cyan-dark: #0B2C33;
+  --nu-black: #020B0F;
+  --nu-electric-cyan: #00E6FF;
+  --nu-neon-aqua: #2AF6FF;
+  --nu-white-glow: #E9FFFF;
+  --nu-font-orbitron: 'Orbitron', sans-serif;
+  --nu-font-exo: 'Exo', sans-serif;
+}
+
+.nu-landing-container {
+  min-height: 100vh;
+  background: radial-gradient(circle at 50% 50%, var(--nu-cyan-dark) 0%, var(--nu-midnight) 40%, var(--nu-black) 100%);
+  color: #fff;
+  font-family: var(--nu-font-exo);
+  overflow: hidden;
+  position: relative;
+}
+
+/* 12-Column Grid Wrapper */
+.nu-grid-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Navigation Bar */
+.nu-navbar {
+  grid-column: span 12;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px 0;
+  z-index: 100;
+}
+
+.nu-logo {
+  font-family: var(--nu-font-orbitron);
+  font-weight: 900;
+  font-size: 24px;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+
+.nu-nav-links {
+  display: flex;
+  gap: 48px;
+}
+
+.nu-nav-link {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.nu-nav-link:hover {
+  color: var(--nu-electric-cyan);
+  text-shadow: 0 0 10px var(--nu-electric-cyan);
+}
+
+.nu-btn-cta {
+  padding: 12px 32px;
+  border: 1.5px solid #fff;
+  border-radius: 999px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  background: transparent;
+  color: #fff;
+  transition: all 0.4s ease;
+}
+
+.nu-btn-cta:hover {
+  border-color: var(--nu-electric-cyan);
+  box-shadow: 0 0 20px var(--nu-electric-cyan);
+  transform: scale(1.05);
+}
+
+/* Hero Section */
+.nu-hero {
+  grid-column: span 12;
+  height: calc(100vh - 160px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Portal Ring */
+.nu-portal-ring {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  border: 2px solid var(--nu-neon-aqua);
+  box-shadow: 0 0 80px var(--nu-neon-aqua), inset 0 0 40px var(--nu-electric-cyan);
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.nu-portal-glow {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--nu-electric-cyan) 0%, transparent 60%);
+  filter: blur(80px);
+  opacity: 0.2;
+}
+
+/* Character Silhouette */
+.nu-silhouette {
+  width: 120px;
+  height: 280px;
+  background: #000;
+  clip-path: polygon(20% 0%, 80% 0%, 90% 20%, 85% 60%, 75% 100%, 25% 100%, 15% 60%, 10% 20%);
+  filter: brightness(0.1);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+  position: relative;
+  z-index: 2;
+}
+
+/* Reflective Floor */
+.nu-floor {
+  position: absolute;
+  bottom: 0;
+  width: 150vw;
+  height: 20vh;
+  background: linear-gradient(to top, var(--nu-black) 0%, transparent 100%);
+  border-top: 1px solid rgba(0, 230, 255, 0.1);
+  backdrop-filter: blur(4px);
+  z-index: 3;
+}
+
+/* Typography */
+.nu-hero-title {
+  font-family: var(--nu-font-orbitron);
+  font-size: clamp(64px, 10vw, 120px);
+  font-weight: 900;
+  letter-spacing: 0.8em;
+  margin-right: -0.8em;
+  color: #fff;
+  z-index: 5;
+  margin-bottom: 24px;
+}
+
+.nu-hero-subtitle {
+  font-weight: 100;
+  letter-spacing: 0.5em;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 48px;
+  z-index: 5;
+  font-size: 14px;
+}
+
+.nu-orbit-cta {
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 5;
+}
+
+.nu-orbit-cta:hover {
+  text-shadow: 0 0 10px var(--nu-neon-aqua);
+}
+
+.nu-orbit-cta span {
+  transition: transform 0.3s ease;
+}
+
+.nu-orbit-cta:hover span {
+  transform: translateX(10px);
+}
+
+/* Statistics Panel */
+.nu-stats-panel {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 64px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: auto;
+  z-index: 10;
+}
+
+.nu-stat-item {
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nu-stat-item:last-child {
+  border-right: none;
+}
+
+.nu-stat-num {
+  font-family: var(--nu-font-orbitron);
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--nu-electric-cyan);
+  margin-bottom: 8px;
+}
+
+.nu-stat-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Interaction Layer */
+.nu-interaction-layer {
+  position: absolute;
+  bottom: 120px;
+  right: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 32px;
+  z-index: 20;
+}
+
+.nu-play-video {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.nu-play-video:hover {
+  border-color: var(--nu-electric-cyan);
+  box-shadow: 0 0 30px var(--nu-electric-cyan);
+  transform: scale(1.1);
+}
+
+.nu-play-label {
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.nu-socials {
+  display: flex;
+  gap: 24px;
+}
+
+.nu-social-icon {
+  color: rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.nu-social-icon:hover {
+  color: var(--nu-electric-cyan);
+  filter: drop-shadow(0 0 5px var(--nu-electric-cyan));
+}
+
+/* Atmosphere Effects */
+.nu-fog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/dust.png');
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Animations */
+@keyframes portalPulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.02); opacity: 0.9; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
+.nu-portal-ring {
+  animation: portalPulse 8s infinite ease-in-out;
+}

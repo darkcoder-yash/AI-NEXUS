@@ -17,66 +17,70 @@ export function Dashboard() {
   ];
 
   return (
-    <div className="p-8 space-y-8 overflow-y-auto h-full scrollbar-thin bg-[#0f172a]/50">
+    <div className="p-10 space-y-10 overflow-y-auto h-full scrollbar-thin bg-transparent relative">
+      <div className="nu-scanlines" />
+      
       {/* Header */}
-      <div className="flex items-center justify-between">
+      <div className="flex items-end justify-between relative z-10">
         <div>
-          <h2 className="text-3xl font-black text-white tracking-tighter">AI NEXUS Dashboard</h2>
-          <p className="text-slate-400 font-medium mt-1">Unified Command for Human Life Management</p>
+          <h2 className="text-4xl font-black text-white tracking-[0.2em] nu-glitch-text">AI NEXUS Dashboard</h2>
+          <p className="text-slate-500 font-medium mt-2 tracking-[0.5em] text-[10px] uppercase">Unified Command for Human Life Management</p>
         </div>
-        <div className="flex items-center gap-4">
-          <div className="px-4 py-2 rounded-xl bg-white/5 border border-white/10 flex items-center gap-3">
-            <ShieldCheck className="w-4 h-4 text-teal-400" />
-            <span className="text-xs font-bold text-slate-300 uppercase tracking-widest">Biometric_Verified</span>
+        <div className="flex items-center gap-6">
+          <div className="px-5 py-2.5 rounded-sm bg-white/[0.02] border border-white/10 flex items-center gap-3 backdrop-blur-md">
+            <ShieldCheck className="w-4 h-4 text-[#00E6FF] drop-shadow-[0_0_5px_rgba(0,230,255,0.5)]" />
+            <span className="text-[9px] font-black text-slate-400 uppercase tracking-[0.3em]">Biometric_Verified</span>
           </div>
-          <div className="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center">
-            <User className="w-6 h-6 text-teal-400" />
+          <div className="w-12 h-12 rounded-sm bg-[#00E6FF]/5 border border-[#00E6FF]/20 flex items-center justify-center hover:bg-[#00E6FF]/10 transition-colors cursor-pointer group">
+            <User className="w-5 h-5 text-[#00E6FF] group-hover:scale-110 transition-transform" />
           </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 relative z-10">
         {/* Left Column: Schedule & Cognitive */}
-        <div className="lg:col-span-2 space-y-6">
+        <div className="lg:col-span-8 space-y-8">
           {/* Main Simulation View */}
           {activeSimulation && (
-            <GlassPanel className="p-8 relative overflow-hidden group border-white/10 shadow-2xl">
-              <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-                <Zap className="w-32 h-32 text-teal-400" />
+            <GlassPanel className="p-10 relative overflow-hidden group">
+              <div className="absolute top-0 right-0 p-10 opacity-5 group-hover:opacity-10 transition-opacity">
+                <Zap className="w-40 h-40 text-[#00E6FF]" />
               </div>
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-2xl bg-teal-500/20 flex items-center justify-center border border-teal-500/30">
-                  <Target className="w-6 h-6 text-teal-400" />
+              <div className="flex items-center gap-5 mb-8">
+                <div className="w-14 h-14 rounded-sm bg-[#00E6FF]/10 flex items-center justify-center border border-[#00E6FF]/20">
+                  <Target className="w-7 h-7 text-[#00E6FF]" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white tracking-tight">Active Simulation Result</h3>
-                  <p className="text-sm text-teal-400/70 font-bold uppercase tracking-widest">Engine_v0.1</p>
+                  <h3 className="text-2xl font-black text-white tracking-widest">Active Simulation</h3>
+                  <p className="text-[9px] text-[#00E6FF] font-black uppercase tracking-[0.5em] mt-1">Engine_v0.1 // Predictive_Core</p>
                 </div>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="space-y-4">
-                  <div className="p-4 rounded-2xl bg-white/5 border border-white/5">
-                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-1">Predicted Outcome</span>
-                    <p className="text-lg font-bold text-white leading-tight">{activeSimulation.outcome}</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div className="space-y-6">
+                  <div className="p-6 rounded-sm bg-white/[0.02] border border-white/5">
+                    <span className="text-[9px] font-black text-slate-500 uppercase tracking-[0.4em] block mb-2">Predicted Outcome</span>
+                    <p className="text-xl font-bold text-white leading-tight tracking-tight">{activeSimulation.outcome}</p>
                   </div>
-                  <div className="p-4 rounded-2xl bg-red-500/10 border border-red-500/20">
-                    <div className="flex items-center gap-2 mb-1">
-                      <AlertTriangle className="w-3.5 h-3.5 text-red-400" />
-                      <span className="text-[10px] font-bold text-red-400 uppercase tracking-widest">Critical Warning</span>
+                  <div className="p-6 rounded-sm bg-red-500/5 border border-red-500/20 relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-1 h-full bg-red-500/50" />
+                    <div className="flex items-center gap-2 mb-2">
+                      <AlertTriangle className="w-4 h-4 text-red-500" />
+                      <span className="text-[9px] font-black text-red-500 uppercase tracking-[0.4em]">Critical Warning</span>
                     </div>
-                    <p className="text-sm text-red-200/80 font-medium">{activeSimulation.risk}</p>
+                    <p className="text-sm text-red-100/70 font-medium leading-relaxed">{activeSimulation.risk}</p>
                   </div>
                 </div>
                 
-                <div className="space-y-6">
+                <div className="space-y-8">
                   <MetricGauge label="Confidence Score" value={activeSimulation.confidence} color="cyan" />
-                  <div className="p-4 rounded-2xl bg-teal-500/10 border border-teal-500/20">
-                    <div className="flex items-center gap-2 mb-1">
-                      <Zap className="w-3.5 h-3.5 text-teal-400" />
-                      <span className="text-[10px] font-bold text-teal-400 uppercase tracking-widest">AI Suggestion</span>
+                  <div className="p-6 rounded-sm bg-[#00E6FF]/5 border border-[#00E6FF]/10 relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-1 h-full bg-[#00E6FF]/50" />
+                    <div className="flex items-center gap-2 mb-2">
+                      <Zap className="w-4 h-4 text-[#00E6FF]" />
+                      <span className="text-[9px] font-black text-[#00E6FF] uppercase tracking-[0.4em]">AI Suggestion</span>
                     </div>
-                    <p className="text-sm text-teal-100/80 font-medium">{activeSimulation.suggestion}</p>
+                    <p className="text-sm text-slate-300 font-medium leading-relaxed">{activeSimulation.suggestion}</p>
                   </div>
                 </div>
               </div>
@@ -84,46 +88,46 @@ export function Dashboard() {
           )}
 
           {/* Today's Schedule */}
-          <GlassPanel className="p-6 border-white/5">
-            <div className="flex items-center justify-between mb-6">
-              <div className="flex items-center gap-3">
-                <Calendar className="w-5 h-5 text-teal-400" />
-                <h3 className="text-lg font-bold text-white tracking-tight">Today's Directive</h3>
+          <GlassPanel className="p-8">
+            <div className="flex items-center justify-between mb-8">
+              <div className="flex items-center gap-4">
+                <Calendar className="w-6 h-6 text-[#00E6FF]" />
+                <h3 className="text-xl font-black text-white tracking-widest">Today's Directive</h3>
               </div>
               <button 
                 onClick={() => setActivePanel('simulation')}
-                className="text-xs font-bold text-teal-400 uppercase tracking-widest hover:text-teal-300 transition-colors flex items-center gap-2"
+                className="text-[9px] font-black text-[#00E6FF] uppercase tracking-[0.3em] hover:text-white transition-colors flex items-center gap-2 group"
               >
-                Manage Tasks <ArrowRight className="w-3 h-3" />
+                Launch Simulation <ArrowRight className="w-3 h-3 group-hover:translateX(5px) transition-transform" />
               </button>
             </div>
             
-            <div className="space-y-3">
+            <div className="space-y-4">
               {tasks.length === 0 && (
-                <div className="p-8 text-center border-2 border-dashed border-white/5 rounded-2xl text-slate-500 font-bold uppercase tracking-widest text-xs">
-                  No active tasks. Add tasks in Simulation Panel.
+                <div className="p-12 text-center border border-dashed border-white/10 rounded-sm text-slate-600 font-black uppercase tracking-[0.5em] text-[10px]">
+                  No active tasks detected.
                 </div>
               )}
               {tasks.map((task) => (
                 <div 
                   key={task.id} 
                   onClick={() => toggleTask(task.id)}
-                  className={`group flex items-center justify-between p-4 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/[0.08] hover:border-teal-500/20 transition-all cursor-pointer shadow-lg shadow-black/20 ${task.status === 'Completed' ? 'opacity-50' : ''}`}
+                  className={`group flex items-center justify-between p-5 rounded-sm bg-white/[0.01] border border-white/5 hover:bg-white/[0.03] hover:border-[#00E6FF]/30 transition-all cursor-pointer ${task.status === 'Completed' ? 'opacity-40' : ''}`}
                 >
-                  <div className="flex items-center gap-4">
-                    <div className={`w-2 h-2 rounded-full ${task.priority === 'High' ? 'bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.5)]' : task.priority === 'Medium' ? 'bg-orange-500' : 'bg-slate-500'}`} />
+                  <div className="flex items-center gap-6">
+                    <div className={`w-1 h-8 ${task.priority === 'High' ? 'bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.5)]' : task.priority === 'Medium' ? 'bg-orange-500' : 'bg-slate-700'}`} />
                     <div>
-                      <p className={`text-sm font-bold text-slate-200 group-hover:text-white transition-colors ${task.status === 'Completed' ? 'line-through' : ''}`}>{task.title}</p>
-                      <div className="flex items-center gap-3 mt-1">
-                        <span className="text-[10px] font-bold text-slate-500 flex items-center gap-1">
+                      <p className={`text-base font-bold text-slate-200 group-hover:text-white transition-colors tracking-tight ${task.status === 'Completed' ? 'line-through' : ''}`}>{task.title}</p>
+                      <div className="flex items-center gap-4 mt-2">
+                        <span className="text-[9px] font-black text-slate-600 flex items-center gap-1.5 uppercase tracking-widest">
                           <Clock className="w-3 h-3" /> {task.time}
                         </span>
-                        <span className="text-[10px] font-bold text-teal-500/50 uppercase tracking-widest">{task.status}</span>
+                        <span className="text-[9px] font-black text-[#00E6FF]/40 uppercase tracking-[0.3em]">{task.status}</span>
                       </div>
                     </div>
                   </div>
-                  <div className={`w-8 h-8 rounded-full border flex items-center justify-center transition-all ${task.status === 'Completed' ? 'border-teal-500 bg-teal-500/20' : 'border-white/10 group-hover:border-teal-500/50'}`}>
-                    <CheckCircle2 className={`w-4 h-4 ${task.status === 'Completed' ? 'text-teal-400' : 'text-slate-600 group-hover:text-teal-400'} transition-colors`} />
+                  <div className={`w-10 h-10 rounded-sm border flex items-center justify-center transition-all ${task.status === 'Completed' ? 'border-[#00E6FF] bg-[#00E6FF]/10' : 'border-white/10 group-hover:border-[#00E6FF]/50'}`}>
+                    <CheckCircle2 className={`w-5 h-5 ${task.status === 'Completed' ? 'text-[#00E6FF]' : 'text-slate-700 group-hover:text-[#00E6FF]'} transition-colors`} />
                   </div>
                 </div>
               ))}
@@ -132,74 +136,76 @@ export function Dashboard() {
         </div>
 
         {/* Right Column: Cognitive & Insights */}
-        <div className="space-y-6">
+        <div className="lg:col-span-4 space-y-8">
           {/* Cognitive Load Meter */}
-          <GlassPanel className="p-6 border-white/10 bg-teal-500/[0.02]">
-            <div className="flex items-center gap-3 mb-8">
-              <Brain className="w-6 h-6 text-teal-400" />
+          <GlassPanel className="p-8 border-[#00E6FF]/10">
+            <div className="flex items-center gap-4 mb-10">
+              <Brain className="w-8 h-8 text-[#00E6FF]" />
               <div>
-                <h3 className="text-lg font-bold text-white tracking-tight">Cognitive Load</h3>
-                <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest">Real-time Biosignals</p>
+                <h3 className="text-lg font-black text-white tracking-widest">Neural Load</h3>
+                <p className="text-[9px] text-slate-600 font-black uppercase tracking-[0.4em] mt-1">Real-time Biosignals</p>
               </div>
             </div>
             
-            <div className="flex flex-col items-center justify-center py-4 mb-8">
-              <div className="relative w-40 h-40">
+            <div className="flex flex-col items-center justify-center py-6 mb-10 relative">
+              <div className="absolute inset-0 bg-radial-gradient(circle, rgba(0,230,255,0.05) 0%, transparent 70%) pointer-events-none" />
+              <div className="relative w-48 h-48">
                 <svg className="w-full h-full -rotate-90">
                   <circle
-                    cx="80" cy="80" r="70"
-                    fill="none" stroke="currentColor" strokeWidth="12"
+                    cx="96" cy="96" r="86"
+                    fill="none" stroke="currentColor" strokeWidth="2"
                     className="text-white/5"
                   />
                   <motion.circle
-                    cx="80" cy="80" r="70"
-                    fill="none" stroke="currentColor" strokeWidth="12"
-                    strokeDasharray={440}
-                    initial={{ strokeDashoffset: 440 }}
-                    animate={{ strokeDashoffset: 440 - (440 * (systemMetrics.memory / 100)) }}
-                    transition={{ duration: 2, ease: "easeOut" }}
-                    className="text-teal-400 drop-shadow-[0_0_8px_rgba(20,184,166,0.5)]"
+                    cx="96" cy="96" r="86"
+                    fill="none" stroke="currentColor" strokeWidth="4"
+                    strokeDasharray={540}
+                    initial={{ strokeDashoffset: 540 }}
+                    animate={{ strokeDashoffset: 540 - (540 * (systemMetrics.memory / 100)) }}
+                    transition={{ duration: 2, ease: "circOut" }}
+                    className="text-[#00E6FF] drop-shadow-[0_0_15px_rgba(0,230,255,0.6)]"
                   />
                 </svg>
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <span className="text-4xl font-black text-white leading-none">{Math.round(systemMetrics.memory)}%</span>
-                  <span className="text-[10px] font-bold text-teal-400 uppercase tracking-widest mt-1">
+                  <span className="text-5xl font-black text-white leading-none tracking-tighter">{Math.round(systemMetrics.memory)}%</span>
+                  <span className="text-[9px] font-black text-[#00E6FF] uppercase tracking-[0.5em] mt-3">
                     {systemMetrics.memory > 80 ? 'CRITICAL' : systemMetrics.memory > 60 ? 'ELEVATED' : 'OPTIMAL'}
                   </span>
                 </div>
               </div>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-6">
               <MetricGauge label="Burnout Risk" value={systemMetrics.memory > 70 ? 45 : 12} color="orange" />
-              <MetricGauge label="Focus Efficiency" value={100 - (systemMetrics.cpu / 2)} color="green" />
+              <MetricGauge label="Focus Efficiency" value={100 - (systemMetrics.cpu / 2)} color="cyan" />
             </div>
           </GlassPanel>
 
           {/* AI Insights Page Preview */}
-          <GlassPanel className="p-6 border-white/5 overflow-hidden relative">
-            <div className="flex items-center gap-3 mb-6">
-              <BarChart3 className="w-5 h-5 text-teal-400" />
-              <h3 className="text-lg font-bold text-white tracking-tight">Pattern Discovery</h3>
+          <GlassPanel className="p-8 overflow-hidden relative">
+            <div className="flex items-center gap-4 mb-8">
+              <BarChart3 className="w-6 h-6 text-[#00E6FF]" />
+              <h3 className="text-lg font-black text-white tracking-widest">Insights</h3>
             </div>
             
-            <div className="space-y-4">
+            <div className="space-y-5">
               {insights.map((insight, i) => (
-                <div key={i} className="flex gap-4 p-3 rounded-2xl bg-white/5 border border-white/5 group hover:bg-white/[0.08] transition-all">
+                <div key={i} className="flex gap-4 p-4 rounded-sm bg-white/[0.01] border border-white/5 group hover:bg-white/[0.03] transition-all relative overflow-hidden">
+                  <div className="absolute top-0 left-0 w-0.5 h-0 group-hover:h-full bg-[#00E6FF] transition-all duration-300" />
                   <div className="mt-1">
-                    <TrendingUp className="w-4 h-4 text-teal-400 opacity-50 group-hover:opacity-100 transition-opacity" />
+                    <TrendingUp className="w-4 h-4 text-[#00E6FF] opacity-30 group-hover:opacity-100 transition-opacity" />
                   </div>
-                  <p className="text-xs font-medium text-slate-300 leading-relaxed">{insight}</p>
+                  <p className="text-[11px] font-medium text-slate-400 group-hover:text-slate-200 leading-relaxed transition-colors">{insight}</p>
                 </div>
               ))}
             </div>
             
-            <div className="mt-6 pt-4 border-t border-white/5">
+            <div className="mt-8 pt-6 border-t border-white/5">
               <button 
                 onClick={() => setActivePanel('patterns')}
-                className="w-full py-3 rounded-xl bg-white/5 text-slate-400 font-bold text-[10px] uppercase tracking-[0.2em] hover:bg-white/10 hover:text-white transition-all"
+                className="w-full py-4 rounded-sm bg-white/[0.02] border border-white/10 text-slate-500 font-black text-[9px] uppercase tracking-[0.4em] hover:bg-[#00E6FF]/5 hover:text-[#00E6FF] hover:border-[#00E6FF]/30 transition-all"
               >
-                Full Analytics Report
+                Neural Analytics Report
               </button>
             </div>
           </GlassPanel>

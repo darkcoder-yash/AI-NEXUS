@@ -1,0 +1,408 @@
+:root {
+  --nexus-teal: #020f12;
+  --nexus-midnight: #01080b;
+  --nexus-cyan-dark: #05161a;
+  --nexus-black: #000407;
+  --nexus-electric-cyan: #00e6ff;
+  --nexus-neon-aqua: #2af6ff;
+  --nexus-white-glow: #e9ffff;
+  --nexus-font-orbitron: 'Orbitron', sans-serif;
+  --nexus-font-exo: 'Exo', sans-serif;
+}
+
+.nexus-landing-container {
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+  font-family: var(--nexus-font-exo);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Ultra-Futuristic Grid Blueprint */
+.nexus-blueprint {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(0, 230, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 230, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  mask-image: radial-gradient(circle at 50% 50%, black 30%, transparent 80%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.nexus-scanlines {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(18, 16, 16, 0) 50%,
+    rgba(0, 0, 0, 0.2) 50%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0.1;
+}
+
+/* Atmospheric Depth */
+.nexus-ambient-glow {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(0, 230, 255, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(42, 246, 255, 0.08) 0%, transparent 40%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+/* 12-Column Grid Wrapper */
+.nexus-grid-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 64px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 32px;
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+}
+
+/* Navigation HUD */
+.nexus-navbar {
+  grid-column: span 12;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  z-index: 100;
+}
+
+.nexus-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nexus-logo-icon {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--nexus-electric-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transform: rotate(45deg);
+}
+
+.nexus-logo-icon::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: var(--nexus-electric-cyan);
+  box-shadow: 0 0 15px var(--nexus-electric-cyan);
+}
+
+.nexus-logo-text {
+  font-family: var(--nexus-font-orbitron);
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: 0.4em;
+  color: #fff;
+  text-shadow: 0 0 15px rgba(0, 230, 255, 0.5);
+}
+
+.nexus-nav-links {
+  display: flex;
+  gap: 48px;
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(20px);
+  padding: 12px 48px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 2px;
+}
+
+.nexus-nav-link {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: rgba(255, 255, 255, 0.4);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.nexus-nav-link:hover {
+  color: var(--nexus-electric-cyan);
+  text-shadow: 0 0 10px var(--nexus-electric-cyan);
+  transform: translateY(-1px);
+}
+
+.nexus-btn-cta {
+  padding: 12px 32px;
+  border: 1px solid rgba(0, 230, 255, 0.2);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  background: transparent;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.nexus-btn-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 230, 255, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.nexus-btn-cta:hover::before {
+  left: 100%;
+}
+
+.nexus-btn-cta:hover {
+  border-color: var(--nexus-electric-cyan);
+  box-shadow: 0 0 30px rgba(0, 230, 255, 0.2);
+  background: rgba(0, 230, 255, 0.05);
+}
+
+/* Hero Core */
+.nexus-hero {
+  grid-column: span 12;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-bottom: 60px;
+}
+
+/* The Living Core (Abstract Blob) */
+.nexus-living-core {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, var(--nexus-electric-cyan) 0%, transparent 70%);
+  filter: blur(80px);
+  opacity: 0.15;
+  animation: coreMorph 10s infinite alternate cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  z-index: 1;
+}
+
+@keyframes coreMorph {
+  0% { transform: scale(1) translate(0, 0); border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+  100% { transform: scale(1.2) translate(20px, -20px); border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
+}
+
+.nexus-portal-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.nexus-portal-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 230, 255, 0.1);
+  transition: all 0.5s ease;
+}
+
+.ring-outer {
+  width: 700px;
+  height: 700px;
+  border-style: dashed;
+  animation: rotateClockwise 60s linear infinite;
+}
+
+.ring-mid {
+  width: 550px;
+  height: 550px;
+  border: 1px solid rgba(0, 230, 255, 0.15);
+  animation: rotateCounter 40s linear infinite;
+}
+
+.ring-inner {
+  width: 420px;
+  height: 420px;
+  border: 2px solid rgba(0, 230, 255, 0.4);
+  box-shadow: 0 0 60px rgba(0, 230, 255, 0.1);
+  animation: pulsePortal 4s infinite ease-in-out;
+}
+
+/* Character / Center Element */
+.nexus-silhouette-container {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nexus-data-fragments {
+  position: absolute;
+  inset: -100px;
+  pointer-events: none;
+}
+
+/* Typography Enhancement */
+.nexus-hero-title {
+  font-family: var(--nexus-font-orbitron);
+  font-size: clamp(48px, 10vw, 120px);
+  font-weight: 900;
+  letter-spacing: 1em;
+  margin-right: -1em;
+  color: #fff;
+  z-index: 10;
+  margin-bottom: 32px;
+  text-align: center;
+  background: linear-gradient(to bottom, #fff 40%, rgba(255, 255, 255, 0.2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 20px rgba(0, 230, 255, 0.3));
+}
+
+.nexus-hero-subtitle {
+  font-weight: 100;
+  letter-spacing: 0.6em;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 80px;
+  z-index: 10;
+  font-size: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  max-width: 600px;
+  line-height: 2;
+}
+
+.nexus-orbit-cta {
+  font-size: 10px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  cursor: pointer;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(0, 230, 255, 0.2);
+  padding: 20px 48px;
+  backdrop-filter: blur(20px);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nexus-orbit-cta:hover {
+  border-color: var(--nexus-electric-cyan);
+  background: rgba(0, 230, 255, 0.08);
+  box-shadow: 0 0 40px rgba(0, 230, 255, 0.1);
+  letter-spacing: 0.5em;
+  padding-right: 32px;
+}
+
+/* Stats HUD */
+.nexus-stats-panel {
+  grid-column: span 12;
+  display: flex;
+  justify-content: space-around;
+  padding: 60px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  margin-top: auto;
+  z-index: 10;
+}
+
+.nexus-stat-item {
+  text-align: left;
+  position: relative;
+  padding-left: 24px;
+  border-left: 1px solid rgba(0, 230, 255, 0.2);
+}
+
+.nexus-stat-num {
+  font-family: var(--nexus-font-orbitron);
+  font-size: 20px;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 4px;
+  letter-spacing: 0.1em;
+}
+
+.nexus-stat-label {
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Scroll Indicator */
+.nexus-scroll-hint {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  opacity: 0.4;
+  z-index: 10;
+}
+
+.nexus-mouse {
+  width: 20px;
+  height: 32px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  position: relative;
+}
+
+.nexus-mouse-wheel {
+  width: 2px;
+  height: 6px;
+  background: #fff;
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scrollWheel 2s infinite;
+}
+
+@keyframes scrollWheel {
+  0% { transform: translate(-50%, 0); opacity: 1; }
+  100% { transform: translate(-50%, 15px); opacity: 0; }
+}
+
+/* Animations */
+@keyframes rotateClockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rotateCounter {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+@keyframes pulsePortal {
+  0%, 100% { transform: scale(1); opacity: 0.4; border-color: rgba(0, 230, 255, 0.4); }
+  50% { transform: scale(1.05); opacity: 0.8; border-color: rgba(0, 230, 255, 1); }
+}
+
+/* Particle / Data Bits */
+.nexus-particle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background: var(--nexus-electric-cyan);
+  box-shadow: 0 0 5px var(--nexus-electric-cyan);
+}
+
+
