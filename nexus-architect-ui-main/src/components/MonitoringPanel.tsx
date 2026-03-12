@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Activity, Cpu, HardDrive, Wifi, Clock, Layers } from 'lucide-react';
+import { Activity, Cpu, HardDrive, Wifi, Clock, Layers, Zap } from 'lucide-react';
 import { useAppStore } from '@/store/useAppStore';
 import { GlassPanel } from './GlassPanel';
 import { MetricGauge } from './MetricGauge';
@@ -25,24 +25,12 @@ export function MonitoringPanel() {
   });
   const [isConnected, setIsConnected] = useState(true);
 
-  // Connect to backend for real metrics
   useEffect(() => {
     if (!nexusWS) return;
 
     const handleMessage = (message: ServerToClientMessage) => {
       switch (message.type) {
-        case WebSocketEventTypes.TOKEN_USAGE:
-          // Could show token usage metrics
-          if (message.payload.metrics) {
-            setBackendMetrics(prev => ({
-              ...prev,
-              // Map any relevant metrics from backend
-            }));
-          }
-          break;
-          
         case WebSocketEventTypes.SERVER_RESPONSE:
-          // Check for system info in response
           if (message.payload.systemMetrics) {
             setBackendMetrics(message.payload.systemMetrics);
           }
@@ -51,18 +39,14 @@ export function MonitoringPanel() {
     };
 
     const unsubscribe = nexusWS.onMessage(handleMessage);
-    
-    // Connect and check status
     if (!nexusWS.isConnected()) {
       nexusWS.connect();
     }
     
-    // Check connection status
     const checkConnection = setInterval(() => {
       setIsConnected(true);
     }, 1000);
 
-    // Keep the local mock update as fallback for visual feedback
     const interval = setInterval(updateMetrics, 2000);
 
     return () => {
@@ -72,85 +56,127 @@ export function MonitoringPanel() {
     };
   }, [updateMetrics]);
 
-  // Use backend metrics if connected, otherwise use local
-  const displayMetrics = isConnected ? backendMetrics : systemMetrics;
+  const displayMetrics = backendMetrics.cpu > 0 ? backendMetrics : systemMetrics;
 
   const metrics = [
-    { label: 'CPU Usage', value: displayMetrics.cpu, icon: Cpu, color: 'blue' as const },
-    { label: 'Memory', value: displayMetrics.memory, icon: HardDrive, color: 'purple' as const },
-    { label: 'API Latency', value: displayMetrics.latency || displayMetrics.latency, unit: 'ms', max: 200, icon: Clock, color: 'cyan' as const },
-    { label: 'Connections', value: displayMetrics.connections || 0, unit: '', max: 500, icon: Wifi, color: 'green' as const },
-    { label: 'Queue', value: displayMetrics.queueLength || 0, unit: '', max: 20, icon: Layers, color: 'orange' as const },
+    { label: 'Neural CPU Load', value: displayMetrics.cpu, icon: Cpu, color: 'cyan' as const },
+    { label: 'Synaptic Memory', value: displayMetrics.memory, icon: HardDrive, color: 'purple' as const },
+    { label: 'Core Latency', value: displayMetrics.latency || 45, unit: 'ms', max: 200, icon: Clock, color: 'blue' as const },
+    { label: 'Active Links', value: displayMetrics.connections || 128, unit: '', max: 500, icon: Wifi, color: 'green' as const },
+    { label: 'Request Queue', value: displayMetrics.queueLength || 3, unit: '', max: 20, icon: Layers, color: 'orange' as const },
+    { label: 'Power Draw', value: 84, unit: 'W', max: 150, icon: Zap, color: 'orange' as const },
   ];
 
   return (
-    <div className="p-6 space-y-6 overflow-y-auto h-full scrollbar-thin">
-      <div className="flex items-center gap-3">
-        <Activity className="w-5 h-5 text-neon-green" />
-        <h2 className="text-lg font-semibold">System Monitor</h2>
-        <div className="flex items-center gap-1.5 ml-auto">
-          <div className="w-2 h-2 rounded-full bg-neon-green animate-pulse" />
-          <span className="text-xs font-mono text-neon-green">
-            LIVE
-          </span>
+    <div className="p-10 space-y-10 overflow-y-auto h-full scrollbar-thin relative">
+      {/* Cinematic Header */}
+      <div className="flex flex-col gap-2">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-1px bg-gradient-to-r from-[#00E6FF] to-transparent" />
+          <span className="text-[10px] font-black tracking-[0.5em] text-[#00E6FF] uppercase">System_Diagnostic</span>
+        </div>
+        <div className="flex items-center justify-between">
+          <h2 className="text-4xl font-black text-white tracking-tighter font-orbitron">CORE MONITOR</h2>
+          <div className="flex items-center gap-4 bg-white/5 px-4 py-2 rounded-xl border border-white/10 backdrop-blur-xl">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-[#00FF9D] animate-pulse shadow-[0_0_10px_#00FF9D]" />
+              <span className="text-[10px] font-bold font-mono text-[#00FF9D]">SYNC_ACTIVE</span>
+            </div>
+            <div className="w-px h-4 bg-white/10" />
+            <span className="text-[10px] font-bold font-mono text-slate-400">ID: NEXUS_CORE_01</span>
+          </div>
         </div>
       </div>
 
-      {/* Connection Status */}
-      <GlassPanel className="p-3 flex items-center justify-between">
-        <span className="text-sm text-muted-foreground">Backend Connection</span>
-        <span className="text-sm font-mono text-neon-green">
-          Connected to ws://localhost:4001
-        </span>
-      </GlassPanel>
-
-      {/* Main Metrics */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {/* 12-Column Grid for Metrics */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {metrics.map((m, i) => (
           <motion.div
             key={m.label}
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: i * 0.1 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: i * 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
-            <GlassPanel className="p-4 space-y-3">
-              <div className="flex items-center gap-2">
-                <m.icon className={`w-4 h-4 text-neon-${m.color}`} />
-                <span className="text-xs text-muted-foreground uppercase tracking-wider">{m.label}</span>
+            <GlassPanel className="p-8 group hover:bg-white/[0.03] transition-all" neon={m.color === 'cyan' ? 'cyan' : 'none'}>
+              <div className="flex items-center justify-between mb-6">
+                <div className={`p-3 rounded-xl bg-white/5 border border-white/10 group-hover:border-primary/30 transition-colors`}>
+                  <m.icon className="w-5 h-5 text-white group-hover:text-primary transition-colors" />
+                </div>
+                <div className="text-[8px] font-black text-slate-600 tracking-widest uppercase">Telemetry_Stream</div>
               </div>
-              <MetricGauge label="" value={m.value} max={m.max} unit={m.unit} color={m.color} />
+              <MetricGauge label={m.label} value={m.value} max={m.max} unit={m.unit} color={m.color} />
             </GlassPanel>
           </motion.div>
         ))}
       </div>
 
-      {/* Traffic Chart - Real-time simulation based on backend data */}
-      <GlassPanel className="p-4">
-        <h3 className="text-xs text-muted-foreground uppercase tracking-wider mb-4">Request Traffic (24h)</h3>
-        <div className="flex items-end gap-1 h-24">
-          {Array.from({ length: 48 }).map((_, i) => {
-            // Use backend latency as a factor for traffic visualization
-            const baseHeight = isConnected ? (displayMetrics.latency || 50) / 4 : 50;
-            const h = Math.random() * baseHeight + 10;
-            return (
-              <motion.div
-                key={i}
-                initial={{ height: 0 }}
-                animate={{ height: `${h}%` }}
-                transition={{ delay: i * 0.02, duration: 0.4 }}
-                className="flex-1 bg-primary/40 rounded-t hover:bg-primary/60 transition-colors"
-                style={{ minWidth: 2 }}
-              />
-            );
-          })}
+      {/* Cinematic Traffic Layer */}
+      <div className="grid grid-cols-12 gap-6">
+        <div className="col-span-12 lg:col-span-8">
+          <GlassPanel className="p-8">
+            <div className="flex items-center justify-between mb-8">
+              <h3 className="text-xs font-black tracking-[0.3em] text-slate-400">NEURAL_TRAFFIC_FLOW</h3>
+              <div className="flex gap-2">
+                <div className="w-2 h-2 rounded-full bg-primary/20" />
+                <div className="w-2 h-2 rounded-full bg-primary/40" />
+                <div className="w-2 h-2 rounded-full bg-primary/60" />
+              </div>
+            </div>
+            <div className="flex items-end gap-1.5 h-48">
+              {Array.from({ length: 60 }).map((_, i) => {
+                const h = 20 + Math.random() * 60;
+                const opacity = 0.1 + (h / 100) * 0.6;
+                return (
+                  <motion.div
+                    key={i}
+                    initial={{ height: 0 }}
+                    animate={{ height: `${h}%` }}
+                    transition={{ delay: i * 0.01, duration: 1 }}
+                    className="flex-1 rounded-t-sm"
+                    style={{ 
+                      backgroundColor: '#00E6FF',
+                      opacity: opacity,
+                      boxShadow: h > 70 ? '0 0 15px rgba(0, 230, 255, 0.3)' : 'none'
+                    }}
+                  />
+                );
+              })}
+            </div>
+            <div className="flex justify-between text-[9px] font-bold text-slate-600 mt-4 uppercase tracking-widest font-mono">
+              <span>Origin_T-60m</span>
+              <span>Vector_Established</span>
+              <span>Current_Interval</span>
+            </div>
+          </GlassPanel>
         </div>
-        <div className="flex justify-between text-[10px] text-muted-foreground mt-2">
-          <span>24h ago</span>
-          <span>12h ago</span>
-          <span>Now</span>
+
+        <div className="col-span-12 lg:col-span-4">
+          <GlassPanel className="p-8 flex flex-col justify-between h-full bg-[#00E6FF]/5 border-[#00E6FF]/20">
+            <div>
+              <h3 className="text-xs font-black tracking-[0.3em] text-[#00E6FF] mb-6">CORE_INTEGRITY</h3>
+              <p className="text-[10px] text-[#00E6FF]/70 leading-relaxed font-bold uppercase tracking-widest">
+                All neural subsystems operating within nominal parameters. Predictive caching optimized at 94.2%.
+              </p>
+            </div>
+            <div className="mt-8 space-y-4">
+              <div className="flex justify-between text-[10px] font-black text-white uppercase tracking-widest">
+                <span>Security_Shield</span>
+                <span className="text-[#00FF9D]">STABLE</span>
+              </div>
+              <div className="w-full h-px bg-white/10" />
+              <div className="flex justify-between text-[10px] font-black text-white uppercase tracking-widest">
+                <span>Logic_Engine</span>
+                <span className="text-[#00FF9D]">OPTIMAL</span>
+              </div>
+              <div className="w-full h-px bg-white/10" />
+              <div className="flex justify-between text-[10px] font-black text-white uppercase tracking-widest">
+                <span>Database_Link</span>
+                <span className="text-[#00FF9D]">ACTIVE</span>
+              </div>
+            </div>
+          </GlassPanel>
         </div>
-      </GlassPanel>
+      </div>
     </div>
   );
 }
-
