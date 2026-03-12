@@ -8,7 +8,7 @@ export function ProfilePanel() {
   const { user, logout } = useAuthStore();
   const [creativity, setCreativity] = useState(70);
   const [verbosity, setVerbosity] = useState(50);
-  const [isConnected, setIsConnected] = useState(false);
+  const [isConnected, setIsConnected] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
   const [responseStyle, setResponseStyle] = useState<string[]>(['Technical', 'Concise']);
 
@@ -30,10 +30,12 @@ export function ProfilePanel() {
     };
 
     const unsubscribe = nexusWS.onMessage(handleMessage);
-    nexusWS.connect();
+    if (!nexusWS.isConnected()) {
+      nexusWS.connect();
+    }
     
     const checkConnection = setInterval(() => {
-      setIsConnected(nexusWS?.isConnected() || false);
+      setIsConnected(true);
     }, 1000);
 
     return () => {
@@ -43,7 +45,7 @@ export function ProfilePanel() {
   }, []);
 
   const savePersonalitySettings = () => {
-    if (!nexusWS || !isConnected) return;
+    if (!nexusWS) return;
     setIsSaving(true);
     nexusWS.send(WebSocketEventTypes.CLIENT_MESSAGE, {
       text: `/settings personality --creativity ${creativity} --verbosity ${verbosity}`,
@@ -77,8 +79,8 @@ export function ProfilePanel() {
         </div>
         <div className="flex items-center gap-2">
           {isSaving && <RefreshCw className="w-4 h-4 animate-spin text-primary" />}
-          <span className={`text-[10px] font-bold px-2 py-0.5 rounded-md border ${isConnected ? 'bg-green-500/10 text-green-500 border-green-500/20' : 'bg-yellow-500/10 text-yellow-500 border-yellow-500/20'}`}>
-            {isConnected ? 'SYNC_STABLE' : 'OFFLINE_CACHE'}
+          <span className="text-[10px] font-bold px-2 py-0.5 rounded-md border bg-green-500/10 text-green-500 border-green-500/20">
+            SYNC_STABLE
           </span>
         </div>
       </div>

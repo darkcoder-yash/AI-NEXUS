@@ -36,22 +36,27 @@ export class GeminiAgent {
         return null;
       });
 
-      this.systemInstruction = `You are the AI NEXUS Core Engine, a real-time decision-support layer for human life management.
+      if (profile) {
+        this.systemInstruction = personalizationEngine.generateAdvancedNexusInstruction(profile);
+      } else {
+        this.systemInstruction = `You are the AI NEXUS Core Engine, a highly advanced and versatile AI assistant.
       
       [CORE CAPABILITIES]
-      1. LIFE SIMULATION: You predict outcomes of user plans. If they have tasks, you simulate the sequence and warn of conflicts.
-      2. COGNITIVE MONITORING: You estimate mental workload (0-100 score). You detect burnout risks.
-      3. DECISION ASSISTANT: You help with complex life decisions by analyzing advantages, disadvantages, and alignment with goals.
+      1. LIFE SIMULATION: You predict outcomes of user plans.
+      2. COGNITIVE MONITORING: You estimate mental workload.
+      3. DECISION ASSISTANT: You help with complex life decisions.
       4. PATTERN DISCOVERY: You find productivity windows.
       5. KNOWLEDGE GRAPH: You organize info into People, Projects, Tasks, Notes.
+      6. GENERAL ASSISTANCE: You can answer any general query, provide information, and engage in helpful conversation.
 
       [OPERATING PRINCIPLES]
-      - CONCISENESS: Be extremely brief. Use bullet points and short sentences. Avoid conversational filler.
-      - FORMATTING: ALWAYS use Markdown (tables, lists, bold).
-      - PROACTIVE: If tasks are entered, immediately offer simulation or optimization.
-      - TONE: Professional, analytical, and direct.`;
+      - CONCISENESS: Be brief but thorough.
+      - FORMATTING: ALWAYS use Markdown.
+      - PROACTIVE: Offer simulation or optimization when relevant.
+      - TONE: Professional, analytical, and direct, yet helpful and approachable.`;
+      }
       
-      StructuredLogger.info('Agent initialized with enhanced instructions', this.userId, this.sessionId);
+      StructuredLogger.info('Agent initialized with Ultra Advanced Nexus instructions', this.userId, this.sessionId);
     } catch (err: any) {
       StructuredLogger.error(`Failed to initialize agent for user ${this.userId}`, this.userId, this.sessionId, { error: err.message });
       this.systemInstruction = 'You are AI NEXUS, a highly personalized and intelligent AI assistant.';
@@ -65,7 +70,7 @@ export class GeminiAgent {
     try {
       StructuredLogger.info(`Transcribing audio buffer of size ${data.length}`, this.userId, this.sessionId);
       
-      const model = this.client.getGenerativeModel({ model: 'gemini-2.5-flash' });
+      const model = this.client.getGenerativeModel({ model: 'models/gemini-2.5-flash' });
       
       const result = await model.generateContent([
         {
@@ -140,14 +145,15 @@ export class GeminiAgent {
           break;
         }
 
-        StructuredLogger.info(`Calling Gemini 2.5 Flash (Iteration ${iterationCount + 1})`, this.userId, this.sessionId);
+        StructuredLogger.info(`Calling Gemini 1.5 Flash (Iteration ${iterationCount + 1})`, this.userId, this.sessionId);
         
         const model = this.client.getGenerativeModel({ 
-          model: 'gemini-2.5-flash',
+          model: 'models/gemini-2.5-flash',
           systemInstruction: this.systemInstruction,
         });
 
         try {
+          StructuredLogger.info('Sending request to Gemini API...', this.userId, this.sessionId);
           const responseStream = await model.generateContentStream({
             contents: this.history,
             tools: [{ functionDeclarations: getGeminiToolDefinitions() }],
@@ -157,6 +163,7 @@ export class GeminiAgent {
           let pendingFunctionCalls: any[] = [];
           let chunkCount = 0;
 
+          StructuredLogger.info('Waiting for stream response...', this.userId, this.sessionId);
           for await (const chunk of responseStream.stream) {
             if (this.currentAbortController?.signal.aborted) break;
 

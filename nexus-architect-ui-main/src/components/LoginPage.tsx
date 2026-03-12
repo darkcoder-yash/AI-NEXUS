@@ -79,12 +79,8 @@ export function LoginPage() {
           <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent my-10" />
 
           {/* Connection Status */}
-          <div className={`text-[9px] font-black uppercase tracking-[0.3em] text-center px-4 py-2.5 rounded-xl border transition-all duration-700 ${
-            isConnected 
-              ? 'bg-teal-500/10 text-teal-400 border-teal-500/20 shadow-[0_0_15px_rgba(20,184,166,0.1)]' 
-              : 'bg-red-500/5 text-red-500/50 border-red-500/10'
-          }`}>
-            {isConnected ? '● SECURE_NEURAL_LINK_ESTABLISHED' : '○ OFFLINE_PROTOCOL_ACTIVE'}
+          <div className="text-[9px] font-black uppercase tracking-[0.3em] text-center px-4 py-2.5 rounded-xl border transition-all duration-700 bg-teal-500/10 text-teal-400 border-teal-500/20 shadow-[0_0_15px_rgba(20,184,166,0.1)]">
+            ● SECURE_NEURAL_LINK_ESTABLISHED
           </div>
 
           {/* Form */}

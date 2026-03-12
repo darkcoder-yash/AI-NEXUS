@@ -1,5 +1,6 @@
 import { z } from 'zod';
-export const toolRegistry = {
+import { integrationRegistry } from './integrations/integrationRegistry.js';
+const emergencyTools = {
     find_emergency_services: {
         name: 'find_emergency_services',
         description: 'Finds the nearest hospital, police station, or fire department based on the user\'s current situation.',
@@ -70,6 +71,79 @@ export const toolRegistry = {
         },
     },
 };
+const advancedNexusTools = {
+    simulate_outcome: {
+        name: 'simulate_outcome',
+        description: 'Simulates the potential outcome of a plan or decision, returning a probability of success and potential risks.',
+        parameters: {
+            type: 'object',
+            properties: {
+                scenario: { type: 'string', description: 'The scenario to simulate' },
+                complexity: { type: 'number', description: 'Complexity level (1-10)' },
+            },
+            required: ['scenario'],
+        },
+        schema: z.object({
+            scenario: z.string(),
+            complexity: z.number().optional().default(5),
+        }),
+        execute: async ({ scenario, complexity }) => {
+            // Mock simulation logic
+            const successRate = Math.floor(Math.random() * (100 - complexity * 5)) + 10;
+            return {
+                scenario,
+                confidence_score: successRate / 100,
+                bottlenecks: ['Resource constraints', 'Time alignment'],
+                recommendation: successRate > 70 ? 'Proceed with caution' : 'Re-evaluate strategy',
+                simulation_v4_result: 'COMPLETED'
+            };
+        },
+    },
+    analyze_cognitive_load: {
+        name: 'analyze_cognitive_load',
+        description: 'Analyzes the user\'s current tasks and schedule to estimate cognitive burden.',
+        parameters: {
+            type: 'object',
+            properties: {
+                tasks: { type: 'array', items: { type: 'string' }, description: 'List of active tasks' },
+            },
+            required: ['tasks'],
+        },
+        schema: z.object({
+            tasks: z.array(z.string()),
+        }),
+        execute: async ({ tasks }) => {
+            const load = Math.min(tasks.length * 15, 100);
+            return {
+                load_score: load,
+                status: load > 80 ? 'CRITICAL_BURNOUT_RISK' : (load > 50 ? 'ELEVATED' : 'OPTIMAL'),
+                suggested_action: load > 80 ? 'Immediate rest recommended. Delegate non-essential tasks.' : 'Maintain current pace.'
+            };
+        },
+    }
+};
+// Merge all tools
+export const toolRegistry = {
+    ...emergencyTools,
+    ...advancedNexusTools,
+};
+// Dynamically add integration tools from the integrationRegistry
+Object.entries(integrationRegistry).forEach(([name, tool]) => {
+    toolRegistry[name] = {
+        name: tool.name,
+        description: tool.description,
+        parameters: tool.schema._def.shape() ? {
+            type: 'object',
+            properties: Object.fromEntries(Object.entries(tool.schema.shape).map(([key, value]) => [
+                key,
+                { type: 'string', description: value.description || '' } // Simplified for tool definitions
+            ])),
+            required: Object.keys(tool.schema.shape).filter(k => !tool.schema.shape[k].isOptional())
+        } : { type: 'object', properties: {} },
+        schema: tool.schema,
+        execute: tool.execute
+    };
+});
 export function getGeminiToolDefinitions() {
     return Object.values(toolRegistry).map((tool) => ({
         name: tool.name,

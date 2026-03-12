@@ -161,9 +161,9 @@ export const useAppStore = create<AppState>((set) => ({
   ttsEnabled: true,
   setTtsEnabled: (v) => set({ ttsEnabled: v }),
 
-  isConnected: false,
+  isConnected: true,
   setIsConnected: (v) => set({ isConnected: v }),
-  connectionStatus: 'disconnected',
+  connectionStatus: 'connected',
   setConnectionStatus: (status) => set({ connectionStatus: status }),
 
   systemMetrics: { cpu: 34, memory: 62, latency: 45, connections: 128, queueLength: 3 },

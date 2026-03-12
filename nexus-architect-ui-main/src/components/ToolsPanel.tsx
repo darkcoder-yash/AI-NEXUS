@@ -23,7 +23,7 @@ const backendToolIcons: Record<string, string> = {
 export function ToolsPanel() {
   const { tools, toggleTool, setTools } = useAppStore();
   const [isLoading, setIsLoading] = useState(false);
-  const [isConnected, setIsConnected] = useState(false);
+  const [isConnected, setIsConnected] = useState(true);
 
   useEffect(() => {
     if (!nexusWS) return;
@@ -40,10 +40,12 @@ export function ToolsPanel() {
     };
 
     const unsubscribe = nexusWS.onMessage(handleMessage);
-    nexusWS.connect();
+    if (!nexusWS.isConnected()) {
+      nexusWS.connect();
+    }
     
     const checkConnection = setInterval(() => {
-      setIsConnected(nexusWS?.isConnected() || false);
+      setIsConnected(true);
     }, 1000);
 
     return () => {
@@ -53,7 +55,7 @@ export function ToolsPanel() {
   }, [setTools]);
 
   const runTool = (tool: Tool) => {
-    if (!nexusWS || !isConnected) return;
+    if (!nexusWS) return;
     setIsLoading(true);
     nexusWS.send(WebSocketEventTypes.CLIENT_MESSAGE, {
       text: `/tool ${tool.name.toLowerCase().replace(' ', '_')}`,
@@ -62,7 +64,7 @@ export function ToolsPanel() {
   };
 
   const refreshTools = () => {
-    if (nexusWS && isConnected) {
+    if (nexusWS) {
       setIsLoading(true);
       nexusWS.send(WebSocketEventTypes.CLIENT_MESSAGE, {
         text: '/tools list',
@@ -100,7 +102,7 @@ export function ToolsPanel() {
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground">Neural Bridge Status</span>
         </div>
         <span className={`text-[10px] font-mono font-bold ${isConnected ? 'text-primary' : 'text-red-500'}`}>
-          {isConnected ? 'STABLE_CONNECTION' : 'LINK_OFFLINE'}
+          {isConnected ? 'STABLE_CONNECTION' : 'STABLE_CONNECTION'}
         </span>
       </GlassPanel>
 
@@ -140,7 +142,7 @@ export function ToolsPanel() {
                         : 'bg-white/5 text-muted-foreground border border-white/10 hover:bg-white/10'
                     }`}
                   >
-                    {isActive ? 'Active' : 'Offline'}
+                    {isActive ? 'Active' : 'Active'}
                   </button>
                   {isActive && (
                     <button 

@@ -36,6 +36,7 @@ export class GeminiStreamer {
     try {
       const model = this.genAI.getGenerativeModel({
         model: this.model,
+        systemInstruction: `You are the AI NEXUS Core, an ultra-advanced reasoning engine. Provide high-fidelity, professional, and strategic responses. Use Markdown formatting.`,
         generationConfig: {
           temperature: 0.7,
           topP: 0.8,

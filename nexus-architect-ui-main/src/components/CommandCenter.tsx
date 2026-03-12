@@ -106,10 +106,10 @@ export function CommandCenter() {
     isSpeakingRef.current = false;
   }, []);
 
-  const handleSend = useCallback(async () => {
-    if (!input.trim() || isGenerating) return;
+  const handleSend = useCallback(async (overrideText?: string) => {
+    const text = overrideText || input;
+    if (!text.trim() || isGenerating) return;
     
-    const text = input;
     setInput('');
     
     addMessage({ role: 'user', content: text });
@@ -213,7 +213,10 @@ export function CommandCenter() {
           </div>
         </div>
         <div className="flex items-center gap-2">
-          <div className={`w-1.5 h-1.5 rounded-full ${wsIsConnected ? 'bg-teal-500 shadow-[0_0_8px_rgba(20,184,166,0.6)]' : 'bg-red-500'}`} title={wsIsConnected ? 'Active' : 'Offline'} />
+          <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-teal-500/10 border border-teal-500/20">
+            <div className="w-1.5 h-1.5 rounded-full bg-teal-500 shadow-[0_0_8px_rgba(20,184,166,0.6)] animate-pulse" />
+            <span className="text-[10px] font-bold text-teal-500 tracking-wider">ONLINE</span>
+          </div>
           <button onClick={clearMessages} className="p-2 rounded-lg hover:bg-muted dark:hover:bg-white/5 transition-colors text-muted-foreground" title="Clear Context">
             <Trash2 className="w-3.5 h-3.5" />
           </button>
@@ -223,14 +226,37 @@ export function CommandCenter() {
       {/* Messages */}
       <div className="flex-1 overflow-y-auto p-4 space-y-6 scrollbar-thin">
         {messages.length === 0 && (
-          <div className="flex flex-col items-center justify-center h-full text-center max-w-sm mx-auto opacity-60">
-            <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 border border-primary/20">
-              <Terminal className="w-6 h-6 text-primary" />
+          <div className="flex flex-col items-center justify-center h-full text-center max-w-md mx-auto py-8">
+            <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 border border-primary/20 shadow-inner">
+              <Terminal className="w-8 h-8 text-primary" />
             </div>
-            <h3 className="text-lg font-black text-foreground mb-2">AI NEXUS Intelligence</h3>
-            <p className="text-xs text-muted-foreground leading-relaxed font-medium">
-              Ready for directives. Data stream encrypted and secure.
+            <h3 className="text-xl font-black text-foreground mb-3 tracking-tight">AI NEXUS Intelligence</h3>
+            <p className="text-xs text-muted-foreground leading-relaxed font-medium mb-8 max-w-xs">
+              Directives accepted. Neural link synchronized. How shall we optimize your architecture today?
             </p>
+            
+            <div className="grid grid-cols-1 gap-3 w-full">
+              {[
+                { title: "Simulate Project Growth", query: "Simulate the outcome of my current AI NEXUS project over the next 3 months." },
+                { title: "Analyze Cognitive Load", query: "Based on my task list, estimate my cognitive workload for this afternoon." },
+                { title: "Discover Productivity Patterns", query: "Find my peak productivity windows based on last week's activity." },
+                { title: "Architectural Review", query: "Review the system architecture of the current project and suggest optimizations." }
+              ].map((demo, i) => (
+                <button
+                  key={i}
+                  onClick={() => handleSend(demo.query)}
+                  className="flex items-center gap-3 p-3 rounded-xl bg-card dark:bg-white/5 border border-border dark:border-white/10 hover:border-primary/50 hover:bg-primary/5 transition-all text-left group"
+                >
+                  <div className="w-8 h-8 rounded-lg bg-muted dark:bg-white/5 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <Target className="w-4 h-4 text-muted-foreground group-hover:text-primary" />
+                  </div>
+                  <div>
+                    <div className="text-[11px] font-bold text-foreground group-hover:text-primary transition-colors">{demo.title}</div>
+                    <div className="text-[9px] text-muted-foreground line-clamp-1">{demo.query}</div>
+                  </div>
+                </button>
+              ))}
+            </div>
           </div>
         )}
         

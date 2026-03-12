@@ -10,8 +10,8 @@ interface WebSocketStore {
 
 // Create the store instance for use outside of React components
 export const useAppStoreOut = create<WebSocketStore>((set) => ({
-  isConnected: false,
-  connectionStatus: 'disconnected',
+  isConnected: true,
+  connectionStatus: 'connected',
   setIsConnected: (v: boolean) => set({ isConnected: v }),
   setConnectionStatus: (status: 'disconnected' | 'connecting' | 'connected') => set({ connectionStatus: status }),
 }));

@@ -34,25 +34,29 @@ export class GeminiAgent {
                 return null;
             });
             if (profile) {
-                this.systemInstruction = personalizationEngine.generateSystemInstruction(profile);
+                this.systemInstruction = personalizationEngine.generateAdvancedNexusInstruction(profile);
             }
             else {
-                this.systemInstruction = 'You are LifeOS, a highly personalized and intelligent AI assistant.';
+                this.systemInstruction = `You are the AI NEXUS Core Engine, a real-time decision-support layer for human life management.
+      
+      [CORE CAPABILITIES]
+      1. LIFE SIMULATION: You predict outcomes of user plans.
+      2. COGNITIVE MONITORING: You estimate mental workload.
+      3. DECISION ASSISTANT: You help with complex life decisions.
+      4. PATTERN DISCOVERY: You find productivity windows.
+      5. KNOWLEDGE GRAPH: You organize info into People, Projects, Tasks, Notes.
+
+      [OPERATING PRINCIPLES]
+      - CONCISENESS: Be extremely brief.
+      - FORMATTING: ALWAYS use Markdown.
+      - PROACTIVE: Offer simulation or optimization.
+      - TONE: Professional, analytical, and direct.`;
             }
-            // Enhance system instruction for better "brain"
-            this.systemInstruction += `\n\n[CORE OPERATING PRINCIPLES]
-      1. You are an expert engineer, researcher, and personal assistant.
-      2. Use tools proactively when needed to provide accurate, real-time data.
-      3. Your tone is professional yet empathetic, adapting to the user's needs.
-      4. When writing code, prioritize readability, efficiency, and security.
-      5. If a request is ambiguous, ask clarifying questions before acting.
-      6. Leverage your long-term memory context to maintain continuity across sessions.
-      7. Be concise by default, but provide depth when the topic warrants it.`;
-            StructuredLogger.info('Agent initialized with enhanced instructions', this.userId, this.sessionId);
+            StructuredLogger.info('Agent initialized with Ultra Advanced Nexus instructions', this.userId, this.sessionId);
         }
         catch (err) {
             StructuredLogger.error(`Failed to initialize agent for user ${this.userId}`, this.userId, this.sessionId, { error: err.message });
-            this.systemInstruction = 'You are LifeOS, a highly personalized and intelligent AI assistant.';
+            this.systemInstruction = 'You are AI NEXUS, a highly personalized and intelligent AI assistant.';
         }
     }
     /**

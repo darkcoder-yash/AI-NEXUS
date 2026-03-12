@@ -3,7 +3,8 @@ import {
   LayoutDashboard, PlayCircle, Activity, Share2, MessageSquare, LineChart, Settings, ChevronLeft, ChevronRight 
 } from 'lucide-react';
 import { useAppStore } from '@/store/useAppStore';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { nexusWS } from '@/lib/websocket';
 
 const navItems = [
   { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
@@ -18,6 +19,13 @@ const navItems = [
 export function AppSidebar() {
   const { activePanel, setActivePanel } = useAppStore();
   const [collapsed, setCollapsed] = useState(false);
+
+  useEffect(() => {
+    if (nexusWS && !nexusWS.isConnected()) {
+      console.log('[AppSidebar] Auto-connecting to AI NEXUS...');
+      nexusWS.connect();
+    }
+  }, []);
 
   return (
     <motion.aside

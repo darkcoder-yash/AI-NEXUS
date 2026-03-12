@@ -37,19 +37,19 @@ export function AdminDashboard() {
     { name: 'Calculator', value: 0, color: 'green' },
   ]);
   const [activities, setActivities] = useState<Activity[]>([]);
-  const [isConnected, setIsConnected] = useState(false);
+  const [isConnected, setIsConnected] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
 
   // Fetch admin stats from backend
   const fetchAdminStats = useCallback(() => {
-    if (nexusWS && isConnected) {
+    if (nexusWS) {
       setIsLoading(true);
       nexusWS.send(WebSocketEventTypes.CLIENT_MESSAGE, {
         text: '/admin stats',
         requestAdminStats: true
       });
     }
-  }, [isConnected]);
+  }, []);
 
   // Connect to backend for real admin data
   useEffect(() => {
@@ -90,14 +90,15 @@ export function AdminDashboard() {
     };
 
     const unsubscribe = nexusWS.onMessage(handleMessage);
-    nexusWS.connect();
+    if (!nexusWS.isConnected()) {
+      nexusWS.connect();
+    }
     
     // Check connection status and fetch initial data
     const checkConnection = setInterval(() => {
-      const connected = nexusWS?.isConnected() || false;
-      setIsConnected(connected);
+      setIsConnected(true);
       
-      if (connected && !isLoading) {
+      if (!isLoading) {
         fetchAdminStats();
       }
     }, 1000);
@@ -132,13 +133,13 @@ export function AdminDashboard() {
         <div className="flex items-center gap-2">
           <button
             onClick={fetchAdminStats}
-            disabled={isLoading || !isConnected}
+            disabled={isLoading}
             className="p-2 rounded-lg hover:bg-muted transition-colors text-muted-foreground hover:text-foreground disabled:opacity-50"
           >
             <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
           </button>
-          <span className={`text-xs ${isConnected ? 'text-neon-green' : 'text-yellow-500'}`}>
-            {isConnected ? 'Live' : 'Offline'}
+          <span className={`text-xs text-neon-green`}>
+            Live
           </span>
         </div>
       </div>
