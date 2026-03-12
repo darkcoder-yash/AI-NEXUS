@@ -77,13 +77,19 @@ export function initializeWebSocketServer(port: number) {
 
         // --- HANDLE BINARY DATA (AUDIO) ---
         if (binaryData) {
-          StructuredLogger.info(`[WS] Received binary data, size: ${binaryData.length}`, authenticatedUserId, requestId);
+          console.log(`[WS] Received binary audio data, size: ${binaryData.length} bytes`);
           const session = sessions.get(sessionId);
           if (session?.agent) {
+            console.log(`[WS] Routing to agent ${sessionId} for transcription...`);
             const transcription = await session.agent.transcribeAudio(binaryData);
             if (transcription) {
+              console.log(`[WS] Transcription received: "${transcription}"`);
               sendMessage(WebSocketEventTypes.VOICE_TRANSCRIPTION, { text: transcription });
+            } else {
+              console.warn(`[WS] Agent returned empty transcription`);
             }
+          } else {
+            console.error(`[WS] No agent found for session ${sessionId} to handle audio`);
           }
           return;
         }

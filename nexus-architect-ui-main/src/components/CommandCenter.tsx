@@ -41,9 +41,11 @@ export function CommandCenter() {
       mediaStreamRef.current = stream;
       audioChunksRef.current = [];
       
-      const mediaRecorder = new MediaRecorder(stream, {
-        mimeType: 'audio/webm;codecs=opus'
-      });
+      const mimeType = MediaRecorder.isTypeSupported('audio/webm;codecs=opus') 
+        ? 'audio/webm;codecs=opus' 
+        : 'audio/webm';
+        
+      const mediaRecorder = new MediaRecorder(stream, { mimeType });
       
       mediaRecorder.ondataavailable = (event) => {
         if (event.data.size > 0) audioChunksRef.current.push(event.data);
@@ -51,7 +53,7 @@ export function CommandCenter() {
       
       mediaRecorder.onstop = async () => {
         if (audioChunksRef.current.length > 0 && nexusWS && isConnected) {
-          const audioBlob = new Blob(audioChunksRef.current, { type: 'audio/webm;codecs=opus' });
+          const audioBlob = new Blob(audioChunksRef.current, { type: mimeType });
           const reader = new FileReader();
           reader.onloadend = () => {
             const arrayBuffer = reader.result as ArrayBuffer;

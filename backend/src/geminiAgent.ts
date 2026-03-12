@@ -75,11 +75,11 @@ export class GeminiAgent {
       const result = await model.generateContent([
         {
           inlineData: {
-            mimeType: 'audio/webm;codecs=opus',
+            mimeType: 'audio/webm',
             data: data.toString('base64')
           }
         },
-        { text: 'Transcribe this audio exactly. If there is no speech, return an empty string. Output ONLY the transcription.' }
+        { text: 'Please transcribe the following audio in English. If you cannot hear anything or there is no speech, respond with an empty string. If you hear speech, provide ONLY the transcript without any preamble.' }
       ]);
       
       const transcription = result.response.text().trim();
