@@ -1,10 +1,17 @@
 import { createClient } from '@supabase/supabase-js';
 
+// Diagnostic log (Safe for production - only checks existence)
+console.log("Supabase Connection Check:", {
+  urlFound: !!import.meta.env.VITE_SUPABASE_URL,
+  keyFound: !!import.meta.env.VITE_SUPABASE_ANON_KEY,
+  envMode: import.meta.env.MODE
+});
+
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || "";
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || "";
 
 if (!supabaseUrl || !supabaseAnonKey) {
-  console.warn("Supabase credentials missing. Check your .env file in your Netlify Environment Variables.");
+  console.warn("CRITICAL: Supabase credentials missing. Ensure VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY are set in Netlify Environment Variables and a new build is triggered.");
 }
 
 // Only initialize if we have both, otherwise we export a mock client to prevent a fatal crash
@@ -13,8 +20,8 @@ export const supabase = (supabaseUrl && supabaseAnonKey)
   : ({
       auth: {
         onAuthStateChange: () => ({ data: { subscription: { unsubscribe: () => {} } } }),
-        signInWithPassword: async () => ({ data: {}, error: new Error("Supabase not configured") }),
-        signUp: async () => ({ data: {}, error: new Error("Supabase not configured") }),
+        signInWithPassword: async () => ({ data: {}, error: new Error("Supabase not configured. Please check Netlify Environment Variables.") }),
+        signUp: async () => ({ data: {}, error: new Error("Supabase not configured. Please check Netlify Environment Variables.") }),
         signOut: async () => ({ error: null }),
         getSession: async () => ({ data: { session: null }, error: null }),
         getUser: async () => ({ data: { user: null }, error: null }),
