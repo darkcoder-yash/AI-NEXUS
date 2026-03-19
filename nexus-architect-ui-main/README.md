@@ -8,7 +8,7 @@ AI NEXUS is an advanced AI-powered personal operating system designed to enhance
 - **Cognitive Load Monitor**: Track mental workload and prevent burnout.
 - **Life Simulation Engine**: Predict outcomes and optimize your daily schedule.
 - **Knowledge Graph**: Map connections across your life data.
-- **NOVA OS**: A living cognitive field interface for organic AI interaction.
+- **NEXUS AI**: A living cognitive field interface for organic AI interaction.
 - **Voice Intelligence**: Hands-free neural interaction.
 
 ## Tech Stack
