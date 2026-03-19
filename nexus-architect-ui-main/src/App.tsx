@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 import AiNexusLanding from "./components/AiNexusLanding";
+import { NovaOS } from "./nova-os/NovaOS";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,7 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<AiNexusLanding />} />
+            <Route path="/nova" element={<NovaOS />} />
             <Route path="/login" element={<Login />} />
             <Route path="/nexus" element={<Index />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

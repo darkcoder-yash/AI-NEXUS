@@ -1,15 +1,22 @@
 import { motion } from 'framer-motion';
 import { Share2, Search, Plus, Filter, Database, Link as LinkIcon, User, Briefcase, FileText } from 'lucide-react';
 import { GlassPanel } from './GlassPanel';
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei';
+import { SpatialGraph3D, GraphNode } from './SpatialGraph3D';
+import { useQuery } from '@tanstack/react-query';
 
 export function KnowledgeGraph() {
-  const nodes = [
-    { id: 1, label: 'Alex Chen', type: 'Person', connections: 3 },
-    { id: 2, label: 'AI NEXUS Project', type: 'Project', connections: 5 },
-    { id: 3, label: 'Q1 Review', type: 'Meeting', connections: 2 },
-    { id: 4, label: 'Architecture.pdf', type: 'Document', connections: 1 },
-    { id: 5, label: 'Database Design', type: 'Task', connections: 2 },
-  ];
+  const { data: nodes = [], isLoading } = useQuery<GraphNode[]>({
+    queryKey: ['knowledgeGraphNodes'],
+    queryFn: async () => {
+      const res = await fetch('http://localhost:4000/api/knowledge/graph');
+      const json = await res.json();
+      return json.nodes;
+    }
+  });
+
+  if (isLoading) return <div className="p-8 text-teal-400 font-bold uppercase tracking-widest text-xs animate-pulse">Initializing Neural Graph...</div>;
 
   return (
     <div className="p-8 space-y-8 overflow-y-auto h-full scrollbar-thin bg-[#0f172a]/50">
@@ -30,7 +37,7 @@ export function KnowledgeGraph() {
 
       {/* Graph Visualizer Placeholder */}
       <GlassPanel className="h-[400px] border-white/10 relative overflow-hidden bg-black/40 group">
-        <div className="absolute inset-0 opacity-20 pointer-events-none">
+        <div className="absolute inset-0 opacity-20 pointer-events-none z-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-teal-500/20 via-transparent to-transparent" />
           <svg className="w-full h-full">
             <defs>
@@ -42,49 +49,21 @@ export function KnowledgeGraph() {
           </svg>
         </div>
 
-        <div className="absolute inset-0 flex items-center justify-center">
-          <motion.div 
-            animate={{ rotate: 360 }}
-            transition={{ duration: 100, repeat: Infinity, ease: "linear" }}
-            className="relative w-64 h-64 border border-teal-500/10 rounded-full flex items-center justify-center"
-          >
-            <div className="absolute w-2 h-2 bg-teal-400 rounded-full top-0 left-1/2 -translate-x-1/2 shadow-[0_0_10px_rgba(20,184,166,0.8)]" />
-            <div className="w-32 h-32 border border-teal-500/20 rounded-full flex items-center justify-center animate-pulse">
-              <Share2 className="w-12 h-12 text-teal-400 opacity-50" />
-            </div>
-          </motion.div>
+        <div className="absolute inset-0 z-10 cursor-move">
+          <Canvas camera={{ position: [0, 0, 15], fov: 60 }}>
+            <ambientLight intensity={0.5} />
+            <pointLight position={[10, 10, 10]} intensity={1} />
+            <SpatialGraph3D nodes={nodes} />
+            <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} autoRotate={false} />
+          </Canvas>
         </div>
 
-        {/* Mock Nodes */}
-        <motion.div 
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          className="absolute top-1/4 left-1/3 p-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md cursor-pointer hover:border-teal-500/50 transition-all"
-        >
-          <div className="flex items-center gap-2">
-            <Briefcase className="w-3 h-3 text-teal-400" />
-            <span className="text-[10px] font-bold text-white uppercase tracking-widest">AI_NEXUS_Project</span>
-          </div>
-        </motion.div>
-
-        <motion.div 
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ delay: 0.2 }}
-          className="absolute bottom-1/3 right-1/4 p-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md cursor-pointer hover:border-teal-500/50 transition-all"
-        >
-          <div className="flex items-center gap-2">
-            <User className="w-3 h-3 text-blue-400" />
-            <span className="text-[10px] font-bold text-white uppercase tracking-widest">Alex_Chen</span>
-          </div>
-        </motion.div>
-
-        <div className="absolute bottom-6 left-6 p-4 rounded-xl bg-black/60 border border-white/10 backdrop-blur-xl">
+        <div className="absolute bottom-6 left-6 p-4 rounded-xl bg-black/60 border border-white/10 backdrop-blur-xl z-20 pointer-events-none">
           <p className="text-[10px] font-bold text-teal-400 uppercase tracking-[0.2em] mb-2">Graph Stats</p>
           <div className="space-y-1">
-            <p className="text-xs text-white font-mono">NODES: 1,242</p>
-            <p className="text-xs text-white font-mono">EDGES: 4,891</p>
-            <p className="text-xs text-white font-mono">DENSITY: 0.12</p>
+            <p className="text-xs text-white font-mono">NODES: {nodes.length}</p>
+            <p className="text-xs text-white font-mono">EDGES: ~{nodes.length * 2}</p>
+            <p className="text-xs text-white font-mono">DENSITY: 0.24</p>
           </div>
         </div>
       </GlassPanel>

@@ -38,9 +38,12 @@ app.get('/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
-// Admin Routes
-app.use('/admin', adminRouter);
+import { adminRouter } from './routes/admin.js';
+import { knowledgeRouter } from './routes/knowledge.js';
 
+// Global Error Handler (MUST BE LAST)
+app.use('/admin', adminRouter);
+app.use('/api/knowledge', knowledgeRouter);
 // Global Error Handler (MUST BE LAST)
 app.use(globalErrorHandler);
 
