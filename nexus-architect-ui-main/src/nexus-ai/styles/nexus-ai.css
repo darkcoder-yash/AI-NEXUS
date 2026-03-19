@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400&display=swap');
 
 :root {
-  --nova-bg: #050505;
-  --nova-deep: #111111;
-  --nova-accent-blue: #00a3ff;
-  --nova-accent-violet: #8a2be2;
-  --nova-accent-teal: #00ffd1;
-  --nova-accent-green: #39ff14;
-  --nova-accent-red: #ff3131;
+  --nexus-bg: #050505;
+  --nexus-deep: #111111;
+  --nexus-accent-blue: #00a3ff;
+  --nexus-accent-violet: #8a2be2;
+  --nexus-accent-teal: #00ffd1;
+  --nexus-accent-green: #39ff14;
+  --nexus-accent-red: #ff3131;
 }
 
-.nova-os-root {
-  background: var(--nova-bg);
+.nexus-os-root {
+  background: var(--nexus-bg);
   color: #ffffff;
   font-family: 'Outfit', sans-serif;
   height: 100vh;
@@ -20,11 +20,11 @@
   position: relative;
 }
 
-.nova-blur-fade-in {
-  animation: novaBlurFadeIn 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+.nexus-blur-fade-in {
+  animation: nexusBlurFadeIn 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-@keyframes novaBlurFadeIn {
+@keyframes nexusBlurFadeIn {
   0% {
     opacity: 0;
     filter: blur(20px);
@@ -37,21 +37,21 @@
   }
 }
 
-.nova-progressive-text span {
+.nexus-progressive-text span {
   display: inline-block;
   opacity: 0;
   filter: blur(5px);
-  animation: novaLetterAppear 0.5s forwards;
+  animation: nexusLetterAppear 0.5s forwards;
 }
 
-@keyframes novaLetterAppear {
+@keyframes nexusLetterAppear {
   to {
     opacity: 1;
     filter: blur(0px);
   }
 }
 
-.nova-fluid-input {
+.nexus-fluid-input {
   background: transparent;
   border: none;
   outline: none;
@@ -65,16 +65,16 @@
   transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.nova-fluid-input::placeholder {
+.nexus-fluid-input::placeholder {
   color: rgba(255, 255, 255, 0.2);
 }
 
-.nova-soft-glow {
+.nexus-soft-glow {
   box-shadow: 0 0 40px rgba(0, 163, 255, 0.1);
   border-radius: 50%;
 }
 
-.nova-noise-overlay {
+.nexus-noise-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -86,7 +86,7 @@
   z-index: 100;
 }
 
-.nova-overlay-panel {
+.nexus-overlay-panel {
   background: rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(20px);
   border-radius: 2rem;
@@ -94,7 +94,7 @@
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.nova-state-indicator {
+.nexus-state-indicator {
   position: absolute;
   top: 2rem;
   right: 2rem;

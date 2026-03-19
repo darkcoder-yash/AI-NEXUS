@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { CognitiveField } from './components/CognitiveField';
 import { ThoughtBlob } from './components/ThoughtBlob';
 import { FluidInput } from './components/FluidInput';
-import { useNovaState, NovaState } from './hooks/useNovaState';
+import { useNexusState, NexusState } from './hooks/useNexusState';
 import { Canvas } from '@react-three/fiber';
-import './styles/nova-os.css';
+import './styles/nexus-ai.css';
 
-export const NovaOS: React.FC = () => {
-  const { state, transitionTo } = useNovaState();
+export const NexusAI: React.FC = () => {
+  const { state, transitionTo } = useNexusState();
   const [isInitialized, setIsInitialized] = useState(false);
   const [history, setHistory] = useState<string[]>([]);
 
@@ -28,11 +28,11 @@ export const NovaOS: React.FC = () => {
   }, [transitionTo]);
 
   return (
-    <div className="nova-os-root">
+    <div className="nexus-ai-root">
       <CognitiveField />
 
       {/* State Indicator */}
-      <div className="nova-state-indicator">
+      <div className="nexus-state-indicator">
         {state}
       </div>
 
@@ -65,7 +65,7 @@ export const NovaOS: React.FC = () => {
               className="absolute text-center"
             >
               <h1 className="text-4xl font-light tracking-[0.5em] text-white opacity-40 uppercase">
-                Nova OS
+                Nexus AI
               </h1>
               <p className="text-sm tracking-widest text-white opacity-20 mt-4 uppercase">
                 Cognitive Field Active
@@ -81,7 +81,7 @@ export const NovaOS: React.FC = () => {
             <motion.div
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              className="absolute top-1/2 right-10 -translate-y-1/2 w-64 nova-overlay-panel"
+              className="absolute top-1/2 right-10 -translate-y-1/2 w-64 nexus-overlay-panel"
             >
               <div className="text-[10px] uppercase tracking-widest opacity-30 mb-4">Memory Field</div>
               <div className="space-y-4 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
@@ -102,7 +102,7 @@ export const NovaOS: React.FC = () => {
             <motion.div
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              className="absolute top-1/2 left-10 -translate-y-1/2 w-48 nova-overlay-panel"
+              className="absolute top-1/2 left-10 -translate-y-1/2 w-48 nexus-overlay-panel"
             >
               <div className="text-[10px] uppercase tracking-widest opacity-30 mb-4">Focus Zones</div>
               <div className="space-y-6">

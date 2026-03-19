@@ -33,7 +33,7 @@ export const FluidInput: React.FC<FluidInputProps> = ({ onSubmit, isExpanded }) 
           value={value}
           onChange={(e) => setValue(e.target.value)}
           onKeyDown={handleKeyDown}
-          className="nova-fluid-input"
+          className="nexus-fluid-input"
           placeholder="Intent..."
           autoFocus
         />

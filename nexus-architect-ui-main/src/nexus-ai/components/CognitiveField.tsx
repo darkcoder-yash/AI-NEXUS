@@ -69,7 +69,7 @@ export const CognitiveField: React.FC = () => {
       <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
         <BackgroundPlane />
       </Canvas>
-      <div className="nova-noise-overlay" />
+      <div className="nexus-noise-overlay" />
     </div>
   );
 };

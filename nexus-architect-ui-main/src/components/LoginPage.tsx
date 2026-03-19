@@ -1,11 +1,15 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Eye, EyeOff, ArrowRight, Zap, Loader2, Terminal, ShieldAlert, Cpu } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Eye, EyeOff, ArrowRight, Zap, Loader2, ShieldAlert, UserPlus, LogIn } from 'lucide-react';
 import { useAuthStore } from '@/store/useAuthStore';
 import { nexusWS, WebSocketEventTypes, useAppStoreOut } from '@/lib/websocket';
+import { supabase } from '@/lib/supabase';
+import { useNavigate } from 'react-router-dom';
 
 export function LoginPage() {
-  const { login, loginDemo } = useAuthStore();
+  const { loginDemo, isAuthenticated } = useAuthStore();
+  const navigate = useNavigate();
+  const [isSignUp, setIsSignUp] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -15,24 +19,45 @@ export function LoginPage() {
   const isConnected = useAppStoreOut((state) => state.isConnected);
 
   useEffect(() => {
+    if (isAuthenticated) {
+      navigate('/nexus');
+    }
+  }, [isAuthenticated, navigate]);
+
+  useEffect(() => {
     if (!nexusWS) return;
     if (!nexusWS.isConnected()) {
       nexusWS.connect();
     }
   }, []);
 
-  const handleLogin = async (e: React.FormEvent) => {
+  const handleAuth = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
     setLoading(true);
 
-    if (nexusWS && isConnected) {
-      nexusWS.send(WebSocketEventTypes.AUTH, { email, password });
-    }
-
-    const ok = login(email, password);
-    if (!ok) {
-      setError('Neural ID verification failed. Access denied.');
+    try {
+      if (isSignUp) {
+        const { error: signUpError } = await supabase.auth.signUp({
+          email,
+          password,
+        });
+        if (signUpError) throw signUpError;
+        setError('Verification email sent. Please check your inbox.');
+      } else {
+        const { error: signInError } = await supabase.auth.signInWithPassword({
+          email,
+          password,
+        });
+        if (signInError) throw signInError;
+        
+        if (nexusWS && isConnected) {
+          nexusWS.send(WebSocketEventTypes.AUTH, { email, password });
+        }
+      }
+    } catch (err: any) {
+      setError(err.message || 'Authentication failed.');
+    } finally {
       setLoading(false);
     }
   };
@@ -68,23 +93,34 @@ export function LoginPage() {
               transition={{ repeat: Infinity, duration: 8, ease: "linear" }}
               className="w-20 h-20 mx-auto rounded-3xl bg-teal-500/10 flex items-center justify-center border border-teal-500/20 shadow-2xl shadow-teal-500/5 overflow-hidden"
             >
-              <img src="/logo.png" alt="AI Nexus Logo" className="w-12 h-12 object-contain logo-glow" onError={(e) => e.currentTarget.style.display = 'none'} />
+              <img src="/logo.png" alt="Nexus AI Logo" className="w-12 h-12 object-contain logo-glow" onError={(e) => e.currentTarget.style.display = 'none'} />
             </motion.div>
             <div>
-              <h1 className="text-4xl font-black tracking-tighter text-white">AI <span className="text-teal-400">NEXUS</span></h1>
+              <h1 className="text-4xl font-black tracking-tighter text-white">NEXUS <span className="text-teal-400">AI</span></h1>
               <p className="text-[10px] text-teal-500 uppercase tracking-[0.5em] font-bold mt-3">Quantum Operating Layer</p>
             </div>
           </div>
 
           <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent my-10" />
 
-          {/* Connection Status */}
-          <div className="text-[9px] font-black uppercase tracking-[0.3em] text-center px-4 py-2.5 rounded-xl border transition-all duration-700 bg-teal-500/10 text-teal-400 border-teal-500/20 shadow-[0_0_15px_rgba(20,184,166,0.1)]">
-            ● SECURE_NEURAL_LINK_ESTABLISHED
+          {/* Mode Toggle */}
+          <div className="flex p-1 bg-white/5 rounded-2xl mb-8">
+            <button
+              onClick={() => setIsSignUp(false)}
+              className={`flex-1 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all ${!isSignUp ? 'bg-teal-500 text-teal-950' : 'text-slate-500 hover:text-slate-300'}`}
+            >
+              Sign_In
+            </button>
+            <button
+              onClick={() => setIsSignUp(true)}
+              className={`flex-1 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all ${isSignUp ? 'bg-teal-500 text-teal-950' : 'text-slate-500 hover:text-slate-300'}`}
+            >
+              Sign_Up
+            </button>
           </div>
 
           {/* Form */}
-          <form onSubmit={handleLogin} className="space-y-6 mt-10">
+          <form onSubmit={handleAuth} className="space-y-6">
             <div className="space-y-3">
               <label className="text-[10px] text-slate-500 uppercase tracking-[0.2em] font-black ml-1">Authentication_ID</label>
               <input
@@ -114,8 +150,8 @@ export function LoginPage() {
             </div>
 
             {error && (
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center justify-center gap-2 text-red-500 font-bold text-[10px] uppercase tracking-widest">
-                <ShieldAlert className="w-3 h-3" />
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center justify-center gap-2 text-red-500 font-bold text-[10px] uppercase tracking-widest text-center">
+                <ShieldAlert className="w-3 h-3 flex-shrink-0" />
                 <span>{error}</span>
               </motion.div>
             )}
@@ -128,7 +164,10 @@ export function LoginPage() {
               {loading ? (
                 <Loader2 className="w-5 h-5 animate-spin" />
               ) : (
-                <>Initialize_Core <ArrowRight className="w-5 h-5" /></>
+                <>
+                  {isSignUp ? 'Initialize_Account' : 'Initialize_Core'}
+                  {isSignUp ? <UserPlus className="w-5 h-5" /> : <ArrowRight className="w-5 h-5" />}
+                </>
               )}
             </button>
           </form>

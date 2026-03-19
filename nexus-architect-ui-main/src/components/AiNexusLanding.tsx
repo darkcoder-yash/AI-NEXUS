@@ -73,16 +73,16 @@ export default function AiNexusLanding() {
 
           <nav className="hidden lg:flex gap-16">
             <motion.a 
-              href="/nova"
+              href="/nexus-ai"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               className="nav-link"
               onClick={(e) => {
                 e.preventDefault();
-                navigate('/nova');
+                navigate('/nexus-ai');
               }}
             >
-              Nova OS
+              Nexus AI
             </motion.a>
             {["Architecture", "Neural Link", "Protocol"].map((link, i) => (
               <motion.a 

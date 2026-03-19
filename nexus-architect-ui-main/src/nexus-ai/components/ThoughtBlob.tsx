@@ -1,10 +1,10 @@
 import React, { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
-import { NovaState } from '../hooks/useNovaState';
+import { NexusState } from '../hooks/useNexusState';
 
 interface ThoughtBlobProps {
-  state: NovaState;
+  state: NexusState;
 }
 
 export const ThoughtBlob: React.FC<ThoughtBlobProps> = ({ state }) => {
