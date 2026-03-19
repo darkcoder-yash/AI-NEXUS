@@ -10,7 +10,7 @@
   --nexus-accent-red: #ff3131;
 }
 
-.nexus-os-root {
+.nexus-ai-root {
   background: var(--nexus-bg);
   color: #ffffff;
   font-family: 'Outfit', sans-serif;
@@ -21,14 +21,14 @@
 }
 
 .nexus-blur-fade-in {
-  animation: nexusBlurFadeIn 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: nexusBlurFadeIn 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 @keyframes nexusBlurFadeIn {
   0% {
     opacity: 0;
-    filter: blur(20px);
-    transform: scale(0.98);
+    filter: blur(30px);
+    transform: scale(0.95);
   }
   100% {
     opacity: 1;
@@ -39,16 +39,6 @@
 
 .nexus-progressive-text span {
   display: inline-block;
-  opacity: 0;
-  filter: blur(5px);
-  animation: nexusLetterAppear 0.5s forwards;
-}
-
-@keyframes nexusLetterAppear {
-  to {
-    opacity: 1;
-    filter: blur(0px);
-  }
 }
 
 .nexus-fluid-input {
@@ -57,21 +47,22 @@
   outline: none;
   color: #fff;
   font-size: 2.5rem;
-  font-weight: 300;
-  letter-spacing: 0.1em;
+  font-weight: 100;
+  letter-spacing: 0.2em;
   text-align: center;
   width: 100%;
-  max-width: 800px;
-  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  max-width: 900px;
+  transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  opacity: 0.6;
+}
+
+.nexus-fluid-input:focus {
+  opacity: 1;
+  letter-spacing: 0.3em;
 }
 
 .nexus-fluid-input::placeholder {
-  color: rgba(255, 255, 255, 0.2);
-}
-
-.nexus-soft-glow {
-  box-shadow: 0 0 40px rgba(0, 163, 255, 0.1);
-  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.1);
 }
 
 .nexus-noise-overlay {
@@ -81,25 +72,54 @@
   width: 100%;
   height: 100%;
   pointer-events: none;
-  opacity: 0.05;
+  opacity: 0.03;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   z-index: 100;
 }
 
-.nexus-overlay-panel {
-  background: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(20px);
-  border-radius: 2rem;
-  padding: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+.nexus-overlay-drifting {
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(40px);
+  border-radius: 4rem;
+  padding: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  box-shadow: 0 0 100px rgba(0,0,0,0.5);
+  animation: nexusDrift 20s ease-in-out infinite alternate;
+}
+
+@keyframes nexusDrift {
+  from { transform: translate(0, 0) rotate(0deg); }
+  to { transform: translate(10px, 15px) rotate(1deg); }
 }
 
 .nexus-state-indicator {
   position: absolute;
-  top: 2rem;
-  right: 2rem;
-  font-size: 0.8rem;
+  top: 3rem;
+  right: 4rem;
+  font-size: 0.7rem;
+  font-weight: 100;
   text-transform: uppercase;
-  letter-spacing: 0.3em;
-  opacity: 0.5;
+  letter-spacing: 0.5em;
+  opacity: 0.3;
+  mix-blend-mode: overlay;
+}
+
+.nexus-breathing {
+  animation: nexusBreathing 8s ease-in-out infinite;
+}
+
+@keyframes nexusBreathing {
+  0%, 100% { transform: scale(1); opacity: 0.4; }
+  50% { transform: scale(1.05); opacity: 0.6; }
+}
+
+.nexus-dissolve {
+  mask-image: radial-gradient(circle, black 50%, transparent 100%);
+  mask-size: 200% 200%;
+  animation: nexusDissolve 2s ease-out forwards;
+}
+
+@keyframes nexusDissolve {
+  from { mask-position: 0% 0%; opacity: 1; }
+  to { mask-position: 100% 100%; opacity: 0; }
 }
