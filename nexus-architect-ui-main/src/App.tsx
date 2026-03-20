@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 import AiNexusLanding from "./components/AiNexusLanding";
 import { NexusAI } from "./nexus-ai/NexusAI";
+import NovaOS from "./pages/NovaOS";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
             <Route path="/nexus-ai" element={<NexusAI />} />
             <Route path="/login" element={<Login />} />
             <Route path="/nexus" element={<Index />} />
+            <Route path="/nova" element={<NovaOS />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
