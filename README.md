@@ -234,6 +234,36 @@ AI Nexus currently includes:
 
 ---
 
+## 🚀 Getting Started
+
+### 1. Clone the repository
+git clone https://github.com/darkcoder-yash/AI-NEXUS
+
+### 2. Install dependencies
+cd frontend
+npm install
+
+cd ../backend
+npm install
+
+### 3. Run the project
+# frontend
+npm run dev
+
+# backend
+npm start
+
+## 🖼️ Preview
+
+<img width="1919" height="977" alt="image" src="https://github.com/user-attachments/assets/e2a979d2-252e-4df5-83ef-eacd20a45104" />
+
+<img width="1919" height="983" alt="image" src="https://github.com/user-attachments/assets/6e9136cd-fde6-4c10-baf5-ee418b64d711" />
+
+<img width="1919" height="980" alt="image" src="https://github.com/user-attachments/assets/0b3f60a9-f4eb-4c25-aa93-f3db29cfd5b7" />
+
+<img width="1919" height="987" alt="image" src="https://github.com/user-attachments/assets/90e6fbf6-88df-4af4-a64f-bbfb76839ed2" />
+
+
 ## 🛣️ Roadmap
 
 ### Phase 1 — Foundation (Completed / Ongoing)
@@ -347,14 +377,15 @@ but interact with intelligence that guides it.
 
 ---
 
-# 🧠 Why this works
+## ⚡ Example Workflow
 
-This README now:
-- ✅ Matches your UI perfectly  
-- ✅ Sounds serious (not hype-only)  
-- ✅ Admits early-stage (builds trust)  
-- ✅ Shows big vision (important for Claude)  
-- ✅ Positions you as a **builder, not a student**
+User inputs a set of tasks →  
+AI Nexus analyzes workload →  
+Simulation engine predicts outcomes →  
+System recommends optimized execution plan  
 
----
+Example Output:
+- Success Probability: 82%
+- Risk: Moderate
+- Suggestion: Prioritize high-focus tasks earlier
 
