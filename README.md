@@ -27,29 +27,8 @@ Instead of reacting to prompts, AI Nexus:
 AI Nexus is built as a **full-stack, modular AI system**:
 
 
-AI NEXUS
-│
-├── 🧠 Agent Layer (AI Core)
-│ ├── Gemini Agent (LLM reasoning)
-│ ├── Planning & Execution Engine
-│ └── Multi-step Action System
-│
-├── 🧩 Memory System
-│ ├── Vector Embeddings
-│ └── Long-term Context Retrieval
-│
-├── ⚡ Real-Time Layer
-│ ├── WebSocket Streaming
-│ └── Live Interaction Engine
-│
-├── 🔗 Integration Layer
-│ ├── Calendar / Gmail / File System
-│ └── External Tool Interfaces
-│
-└── 🖥️ Cognitive Interface (Frontend)
-├── 3D UI (React Three Fiber)
-├── Command Center Dashboard
-└── State Management (Zustand)
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/58e2492b-98b4-4eac-812c-684f69320934" />
+
 
 
 ---
