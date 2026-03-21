@@ -235,8 +235,9 @@ We welcome:
 - Performance optimizations  
 - Integration modules  
 
-```bash
+
 git clone https://github.com/darkcoder-yash/AI-NEXUS
+
 
 ## 🖼️ Preview
 
