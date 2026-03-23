@@ -1004,3 +1004,622 @@
 {"timestamp":"2026-03-19T06:04:20.475Z","level":"info","requestId":"f5cfe465-ff63-49b5-871c-62e42fb47535","message":"[WS] Incoming Message [4e669533-5d3b-4d01-8d7b-5e0ea80be922]:","metadata":{"type":"AUTH"}}
 {"timestamp":"2026-03-19T06:04:32.066Z","level":"info","requestId":"4e669533-5d3b-4d01-8d7b-5e0ea80be922","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
 {"timestamp":"2026-03-19T06:06:43.396Z","level":"info","requestId":"7dc84ef8-e3f2-4cd7-bc57-23d57c23d7d7","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T06:37:14.856Z","level":"info","requestId":"21aa6b07-6134-4125-b9e5-67cb9b2e5033","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T06:37:14.875Z","level":"info","requestId":"7dfd3a1d-cd36-43ca-abc1-af73c48104d4","message":"[WS] Incoming Message [21aa6b07-6134-4125-b9e5-67cb9b2e5033]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T06:37:46.302Z","level":"info","requestId":"c10a8f86-313d-481e-b54e-e879c988a0fd","userId":"test-user-id","message":"[WS] Incoming Message [21aa6b07-6134-4125-b9e5-67cb9b2e5033]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T06:43:49.135Z","level":"info","requestId":"2ad0cd53-7a65-4a6d-aabf-de450b5653f9","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T06:43:49.177Z","level":"info","requestId":"a5cb7eca-5f46-4951-9002-03b2fe5778c0","message":"[WS] Incoming Message [2ad0cd53-7a65-4a6d-aabf-de450b5653f9]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T06:43:55.487Z","level":"info","requestId":"2ad0cd53-7a65-4a6d-aabf-de450b5653f9","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T06:48:19.453Z","level":"info","requestId":"21aa6b07-6134-4125-b9e5-67cb9b2e5033","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T06:48:24.540Z","level":"info","requestId":"6da17e31-b2d7-45aa-99ff-099d72fecf41","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T06:48:24.560Z","level":"info","requestId":"e3f74ae2-5295-485d-97de-bb79860567bf","message":"[WS] Incoming Message [6da17e31-b2d7-45aa-99ff-099d72fecf41]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T06:49:25.266Z","level":"info","requestId":"6da17e31-b2d7-45aa-99ff-099d72fecf41","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T06:49:27.988Z","level":"info","requestId":"ffdf428a-6cf4-431f-9772-1a40ebf8aa76","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T06:49:28.223Z","level":"info","requestId":"6e7a68c6-5ca4-4de7-bdd0-344a543d80bf","message":"[WS] Incoming Message [ffdf428a-6cf4-431f-9772-1a40ebf8aa76]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T06:50:32.337Z","level":"info","requestId":"ffdf428a-6cf4-431f-9772-1a40ebf8aa76","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T06:50:34.650Z","level":"info","requestId":"f0b6efbf-e72f-4307-822c-6b8a648ef98f","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T06:50:34.652Z","level":"info","requestId":"e2b98cae-3757-4fab-a4d4-1778dad8af26","message":"[WS] Incoming Message [f0b6efbf-e72f-4307-822c-6b8a648ef98f]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T06:51:36.805Z","level":"info","requestId":"f0b6efbf-e72f-4307-822c-6b8a648ef98f","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T07:08:57.504Z","level":"info","requestId":"713d2be6-4805-439f-877a-bb979c774b57","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T07:08:57.512Z","level":"info","requestId":"94926239-438b-4a4f-8869-503627c86425","message":"[WS] Incoming Message [713d2be6-4805-439f-877a-bb979c774b57]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T07:08:59.652Z","level":"info","requestId":"713d2be6-4805-439f-877a-bb979c774b57","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T08:23:09.594Z","level":"info","requestId":"590cf589-2db1-4786-b9e8-ca076396e578","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T08:23:10.376Z","level":"info","requestId":"a9ca111f-a50c-4703-a67f-a80d87a89b90","message":"[WS] Incoming Message [590cf589-2db1-4786-b9e8-ca076396e578]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T08:23:10.963Z","level":"info","requestId":"590cf589-2db1-4786-b9e8-ca076396e578","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T08:23:17.501Z","level":"info","requestId":"56f9ef28-0149-42f0-9bd2-12c827f8b8a5","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T08:23:17.593Z","level":"info","requestId":"8c635e29-6654-4aa1-be3e-6e43e7a2fb21","message":"[WS] Incoming Message [56f9ef28-0149-42f0-9bd2-12c827f8b8a5]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T08:26:20.094Z","level":"info","requestId":"56f9ef28-0149-42f0-9bd2-12c827f8b8a5","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T08:26:21.326Z","level":"info","requestId":"7cb8d209-b574-412c-9666-d08886a10eb2","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T08:26:21.329Z","level":"info","requestId":"ec943dc1-4044-4162-8317-ee5647e4f0de","message":"[WS] Incoming Message [7cb8d209-b574-412c-9666-d08886a10eb2]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T08:39:51.214Z","level":"info","requestId":"7cb8d209-b574-412c-9666-d08886a10eb2","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T08:55:20.425Z","level":"info","requestId":"d624bd34-6b93-4195-8ccd-7426937e2740","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T08:55:20.742Z","level":"info","requestId":"07f930bc-96fd-4ae0-9732-523b1155b680","message":"[WS] Incoming Message [d624bd34-6b93-4195-8ccd-7426937e2740]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T09:22:14.336Z","level":"info","requestId":"d624bd34-6b93-4195-8ccd-7426937e2740","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T09:54:09.213Z","level":"info","requestId":"040d8247-eaec-4257-88c2-c84260aaa042","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T09:54:09.223Z","level":"info","requestId":"fa07f286-9237-4d77-8bbe-a0b432ff5752","message":"[WS] Incoming Message [040d8247-eaec-4257-88c2-c84260aaa042]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T09:54:36.854Z","level":"info","requestId":"040d8247-eaec-4257-88c2-c84260aaa042","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T11:52:57.562Z","level":"info","requestId":"5447cead-abcf-45de-94c9-dd2c66c056aa","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T11:52:58.670Z","level":"info","requestId":"c7c33622-b7d8-48c3-bdfa-7156d43ee6b4","message":"[WS] Incoming Message [5447cead-abcf-45de-94c9-dd2c66c056aa]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T11:53:01.744Z","level":"info","requestId":"5447cead-abcf-45de-94c9-dd2c66c056aa","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T11:53:03.141Z","level":"info","requestId":"2aba44ec-17a4-4210-9e2c-6093dc8f7036","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T11:53:03.149Z","level":"info","requestId":"0b7bdc94-0f6c-4ebc-86bc-5a81ed10287a","message":"[WS] Incoming Message [2aba44ec-17a4-4210-9e2c-6093dc8f7036]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T11:53:04.910Z","level":"info","requestId":"2aba44ec-17a4-4210-9e2c-6093dc8f7036","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T11:53:05.684Z","level":"info","requestId":"0aad42b3-ef69-4bb8-a686-e8af333d31e0","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T11:53:05.689Z","level":"info","requestId":"deda972f-b833-4ce6-bf39-8c6cce155769","message":"[WS] Incoming Message [0aad42b3-ef69-4bb8-a686-e8af333d31e0]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T11:54:24.813Z","level":"info","requestId":"0aad42b3-ef69-4bb8-a686-e8af333d31e0","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T11:54:27.158Z","level":"info","requestId":"3546e9c4-dc65-405f-9560-197d4dda5723","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T11:54:27.230Z","level":"info","requestId":"b9a4421b-eaf5-41d3-9e2b-cce1c8e307b5","message":"[WS] Incoming Message [3546e9c4-dc65-405f-9560-197d4dda5723]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T12:17:02.955Z","level":"info","requestId":"d928495d-27cc-46a6-ae4e-3c592bdb4e86","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T12:17:02.962Z","level":"info","requestId":"341eb7eb-7efa-4e03-9c09-3098b41483bf","message":"[WS] Incoming Message [d928495d-27cc-46a6-ae4e-3c592bdb4e86]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T12:22:25.675Z","level":"info","requestId":"3546e9c4-dc65-405f-9560-197d4dda5723","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T12:22:38.552Z","level":"info","requestId":"d2033b9a-0b73-4f8d-bbf3-9d0037078f5e","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T12:22:38.578Z","level":"info","requestId":"9e74e3c2-a174-418e-b8f8-f897cc189955","message":"[WS] Incoming Message [d2033b9a-0b73-4f8d-bbf3-9d0037078f5e]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T12:23:54.061Z","level":"info","requestId":"59b94d90-e5a7-4ccd-8d28-82c637bed7e1","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T12:23:54.088Z","level":"info","requestId":"6aaf013e-5343-44a8-8e98-6b40f79ff885","message":"[WS] Incoming Message [59b94d90-e5a7-4ccd-8d28-82c637bed7e1]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T12:27:44.357Z","level":"info","requestId":"5f40671f-e7c8-4001-96f4-db0ce710fa65","userId":"test-user-id","message":"[WS] Incoming Message [d928495d-27cc-46a6-ae4e-3c592bdb4e86]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T12:28:15.824Z","level":"info","requestId":"d928495d-27cc-46a6-ae4e-3c592bdb4e86","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T12:28:17.945Z","level":"info","requestId":"babf577d-a6fd-4df5-b3f5-d9beda319063","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T12:28:17.949Z","level":"info","requestId":"cf393cbe-b255-46f6-a551-5e0954d7dc2b","message":"[WS] Incoming Message [babf577d-a6fd-4df5-b3f5-d9beda319063]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T12:29:01.772Z","level":"info","requestId":"59b94d90-e5a7-4ccd-8d28-82c637bed7e1","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T12:29:13.884Z","level":"info","requestId":"42075aa3-5a6b-409c-88d8-4d579a51187d","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T12:29:13.909Z","level":"info","requestId":"9bf999e3-8e66-4fb8-b594-28333524aafa","message":"[WS] Incoming Message [42075aa3-5a6b-409c-88d8-4d579a51187d]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T12:30:21.715Z","level":"info","requestId":"d2033b9a-0b73-4f8d-bbf3-9d0037078f5e","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T12:30:23.442Z","level":"info","requestId":"2ee07d2b-8dff-4d6d-b14d-c81015ff4db3","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T12:30:23.444Z","level":"info","requestId":"69ce4cb9-22ab-4476-9694-beef754ea46f","message":"[WS] Incoming Message [2ee07d2b-8dff-4d6d-b14d-c81015ff4db3]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T12:33:39.389Z","level":"info","requestId":"2ee07d2b-8dff-4d6d-b14d-c81015ff4db3","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T12:33:41.728Z","level":"info","requestId":"a1858635-f566-43ad-83c0-d4905b019e9e","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T12:33:41.758Z","level":"info","requestId":"8bc00204-d6ca-43a3-9c8b-6caea57e855e","message":"[WS] Incoming Message [a1858635-f566-43ad-83c0-d4905b019e9e]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T12:45:12.196Z","level":"info","requestId":"a1858635-f566-43ad-83c0-d4905b019e9e","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T12:45:12.197Z","level":"info","requestId":"babf577d-a6fd-4df5-b3f5-d9beda319063","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T12:45:12.198Z","level":"info","requestId":"42075aa3-5a6b-409c-88d8-4d579a51187d","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T12:47:19.576Z","level":"info","requestId":"ff11ef10-8387-411b-a14e-bdfbb3910080","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T12:47:19.669Z","level":"info","requestId":"c09f1af4-0224-4aa7-8eb8-4952ad277d1f","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T12:47:19.728Z","level":"info","requestId":"0ef45b39-755c-4d3a-a41d-eb0cdf96ac04","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T12:47:37.124Z","level":"info","requestId":"bf3b9f5e-3664-4162-9a7b-4a29cf6ef2bb","message":"[WS] Incoming Message [ff11ef10-8387-411b-a14e-bdfbb3910080]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T12:47:37.156Z","level":"info","requestId":"acccb557-0533-45e5-8236-9a198f13ed44","message":"[WS] Incoming Message [0ef45b39-755c-4d3a-a41d-eb0cdf96ac04]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T12:47:37.164Z","level":"info","requestId":"f9aae469-4ff5-4419-b0d0-8ad3aa98b204","message":"[WS] Incoming Message [c09f1af4-0224-4aa7-8eb8-4952ad277d1f]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T12:47:38.089Z","level":"info","requestId":"174353bd-04c2-4b45-8d88-fefd15350885","userId":"test-user-id","message":"[WS] Incoming Message [0ef45b39-755c-4d3a-a41d-eb0cdf96ac04]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T12:47:38.092Z","level":"info","requestId":"6d77dab5-1186-445b-87a9-bfdf5ef7ae07","userId":"test-user-id","message":"[WS] Incoming Message [c09f1af4-0224-4aa7-8eb8-4952ad277d1f]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T12:47:38.157Z","level":"info","requestId":"19d67c81-c792-470a-abb8-e018c6f73e53","userId":"test-user-id","message":"[WS] Incoming Message [ff11ef10-8387-411b-a14e-bdfbb3910080]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T12:47:38.594Z","level":"info","requestId":"ff11ef10-8387-411b-a14e-bdfbb3910080","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T12:47:40.215Z","level":"info","requestId":"10c4377b-9d1a-4c61-8c14-e0e661877fbc","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T12:47:40.326Z","level":"info","requestId":"ec80e75d-e9df-44ee-8c6d-7fb854984ac1","message":"[WS] Incoming Message [10c4377b-9d1a-4c61-8c14-e0e661877fbc]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T13:10:25.105Z","level":"info","requestId":"10c4377b-9d1a-4c61-8c14-e0e661877fbc","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T13:10:25.109Z","level":"info","requestId":"c09f1af4-0224-4aa7-8eb8-4952ad277d1f","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T13:15:33.514Z","level":"info","requestId":"0ef45b39-755c-4d3a-a41d-eb0cdf96ac04","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T13:15:38.115Z","level":"info","requestId":"6b37d2e6-31a4-4aaf-92f1-0dabdec644e7","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T13:15:38.147Z","level":"info","requestId":"93120c9e-9b2d-4bab-9378-8c2d74d68f06","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T13:15:38.151Z","level":"info","requestId":"7e215e95-eb69-4fe0-86f8-d44143004a15","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T13:15:38.186Z","level":"info","requestId":"5d6159c8-212a-48a0-8675-a20fe9cd92f4","message":"[WS] Incoming Message [6b37d2e6-31a4-4aaf-92f1-0dabdec644e7]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T13:15:38.196Z","level":"info","requestId":"917804ab-3461-4944-92c4-547ddceafc81","message":"[WS] Incoming Message [93120c9e-9b2d-4bab-9378-8c2d74d68f06]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T13:15:38.197Z","level":"info","requestId":"ccc84e84-61db-4df4-9829-403a770e1f43","message":"[WS] Incoming Message [7e215e95-eb69-4fe0-86f8-d44143004a15]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T13:15:47.906Z","level":"info","requestId":"6b37d2e6-31a4-4aaf-92f1-0dabdec644e7","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T13:15:48.621Z","level":"info","requestId":"5049229a-893a-411e-97fc-d651b362e1cf","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T13:15:48.665Z","level":"info","requestId":"d00e0234-05ef-428e-a606-8d0706790d1e","message":"[WS] Incoming Message [5049229a-893a-411e-97fc-d651b362e1cf]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T13:30:09.200Z","level":"info","requestId":"5049229a-893a-411e-97fc-d651b362e1cf","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T13:30:09.210Z","level":"info","requestId":"93120c9e-9b2d-4bab-9378-8c2d74d68f06","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T13:30:09.221Z","level":"info","requestId":"7e215e95-eb69-4fe0-86f8-d44143004a15","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T13:30:54.787Z","level":"info","requestId":"f3ea084a-c3e3-4daa-a242-fcf58032bb0c","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T13:30:54.839Z","level":"info","requestId":"781bd3cc-450f-4933-b333-bab18e726d65","message":"[WS] Incoming Message [f3ea084a-c3e3-4daa-a242-fcf58032bb0c]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T13:30:55.049Z","level":"info","requestId":"7db31213-4b17-4f61-8f53-28a036341faf","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T13:30:55.064Z","level":"info","requestId":"06221953-fef6-4ce9-a490-01d38c03e10b","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T13:30:55.070Z","level":"info","requestId":"029afeb4-3914-4056-b30d-3387b672381e","message":"[WS] Incoming Message [06221953-fef6-4ce9-a490-01d38c03e10b]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T13:30:55.071Z","level":"info","requestId":"fe85fadc-a1ce-40f9-81f8-a612cbd9642b","message":"[WS] Incoming Message [7db31213-4b17-4f61-8f53-28a036341faf]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T13:30:55.594Z","level":"info","requestId":"f3ea084a-c3e3-4daa-a242-fcf58032bb0c","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T13:31:05.720Z","level":"info","requestId":"bf7eaa30-08a7-4c58-843b-533a6469fb49","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T13:31:06.059Z","level":"info","requestId":"89c0c8f4-94e0-495f-855c-0314fd33a553","message":"[WS] Incoming Message [bf7eaa30-08a7-4c58-843b-533a6469fb49]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T13:41:05.314Z","level":"info","requestId":"7db31213-4b17-4f61-8f53-28a036341faf","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T13:41:13.769Z","level":"info","requestId":"06221953-fef6-4ce9-a490-01d38c03e10b","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T13:41:13.808Z","level":"info","requestId":"bf7eaa30-08a7-4c58-843b-533a6469fb49","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T13:41:31.274Z","level":"info","requestId":"39b6a06c-b5c8-436a-b8d1-cfd94a443b3e","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T13:41:31.291Z","level":"info","requestId":"cfecd87b-f9c3-4687-ab7d-5c23eadb10f1","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T13:41:31.295Z","level":"info","requestId":"c96b25aa-9898-4408-b0f7-b9433a7dd089","message":"[WS] Incoming Message [39b6a06c-b5c8-436a-b8d1-cfd94a443b3e]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T13:41:31.297Z","level":"info","requestId":"b64eb31e-2596-4b04-a39a-69d37b3e9ed6","message":"[WS] Incoming Message [cfecd87b-f9c3-4687-ab7d-5c23eadb10f1]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T13:41:32.999Z","level":"info","requestId":"08026c53-8125-4c6c-a467-7396bdf3b94d","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T13:41:33.203Z","level":"info","requestId":"f0dd2087-6688-4701-a696-c33684b006ff","message":"[WS] Incoming Message [08026c53-8125-4c6c-a467-7396bdf3b94d]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T13:49:05.511Z","level":"info","requestId":"08026c53-8125-4c6c-a467-7396bdf3b94d","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T13:49:05.521Z","level":"info","requestId":"39b6a06c-b5c8-436a-b8d1-cfd94a443b3e","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T13:49:05.627Z","level":"info","requestId":"cfecd87b-f9c3-4687-ab7d-5c23eadb10f1","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T13:49:06.310Z","level":"info","requestId":"87124bc7-6627-4914-b82d-f31b82cc1fde","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T13:49:06.327Z","level":"info","requestId":"46cd3e33-df85-4507-84a0-a7d487e6ffb4","message":"[WS] Incoming Message [87124bc7-6627-4914-b82d-f31b82cc1fde]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T13:49:10.578Z","level":"info","requestId":"87124bc7-6627-4914-b82d-f31b82cc1fde","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T13:58:01.522Z","level":"info","requestId":"36219a8a-9012-43ff-903e-4af6850141cc","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T13:58:01.551Z","level":"info","requestId":"68ddc767-1efe-4a0f-804c-a4e2d07c07ed","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T13:58:20.718Z","level":"info","requestId":"2dafd240-2bd1-4c9f-ae67-05cde8600045","message":"[WS] Incoming Message [68ddc767-1efe-4a0f-804c-a4e2d07c07ed]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T13:58:20.977Z","level":"info","requestId":"f5fa68dd-810a-4a96-88ea-721665ff0486","message":"[WS] Incoming Message [36219a8a-9012-43ff-903e-4af6850141cc]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T13:58:28.595Z","level":"info","requestId":"93d7f52e-437e-4a05-be0a-40f40350dbe7","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T13:58:28.598Z","level":"info","requestId":"786ef1a5-337a-4b70-9bb4-4a4f329da62a","message":"[WS] Incoming Message [93d7f52e-437e-4a05-be0a-40f40350dbe7]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T13:58:28.643Z","level":"info","requestId":"93d7f52e-437e-4a05-be0a-40f40350dbe7","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T13:58:29.011Z","level":"info","requestId":"beb79181-0d55-4d5b-8ffc-23ab63b82204","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T13:58:29.021Z","level":"info","requestId":"5b04e669-bb1b-42cf-938d-06b20685f170","message":"[WS] Incoming Message [beb79181-0d55-4d5b-8ffc-23ab63b82204]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T14:16:23.861Z","level":"info","requestId":"beb79181-0d55-4d5b-8ffc-23ab63b82204","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T14:16:23.953Z","level":"info","requestId":"36219a8a-9012-43ff-903e-4af6850141cc","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T14:16:24.040Z","level":"info","requestId":"68ddc767-1efe-4a0f-804c-a4e2d07c07ed","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T16:04:52.141Z","level":"info","requestId":"682e7068-f0cf-4506-b345-204cb18c847a","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T16:04:52.150Z","level":"info","requestId":"c89d78d4-1e68-4dd4-8372-85ec154c0203","message":"[WS] Incoming Message [682e7068-f0cf-4506-b345-204cb18c847a]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T16:04:52.170Z","level":"info","requestId":"6f8b0d26-3395-4363-80cb-c970b674b7e5","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T16:04:52.176Z","level":"info","requestId":"0aebf8f2-0806-4042-871a-3ff4b612be4e","message":"[WS] Incoming Message [6f8b0d26-3395-4363-80cb-c970b674b7e5]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T16:04:53.619Z","level":"info","requestId":"39dab20e-b702-42c3-ad10-1c7b8f422abd","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T16:04:53.620Z","level":"info","requestId":"e0853c73-c721-4c9c-9045-af0ac6b989bd","message":"[WS] Incoming Message [39dab20e-b702-42c3-ad10-1c7b8f422abd]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T16:04:54.249Z","level":"info","requestId":"682e7068-f0cf-4506-b345-204cb18c847a","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T16:04:55.586Z","level":"info","requestId":"8b503a0a-8001-49f9-a3c4-af2810af328b","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T16:04:55.597Z","level":"info","requestId":"97573075-839e-4df1-8571-569bb6efc4fa","message":"[WS] Incoming Message [8b503a0a-8001-49f9-a3c4-af2810af328b]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T16:05:08.628Z","level":"info","requestId":"39dab20e-b702-42c3-ad10-1c7b8f422abd","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T16:05:08.631Z","level":"info","requestId":"6f8b0d26-3395-4363-80cb-c970b674b7e5","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T16:05:08.634Z","level":"info","requestId":"8b503a0a-8001-49f9-a3c4-af2810af328b","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T17:11:16.649Z","level":"info","requestId":"3b911f6b-5593-4aa6-9a73-6c0707f9ab38","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T17:11:16.650Z","level":"info","requestId":"4c8e4fce-8ddd-4a7a-b69b-42be5a442160","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T17:11:16.670Z","level":"info","requestId":"fc0ba452-3ec9-4a40-8788-3528ae04203c","message":"[WS] Incoming Message [3b911f6b-5593-4aa6-9a73-6c0707f9ab38]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T17:11:16.677Z","level":"info","requestId":"1729f605-2977-44fe-857b-9b56c331bb7b","message":"[WS] Incoming Message [4c8e4fce-8ddd-4a7a-b69b-42be5a442160]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T17:11:19.577Z","level":"info","requestId":"7dbe0856-5f41-4e3c-b999-66267b786dc9","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T17:11:19.784Z","level":"info","requestId":"a51e1c36-cff7-47d2-b540-483e66179cfa","message":"[WS] Incoming Message [7dbe0856-5f41-4e3c-b999-66267b786dc9]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T17:39:39.046Z","level":"info","requestId":"7dbe0856-5f41-4e3c-b999-66267b786dc9","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T17:39:46.353Z","level":"info","requestId":"3b911f6b-5593-4aa6-9a73-6c0707f9ab38","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T17:39:46.423Z","level":"info","requestId":"4c8e4fce-8ddd-4a7a-b69b-42be5a442160","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T17:39:59.283Z","level":"info","requestId":"eb3ba832-c700-484f-8855-ab76af380cf4","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T17:39:59.302Z","level":"info","requestId":"c15cf76d-5928-47cd-9280-4fb995796178","message":"[WS] Incoming Message [eb3ba832-c700-484f-8855-ab76af380cf4]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T17:39:59.324Z","level":"info","requestId":"5dedbb39-8611-403d-8a25-704a3580c987","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T17:39:59.441Z","level":"info","requestId":"bc516a1d-caf3-4f27-89f4-0c4f034bb055","message":"[WS] Incoming Message [5dedbb39-8611-403d-8a25-704a3580c987]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T17:39:59.509Z","level":"info","requestId":"23e7235f-610d-4c1d-a670-a98e7b4a6ddb","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T17:39:59.516Z","level":"info","requestId":"dfe50610-f0aa-4a67-8571-989157146095","message":"[WS] Incoming Message [23e7235f-610d-4c1d-a670-a98e7b4a6ddb]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T17:39:59.702Z","level":"info","requestId":"5dedbb39-8611-403d-8a25-704a3580c987","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T17:40:13.839Z","level":"info","requestId":"9ccd65dc-e920-4c6b-ad6a-636beb3ff04f","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T17:40:13.885Z","level":"info","requestId":"54b86f36-0314-4267-a57b-2cf80042402c","message":"[WS] Incoming Message [9ccd65dc-e920-4c6b-ad6a-636beb3ff04f]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T17:43:08.622Z","level":"info","requestId":"9ccd65dc-e920-4c6b-ad6a-636beb3ff04f","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T17:43:08.626Z","level":"info","requestId":"eb3ba832-c700-484f-8855-ab76af380cf4","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T17:43:08.627Z","level":"info","requestId":"23e7235f-610d-4c1d-a670-a98e7b4a6ddb","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T17:46:27.110Z","level":"info","requestId":"b73d6ac7-639f-4bdb-9048-c1aeacca39c8","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T17:46:27.203Z","level":"info","requestId":"8c610170-e710-4bb9-ba99-d5bd956f3972","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T17:46:27.219Z","level":"info","requestId":"343e525e-a221-4593-948b-5ad4b35998d2","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T17:46:27.426Z","level":"info","requestId":"02b10bbd-fb20-4f8b-a915-61f892df3253","message":"[WS] Incoming Message [8c610170-e710-4bb9-ba99-d5bd956f3972]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T17:46:27.431Z","level":"info","requestId":"fa788924-ade0-4293-86cf-c6f66807f0aa","message":"[WS] Incoming Message [343e525e-a221-4593-948b-5ad4b35998d2]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T17:46:27.432Z","level":"info","requestId":"4c2ecb1e-a26c-4c3c-897c-5956da475a73","message":"[WS] Incoming Message [b73d6ac7-639f-4bdb-9048-c1aeacca39c8]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T17:46:28.372Z","level":"info","requestId":"8c610170-e710-4bb9-ba99-d5bd956f3972","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T17:46:28.839Z","level":"info","requestId":"f89741c2-b56f-4d4c-b23a-96b27da807c9","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T17:46:29.510Z","level":"info","requestId":"562a1d16-b051-436f-9fc0-48272912698f","message":"[WS] Incoming Message [f89741c2-b56f-4d4c-b23a-96b27da807c9]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T17:52:53.332Z","level":"info","requestId":"f89741c2-b56f-4d4c-b23a-96b27da807c9","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T17:52:53.398Z","level":"info","requestId":"b73d6ac7-639f-4bdb-9048-c1aeacca39c8","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T17:52:53.529Z","level":"info","requestId":"343e525e-a221-4593-948b-5ad4b35998d2","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T17:55:08.794Z","level":"info","requestId":"cf035806-a82d-4607-a44c-3ff9d095cd9c","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T17:55:08.843Z","level":"info","requestId":"84b6a02e-7799-4249-85c6-e96a2bdc8f73","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T17:55:08.844Z","level":"info","requestId":"f7fe7354-58c8-4089-81e2-62e02b98c892","message":"[WS] Incoming Message [84b6a02e-7799-4249-85c6-e96a2bdc8f73]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T17:55:08.850Z","level":"info","requestId":"b383dbf4-b2e7-4aa3-b904-cc13ca3d62d8","message":"[WS] Incoming Message [cf035806-a82d-4607-a44c-3ff9d095cd9c]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T17:55:08.864Z","level":"info","requestId":"776ace82-700e-4ed2-ab58-7f7c58e1574c","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-19T17:55:08.924Z","level":"info","requestId":"a8234b3a-a3ec-4db2-80a0-eece88db8395","message":"[WS] Incoming Message [776ace82-700e-4ed2-ab58-7f7c58e1574c]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-19T18:36:07.093Z","level":"info","requestId":"776ace82-700e-4ed2-ab58-7f7c58e1574c","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T18:36:07.121Z","level":"info","requestId":"cf035806-a82d-4607-a44c-3ff9d095cd9c","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-19T18:36:07.168Z","level":"info","requestId":"84b6a02e-7799-4249-85c6-e96a2bdc8f73","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T11:33:44.839Z","level":"info","requestId":"7875c07f-fcda-4124-8571-b034d3f6c226","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T11:33:44.857Z","level":"info","requestId":"020b0930-ce00-4b57-b3a8-bddd5aed609f","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T11:33:44.887Z","level":"info","requestId":"1a39cd3b-741f-4d2b-9348-0b60c61bf5a9","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T11:33:44.914Z","level":"info","requestId":"1ba2dbf7-b961-4ab0-9d13-91f9f3b10f8a","message":"[WS] Incoming Message [7875c07f-fcda-4124-8571-b034d3f6c226]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T11:33:44.916Z","level":"info","requestId":"1d293ae9-b8da-4e1a-a10d-058169bee617","message":"[WS] Incoming Message [020b0930-ce00-4b57-b3a8-bddd5aed609f]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T11:33:44.925Z","level":"info","requestId":"a79ef04b-6fa9-423e-b476-1224b0856cb8","message":"[WS] Incoming Message [1a39cd3b-741f-4d2b-9348-0b60c61bf5a9]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T12:16:49.863Z","level":"info","requestId":"1a39cd3b-741f-4d2b-9348-0b60c61bf5a9","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T12:16:50.082Z","level":"info","requestId":"7875c07f-fcda-4124-8571-b034d3f6c226","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T12:16:50.098Z","level":"info","requestId":"020b0930-ce00-4b57-b3a8-bddd5aed609f","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T12:17:22.603Z","level":"info","requestId":"23763119-97f8-450b-a3e9-d89f6ce15700","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T12:17:22.638Z","level":"info","requestId":"b3623b20-ef8d-4291-a37e-dc35dec0d4ad","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T12:17:22.639Z","level":"info","requestId":"f69a384e-6ede-4f44-a9c5-ff00d5c4bf2e","message":"[WS] Incoming Message [23763119-97f8-450b-a3e9-d89f6ce15700]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T12:17:22.669Z","level":"info","requestId":"73e01d41-c48f-4e40-9a0c-b0931f1e1166","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T12:17:22.671Z","level":"info","requestId":"d6fa66a4-2b3e-4bf1-b14e-0019d7838fc8","message":"[WS] Incoming Message [b3623b20-ef8d-4291-a37e-dc35dec0d4ad]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T12:17:22.683Z","level":"info","requestId":"640938fb-dc0d-4105-a383-caf1c864d364","message":"[WS] Incoming Message [73e01d41-c48f-4e40-9a0c-b0931f1e1166]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T12:24:25.370Z","level":"info","requestId":"73e01d41-c48f-4e40-9a0c-b0931f1e1166","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T12:24:25.371Z","level":"info","requestId":"23763119-97f8-450b-a3e9-d89f6ce15700","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T12:24:25.372Z","level":"info","requestId":"b3623b20-ef8d-4291-a37e-dc35dec0d4ad","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T12:24:29.138Z","level":"info","requestId":"62134fee-086e-4102-8331-08dec0c5e867","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T12:24:29.168Z","level":"info","requestId":"950cfdcf-299c-488c-9ebc-02f2a0c5d46f","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T12:24:29.171Z","level":"info","requestId":"ed82c4b4-63c0-4c2d-a19f-0b4c619700cf","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T12:24:29.172Z","level":"info","requestId":"90245ba0-ab49-4b3d-8c9d-c1648ffae471","message":"[WS] Incoming Message [62134fee-086e-4102-8331-08dec0c5e867]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T12:24:29.174Z","level":"info","requestId":"57f5fe71-185a-4eb0-978d-520f25f2ea46","message":"[WS] Incoming Message [ed82c4b4-63c0-4c2d-a19f-0b4c619700cf]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T12:24:29.176Z","level":"info","requestId":"c1e7ba18-fb08-4797-a700-c4ed52b8ac22","message":"[WS] Incoming Message [950cfdcf-299c-488c-9ebc-02f2a0c5d46f]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T12:25:21.567Z","level":"info","requestId":"62134fee-086e-4102-8331-08dec0c5e867","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T12:25:22.648Z","level":"info","requestId":"950cfdcf-299c-488c-9ebc-02f2a0c5d46f","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T12:25:22.663Z","level":"info","requestId":"ed82c4b4-63c0-4c2d-a19f-0b4c619700cf","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T12:25:27.155Z","level":"info","requestId":"02b8cb4b-f78e-4c96-bd3a-e56b6179664a","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T12:25:27.172Z","level":"info","requestId":"71f1fa19-2f3b-4b14-9f9e-7504f0d71ee7","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T12:25:27.176Z","level":"info","requestId":"6978e5df-8ada-4f21-ba9b-b64682532267","message":"[WS] Incoming Message [02b8cb4b-f78e-4c96-bd3a-e56b6179664a]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T12:25:27.177Z","level":"info","requestId":"28e12568-860b-49b1-9370-53d3362c2947","message":"[WS] Incoming Message [71f1fa19-2f3b-4b14-9f9e-7504f0d71ee7]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T12:25:27.200Z","level":"info","requestId":"f8e657ee-af40-4609-a69a-a3e20b915e77","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T12:25:27.202Z","level":"info","requestId":"206e7968-928b-44fd-af06-e6207347ee75","message":"[WS] Incoming Message [f8e657ee-af40-4609-a69a-a3e20b915e77]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T12:26:26.016Z","level":"info","requestId":"f8e657ee-af40-4609-a69a-a3e20b915e77","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T13:59:09.582Z","level":"info","requestId":"71f1fa19-2f3b-4b14-9f9e-7504f0d71ee7","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T13:59:09.597Z","level":"info","requestId":"02b8cb4b-f78e-4c96-bd3a-e56b6179664a","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T13:59:16.147Z","level":"info","requestId":"bcd40c7a-24b3-4721-ac11-3d45e01775ae","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T13:59:26.187Z","level":"info","requestId":"677cf8a9-a5eb-4d72-9615-febdb325bb12","message":"[WS] Incoming Message [bcd40c7a-24b3-4721-ac11-3d45e01775ae]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T13:59:28.241Z","level":"info","requestId":"a07f602f-fdfa-4481-a7cc-c8f1f40083d3","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T13:59:28.242Z","level":"info","requestId":"c05e980a-36f4-4efb-a920-ac6f888d4a3a","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T13:59:28.255Z","level":"info","requestId":"3917d7b8-3793-44c8-8a92-a376849517ec","message":"[WS] Incoming Message [c05e980a-36f4-4efb-a920-ac6f888d4a3a]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T13:59:28.258Z","level":"info","requestId":"827b96b8-9ed9-4841-975a-b808edf6278b","message":"[WS] Incoming Message [a07f602f-fdfa-4481-a7cc-c8f1f40083d3]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T14:02:29.262Z","level":"info","requestId":"c05e980a-36f4-4efb-a920-ac6f888d4a3a","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T14:11:51.219Z","level":"info","requestId":"bcd40c7a-24b3-4721-ac11-3d45e01775ae","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T14:11:51.274Z","level":"info","requestId":"a07f602f-fdfa-4481-a7cc-c8f1f40083d3","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T14:11:55.129Z","level":"info","requestId":"0870cee6-a777-48c3-9911-99aa688175c3","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T14:12:00.051Z","level":"info","requestId":"09eb7624-e219-484d-9592-49b1f2114cdf","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T14:12:00.074Z","level":"info","requestId":"1f5fc09b-b8fc-44a7-aedd-a1ce912dc6b5","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T14:12:00.164Z","level":"info","requestId":"e2682b25-2d59-4aba-84a8-87be47d63cde","message":"[WS] Incoming Message [0870cee6-a777-48c3-9911-99aa688175c3]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T14:12:00.166Z","level":"info","requestId":"1ac7dd54-1864-422c-a54c-ca2e5d525dd1","message":"[WS] Incoming Message [1f5fc09b-b8fc-44a7-aedd-a1ce912dc6b5]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T14:12:00.169Z","level":"info","requestId":"ef1faed5-0874-4f2e-80fb-1f4c1321bc0b","message":"[WS] Incoming Message [09eb7624-e219-484d-9592-49b1f2114cdf]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T14:29:51.594Z","level":"info","requestId":"1f5fc09b-b8fc-44a7-aedd-a1ce912dc6b5","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T14:29:51.872Z","level":"info","requestId":"0870cee6-a777-48c3-9911-99aa688175c3","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T14:29:52.035Z","level":"info","requestId":"09eb7624-e219-484d-9592-49b1f2114cdf","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T15:38:32.592Z","level":"info","requestId":"ee32fd72-9d12-4333-8750-a83f0ab344c0","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T15:38:32.611Z","level":"info","requestId":"68a45254-4542-4467-92c5-b0ff4063fe73","message":"[WS] Incoming Message [ee32fd72-9d12-4333-8750-a83f0ab344c0]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T15:38:34.268Z","level":"info","requestId":"f9c2798f-36dc-4b30-9a46-de37452d8bfe","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T15:38:34.370Z","level":"info","requestId":"f86ad340-e23b-42b2-9a22-8255a5df1294","message":"[WS] Incoming Message [f9c2798f-36dc-4b30-9a46-de37452d8bfe]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T15:38:34.804Z","level":"info","requestId":"08288df4-f009-4586-8f4d-2c31cb97de01","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T15:38:34.860Z","level":"info","requestId":"ae091d80-cd66-407e-946e-4bd6ca9b9435","message":"[WS] Incoming Message [08288df4-f009-4586-8f4d-2c31cb97de01]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T16:56:04.872Z","level":"info","requestId":"f9c2798f-36dc-4b30-9a46-de37452d8bfe","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T16:56:04.928Z","level":"info","requestId":"08288df4-f009-4586-8f4d-2c31cb97de01","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T16:56:04.950Z","level":"info","requestId":"ee32fd72-9d12-4333-8750-a83f0ab344c0","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T16:57:03.016Z","level":"info","requestId":"836fdc44-280e-413c-8547-f220bb0215ad","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T16:57:03.071Z","level":"info","requestId":"81cab2b9-e74b-49b8-8010-82b45b8d38d6","message":"[WS] Incoming Message [836fdc44-280e-413c-8547-f220bb0215ad]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T16:57:13.521Z","level":"info","requestId":"a322a4f5-1f65-4c47-b951-fe68cdb606aa","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T16:57:13.553Z","level":"info","requestId":"06de7913-6c20-4b03-91ea-e182bf8eb537","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T16:57:13.554Z","level":"info","requestId":"afb2684f-77e8-41ab-a45c-bd2f0bebeb07","message":"[WS] Incoming Message [a322a4f5-1f65-4c47-b951-fe68cdb606aa]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T16:57:13.560Z","level":"info","requestId":"e878c925-2061-4e5b-bfd4-e0ce45fe4772","message":"[WS] Incoming Message [06de7913-6c20-4b03-91ea-e182bf8eb537]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T17:43:56.473Z","level":"info","requestId":"06de7913-6c20-4b03-91ea-e182bf8eb537","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T17:43:56.736Z","level":"info","requestId":"836fdc44-280e-413c-8547-f220bb0215ad","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T17:43:56.738Z","level":"info","requestId":"a322a4f5-1f65-4c47-b951-fe68cdb606aa","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T17:44:16.481Z","level":"info","requestId":"e8ab8c08-b2cb-431c-8b7e-fb39d29a9065","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T17:44:16.491Z","level":"info","requestId":"e87aac9f-7189-4d36-a719-6e3e4ab2faf4","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T17:44:16.518Z","level":"info","requestId":"214a252b-8a07-49fb-b4b5-26a881541c89","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T17:44:16.548Z","level":"info","requestId":"7c1274f3-9291-44a8-98b3-388341a70286","message":"[WS] Incoming Message [e8ab8c08-b2cb-431c-8b7e-fb39d29a9065]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T17:44:16.556Z","level":"info","requestId":"4f99bf83-44d6-4354-a771-d56f1ea4b2d7","message":"[WS] Incoming Message [214a252b-8a07-49fb-b4b5-26a881541c89]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T17:44:16.784Z","level":"info","requestId":"332d8dd3-a2ad-4b44-9948-53d64fa67640","message":"[WS] Incoming Message [e87aac9f-7189-4d36-a719-6e3e4ab2faf4]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T18:00:43.269Z","level":"info","requestId":"214a252b-8a07-49fb-b4b5-26a881541c89","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T18:22:02.431Z","level":"info","requestId":"e87aac9f-7189-4d36-a719-6e3e4ab2faf4","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T18:22:02.433Z","level":"info","requestId":"e8ab8c08-b2cb-431c-8b7e-fb39d29a9065","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T18:22:36.506Z","level":"info","requestId":"6954c59b-7a30-48cf-9e47-73481211781a","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T18:22:36.513Z","level":"info","requestId":"52688b3d-236d-49ee-9f48-2feb29ef8797","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T18:22:36.539Z","level":"info","requestId":"c72030ee-6436-4bb4-9417-870365c73292","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T18:22:36.747Z","level":"info","requestId":"55aa0225-fe64-4227-a83b-53d35a9f810a","message":"[WS] Incoming Message [52688b3d-236d-49ee-9f48-2feb29ef8797]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T18:22:55.523Z","level":"info","requestId":"2a928860-3394-482b-89d8-3a66de0045de","message":"[WS] Incoming Message [c72030ee-6436-4bb4-9417-870365c73292]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T18:22:56.267Z","level":"info","requestId":"8fc534e2-e0fb-4be0-af53-36ab77d9c6da","message":"[WS] Incoming Message [6954c59b-7a30-48cf-9e47-73481211781a]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T18:22:58.029Z","level":"info","requestId":"f639abd7-8872-4ebb-b991-216d3bbeccc6","userId":"test-user-id","message":"[WS] Incoming Message [6954c59b-7a30-48cf-9e47-73481211781a]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T18:33:10.218Z","level":"info","requestId":"c72030ee-6436-4bb4-9417-870365c73292","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T18:33:10.230Z","level":"info","requestId":"6954c59b-7a30-48cf-9e47-73481211781a","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T18:33:10.233Z","level":"info","requestId":"52688b3d-236d-49ee-9f48-2feb29ef8797","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T18:33:19.539Z","level":"info","requestId":"e84684f7-10de-4997-8ca4-b2815983175e","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T18:33:19.563Z","level":"info","requestId":"349e3ccc-add1-4017-b47b-937137165d74","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-20T18:33:19.573Z","level":"info","requestId":"bf230ddd-900d-4ab1-9a50-edbd13a42cc7","message":"[WS] Incoming Message [e84684f7-10de-4997-8ca4-b2815983175e]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T18:33:19.586Z","level":"info","requestId":"d4dcd2f5-cbf4-4263-a4dc-0f21544806f2","message":"[WS] Incoming Message [349e3ccc-add1-4017-b47b-937137165d74]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-20T18:39:54.633Z","level":"info","requestId":"349e3ccc-add1-4017-b47b-937137165d74","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-20T18:39:54.661Z","level":"info","requestId":"e84684f7-10de-4997-8ca4-b2815983175e","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T05:24:01.334Z","level":"info","requestId":"f850acbe-3591-4251-b862-a0606cd16313","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T05:24:02.738Z","level":"info","requestId":"834929ad-a3ed-4ae4-acdb-e0f4f45ce4a2","message":"[WS] Incoming Message [f850acbe-3591-4251-b862-a0606cd16313]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T05:24:05.138Z","level":"info","requestId":"a3fe2a59-e2dc-498c-a142-18d43c5dc771","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T05:24:05.145Z","level":"info","requestId":"335c9fcd-7d22-4831-9859-27a8bac22864","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T05:24:05.146Z","level":"info","requestId":"e7f3e2d8-92d5-47de-a6c4-af50d2730991","message":"[WS] Incoming Message [a3fe2a59-e2dc-498c-a142-18d43c5dc771]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T05:24:05.148Z","level":"info","requestId":"cefcf570-d882-4e0b-bf0c-5f170853e5da","message":"[WS] Incoming Message [335c9fcd-7d22-4831-9859-27a8bac22864]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T05:25:08.585Z","level":"info","requestId":"a3fe2a59-e2dc-498c-a142-18d43c5dc771","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T05:25:08.647Z","level":"info","requestId":"335c9fcd-7d22-4831-9859-27a8bac22864","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T05:25:08.793Z","level":"info","requestId":"f850acbe-3591-4251-b862-a0606cd16313","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T05:25:10.398Z","level":"info","requestId":"fdc34fe7-e37a-44c3-9cdc-2bb38a1bfa48","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T05:25:10.473Z","level":"info","requestId":"48e811f6-71db-4a31-8b81-f388aca05d9b","message":"[WS] Incoming Message [fdc34fe7-e37a-44c3-9cdc-2bb38a1bfa48]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T05:25:12.837Z","level":"info","requestId":"424184ae-ed1e-4ad8-9840-6c8ab62555e5","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T05:25:12.845Z","level":"info","requestId":"9db81746-71d8-4c49-a4c8-2a9b7a28a931","message":"[WS] Incoming Message [424184ae-ed1e-4ad8-9840-6c8ab62555e5]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T05:25:17.155Z","level":"info","requestId":"4296205d-308f-4a54-aabe-3d45b214e1cb","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T05:25:17.165Z","level":"info","requestId":"9e2793b8-bdb2-4f1e-ba08-f78f376d5d2f","message":"[WS] Incoming Message [4296205d-308f-4a54-aabe-3d45b214e1cb]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T05:37:03.481Z","level":"info","requestId":"424184ae-ed1e-4ad8-9840-6c8ab62555e5","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T05:37:03.490Z","level":"info","requestId":"4296205d-308f-4a54-aabe-3d45b214e1cb","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T05:37:03.494Z","level":"info","requestId":"fdc34fe7-e37a-44c3-9cdc-2bb38a1bfa48","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T05:42:37.157Z","level":"info","requestId":"9251cb97-1550-45cb-8040-c6c3341ebf91","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T05:42:37.172Z","level":"info","requestId":"2f1cdc6e-8a67-48a2-86da-87858c93503b","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T05:42:37.181Z","level":"info","requestId":"21aadcec-3e73-4b55-b0d2-a758f58b578f","message":"[WS] Incoming Message [9251cb97-1550-45cb-8040-c6c3341ebf91]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T05:42:37.183Z","level":"info","requestId":"db5cfdf1-5446-4b11-8eb7-a2c1e025b333","message":"[WS] Incoming Message [2f1cdc6e-8a67-48a2-86da-87858c93503b]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T05:42:37.218Z","level":"info","requestId":"85dc7843-0854-406a-acb6-7c365e0dddc2","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T05:42:37.225Z","level":"info","requestId":"d3ae6214-13d6-4b2c-895e-a55ad1dd9c16","message":"[WS] Incoming Message [85dc7843-0854-406a-acb6-7c365e0dddc2]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T05:42:46.257Z","level":"info","requestId":"85dc7843-0854-406a-acb6-7c365e0dddc2","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T05:42:46.264Z","level":"info","requestId":"9251cb97-1550-45cb-8040-c6c3341ebf91","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T06:27:09.523Z","level":"info","requestId":"2f1cdc6e-8a67-48a2-86da-87858c93503b","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T06:27:18.217Z","level":"info","requestId":"6c718c04-275d-43f5-8289-5293e53e0bb6","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T06:27:18.231Z","level":"info","requestId":"2d30aec7-fc5e-4b49-9765-fb540a1594d3","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T06:27:18.243Z","level":"info","requestId":"fcb3c947-431b-4b9f-879b-57e9f10a82c0","message":"[WS] Incoming Message [2d30aec7-fc5e-4b49-9765-fb540a1594d3]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T06:27:18.245Z","level":"info","requestId":"16b46e1e-b3b2-458a-b833-df95bab74e21","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T06:27:18.257Z","level":"info","requestId":"eaef7f9a-8856-4bb0-ab02-b61ce17f9001","message":"[WS] Incoming Message [6c718c04-275d-43f5-8289-5293e53e0bb6]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T06:27:18.262Z","level":"info","requestId":"44547dc3-d81f-48db-aad1-4498de6e3adf","message":"[WS] Incoming Message [16b46e1e-b3b2-458a-b833-df95bab74e21]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T06:37:32.029Z","level":"info","requestId":"10851f8f-eea0-4b7a-8430-8366d70a2839","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T06:37:32.032Z","level":"info","requestId":"251427f0-fcd8-497e-8710-9083deaafddb","message":"[WS] Incoming Message [10851f8f-eea0-4b7a-8430-8366d70a2839]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T06:37:33.657Z","level":"info","requestId":"8392547d-bac4-47fc-885f-c11c77d58a4d","userId":"test-user-id","message":"[WS] Incoming Message [10851f8f-eea0-4b7a-8430-8366d70a2839]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T07:34:25.275Z","level":"info","requestId":"10851f8f-eea0-4b7a-8430-8366d70a2839","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T07:34:26.646Z","level":"info","requestId":"2d30aec7-fc5e-4b49-9765-fb540a1594d3","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T07:34:26.664Z","level":"info","requestId":"6c718c04-275d-43f5-8289-5293e53e0bb6","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T07:34:26.681Z","level":"info","requestId":"16b46e1e-b3b2-458a-b833-df95bab74e21","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T07:34:32.168Z","level":"info","requestId":"d8f62f09-8472-4120-9882-e978fe247fc6","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T07:34:32.189Z","level":"info","requestId":"dc1c2b54-b341-4cec-a7bf-e409551537f4","message":"[WS] Incoming Message [d8f62f09-8472-4120-9882-e978fe247fc6]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T07:34:34.150Z","level":"info","requestId":"5989c924-2e40-4f46-ad2f-292ccd1f708d","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T07:34:34.180Z","level":"info","requestId":"6ff5bd60-8e3e-4cad-8a80-e179cac209c7","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T07:34:34.181Z","level":"info","requestId":"704b1d63-3c12-4bc9-845a-7b8bded53b78","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T07:34:34.184Z","level":"info","requestId":"478a6435-d8e9-4c26-a7ac-427412a3ed63","message":"[WS] Incoming Message [5989c924-2e40-4f46-ad2f-292ccd1f708d]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T07:34:34.191Z","level":"info","requestId":"383a126b-f71d-4b02-acc8-60f75799e872","message":"[WS] Incoming Message [6ff5bd60-8e3e-4cad-8a80-e179cac209c7]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T07:34:34.193Z","level":"info","requestId":"58099f68-ae56-49c6-9b05-4fff818001df","message":"[WS] Incoming Message [704b1d63-3c12-4bc9-845a-7b8bded53b78]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T07:35:32.868Z","level":"info","requestId":"d8f62f09-8472-4120-9882-e978fe247fc6","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T07:38:54.182Z","level":"info","requestId":"5989c924-2e40-4f46-ad2f-292ccd1f708d","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T07:38:54.247Z","level":"info","requestId":"6ff5bd60-8e3e-4cad-8a80-e179cac209c7","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T07:38:54.314Z","level":"info","requestId":"704b1d63-3c12-4bc9-845a-7b8bded53b78","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T07:38:58.128Z","level":"info","requestId":"e9c257ff-8952-46ce-9553-400a1a09dabd","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T07:38:58.130Z","level":"info","requestId":"a924c7c1-cb48-449c-9ec8-0a2beb7382dd","message":"[WS] Incoming Message [e9c257ff-8952-46ce-9553-400a1a09dabd]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T07:38:58.147Z","level":"info","requestId":"d12d20f3-a8a6-486f-8939-c2d92e679da0","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T07:38:58.163Z","level":"info","requestId":"a01597d2-e23a-4533-8442-3cc20d8455e1","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T07:38:58.165Z","level":"info","requestId":"b7438eb8-f361-4d03-921d-309e7a79b562","message":"[WS] Incoming Message [a01597d2-e23a-4533-8442-3cc20d8455e1]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T07:38:58.166Z","level":"info","requestId":"88b95739-970c-4c22-9c18-5a198306a971","message":"[WS] Incoming Message [d12d20f3-a8a6-486f-8939-c2d92e679da0]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T07:38:58.194Z","level":"info","requestId":"f4644f3b-435a-464a-a836-7c9b67bd317e","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T07:38:58.197Z","level":"info","requestId":"c333a41b-3857-428d-9f5a-16b6aea3ae68","message":"[WS] Incoming Message [f4644f3b-435a-464a-a836-7c9b67bd317e]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T07:43:20.417Z","level":"info","requestId":"e9c257ff-8952-46ce-9553-400a1a09dabd","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T07:43:20.538Z","level":"info","requestId":"f4644f3b-435a-464a-a836-7c9b67bd317e","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T07:43:20.541Z","level":"info","requestId":"d12d20f3-a8a6-486f-8939-c2d92e679da0","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T07:43:20.543Z","level":"info","requestId":"a01597d2-e23a-4533-8442-3cc20d8455e1","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T08:13:50.838Z","level":"info","requestId":"257c61c3-5b19-40e5-b7fc-569cdd7dc494","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T08:13:50.882Z","level":"info","requestId":"a8202c97-97cd-4615-8bb7-c67ea6e7405c","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T08:13:50.884Z","level":"info","requestId":"5ba1b8e0-8965-4c97-bac8-8b4de6ea3b2a","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T08:13:50.922Z","level":"info","requestId":"b6e01a50-94a1-4a48-ad98-c626c4f384b8","message":"[WS] Incoming Message [a8202c97-97cd-4615-8bb7-c67ea6e7405c]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T08:13:50.924Z","level":"info","requestId":"964f825d-2a5e-41a7-836d-6bf7e240a962","message":"[WS] Incoming Message [5ba1b8e0-8965-4c97-bac8-8b4de6ea3b2a]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T08:13:50.987Z","level":"info","requestId":"9ef41831-a55a-4818-a292-936014d84fe3","message":"[WS] Incoming Message [257c61c3-5b19-40e5-b7fc-569cdd7dc494]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T08:13:51.338Z","level":"info","requestId":"a5f728c1-c51b-4850-9678-a285b5913e8f","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T08:13:51.340Z","level":"info","requestId":"465b9eb8-04c7-412c-a339-42be927090c5","message":"[WS] Incoming Message [a5f728c1-c51b-4850-9678-a285b5913e8f]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T08:17:28.221Z","level":"info","requestId":"a5f728c1-c51b-4850-9678-a285b5913e8f","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T08:24:38.828Z","level":"info","requestId":"5ba1b8e0-8965-4c97-bac8-8b4de6ea3b2a","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T08:24:38.930Z","level":"info","requestId":"257c61c3-5b19-40e5-b7fc-569cdd7dc494","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T08:24:38.998Z","level":"info","requestId":"a8202c97-97cd-4615-8bb7-c67ea6e7405c","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T08:24:43.150Z","level":"info","requestId":"4406418c-66be-4956-b89f-46e7b860f06d","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T08:24:43.165Z","level":"info","requestId":"518583ed-6b35-42bf-b696-4d9a4eae88c4","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T08:24:43.196Z","level":"info","requestId":"c9d5d711-e615-41e2-93a6-ce228d397b78","message":"[WS] Incoming Message [518583ed-6b35-42bf-b696-4d9a4eae88c4]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T08:24:43.198Z","level":"info","requestId":"d6414f85-cc7f-466c-8190-fc8d0c5dee5a","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T08:24:43.199Z","level":"info","requestId":"91010fea-7433-472b-8275-b44f38784db1","message":"[WS] Incoming Message [4406418c-66be-4956-b89f-46e7b860f06d]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T08:24:43.203Z","level":"info","requestId":"4481b832-f9b0-4689-b6a5-f408ef7ab5f3","message":"[WS] Incoming Message [d6414f85-cc7f-466c-8190-fc8d0c5dee5a]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T08:36:54.469Z","level":"info","requestId":"d6414f85-cc7f-466c-8190-fc8d0c5dee5a","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T08:36:54.523Z","level":"info","requestId":"4406418c-66be-4956-b89f-46e7b860f06d","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T08:36:54.621Z","level":"info","requestId":"518583ed-6b35-42bf-b696-4d9a4eae88c4","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T08:36:59.192Z","level":"info","requestId":"e7c3b33d-6d4f-4951-9211-fe6d3b879102","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T08:36:59.220Z","level":"info","requestId":"4ab816b0-ff39-42c4-bb76-a17cb81a5e8b","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T08:36:59.221Z","level":"info","requestId":"b869f7c9-24fa-43b1-9414-149149a08fb5","message":"[WS] Incoming Message [4ab816b0-ff39-42c4-bb76-a17cb81a5e8b]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T08:36:59.223Z","level":"info","requestId":"f2e9d604-0698-4ef1-9a9f-9abe4d35a694","message":"[WS] Incoming Message [e7c3b33d-6d4f-4951-9211-fe6d3b879102]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T08:36:59.225Z","level":"info","requestId":"037cbe21-b026-4c0a-a70f-0bf8c31ffc11","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T08:36:59.231Z","level":"info","requestId":"289a79e9-c91b-4756-9986-9c9dc2910cc8","message":"[WS] Incoming Message [037cbe21-b026-4c0a-a70f-0bf8c31ffc11]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T08:41:11.349Z","level":"info","requestId":"4ab816b0-ff39-42c4-bb76-a17cb81a5e8b","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T08:51:33.206Z","level":"info","requestId":"037cbe21-b026-4c0a-a70f-0bf8c31ffc11","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T08:51:33.229Z","level":"info","requestId":"e7c3b33d-6d4f-4951-9211-fe6d3b879102","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T09:03:00.952Z","level":"info","requestId":"a2e7400f-90e9-4fd5-bf9f-746d599d50e6","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T09:03:00.982Z","level":"info","requestId":"c5b8a407-e355-4426-8cd2-63500b3d9cad","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T09:03:00.985Z","level":"info","requestId":"156a96ea-20dd-4b94-9bd1-2e84e1975879","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T09:03:00.986Z","level":"info","requestId":"c4f5a33e-0c1c-405c-8088-a193119e21d1","message":"[WS] Incoming Message [a2e7400f-90e9-4fd5-bf9f-746d599d50e6]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T09:03:00.997Z","level":"info","requestId":"28c67f1b-e21e-48e1-9628-70fa9453bd8d","message":"[WS] Incoming Message [c5b8a407-e355-4426-8cd2-63500b3d9cad]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T09:03:01.009Z","level":"info","requestId":"1eb21002-395b-461d-9a8d-d2f20efc1a77","message":"[WS] Incoming Message [156a96ea-20dd-4b94-9bd1-2e84e1975879]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T09:10:45.880Z","level":"info","requestId":"c5b8a407-e355-4426-8cd2-63500b3d9cad","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T09:10:45.886Z","level":"info","requestId":"a2e7400f-90e9-4fd5-bf9f-746d599d50e6","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T09:10:45.891Z","level":"info","requestId":"156a96ea-20dd-4b94-9bd1-2e84e1975879","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T09:11:00.706Z","level":"info","requestId":"4ada2431-0cc8-48c7-96c6-b98ebe7eeb48","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T09:11:00.722Z","level":"info","requestId":"4a23ec09-b959-4d9d-bf2d-b4671aa94066","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T09:11:00.722Z","level":"info","requestId":"833d45e5-662c-4615-a552-a6bfc3f5a66d","message":"[WS] Incoming Message [4ada2431-0cc8-48c7-96c6-b98ebe7eeb48]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T09:11:00.725Z","level":"info","requestId":"cbdbdcb0-2674-465f-9531-0b7ea6221290","message":"[WS] Incoming Message [4a23ec09-b959-4d9d-bf2d-b4671aa94066]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T09:11:00.752Z","level":"info","requestId":"2fbf7e85-1b5d-481d-881b-d3d49f95f10d","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T09:11:00.755Z","level":"info","requestId":"2f3998dd-cc21-4b3b-a7f8-cfc1e0cad4ed","message":"[WS] Incoming Message [2fbf7e85-1b5d-481d-881b-d3d49f95f10d]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T09:14:17.176Z","level":"info","requestId":"2fbf7e85-1b5d-481d-881b-d3d49f95f10d","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T09:56:52.581Z","level":"info","requestId":"4ada2431-0cc8-48c7-96c6-b98ebe7eeb48","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T09:56:52.654Z","level":"info","requestId":"4a23ec09-b959-4d9d-bf2d-b4671aa94066","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T09:57:00.734Z","level":"info","requestId":"fdb19e09-e0b2-4107-af39-7c7631f3bdea","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T09:57:00.749Z","level":"info","requestId":"8f315dfb-4377-4893-99de-59dc6323ec15","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T09:57:00.754Z","level":"info","requestId":"cb596cb7-2104-44c6-9f43-c652bb07a275","message":"[WS] Incoming Message [8f315dfb-4377-4893-99de-59dc6323ec15]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T09:57:00.761Z","level":"info","requestId":"772c7af9-5e10-44b0-aeda-c80ffca0dd8e","message":"[WS] Incoming Message [fdb19e09-e0b2-4107-af39-7c7631f3bdea]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T09:57:00.950Z","level":"info","requestId":"d17a4607-ea00-4927-aee2-e6edb48aed15","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T09:57:00.960Z","level":"info","requestId":"28442f23-7d4f-430b-8087-d35757d0e09b","message":"[WS] Incoming Message [d17a4607-ea00-4927-aee2-e6edb48aed15]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T10:15:49.420Z","level":"info","requestId":"8f315dfb-4377-4893-99de-59dc6323ec15","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T10:15:49.497Z","level":"info","requestId":"d17a4607-ea00-4927-aee2-e6edb48aed15","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T10:15:49.547Z","level":"info","requestId":"fdb19e09-e0b2-4107-af39-7c7631f3bdea","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T10:15:51.643Z","level":"info","requestId":"b11d995a-14ea-4707-8758-ee179a1042f7","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T10:15:51.663Z","level":"info","requestId":"50a55b72-61c8-44a3-ac2d-9678042d2a9d","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T10:15:53.380Z","level":"info","requestId":"38426de6-707a-4544-b417-8fe8c3162cda","message":"[WS] Incoming Message [50a55b72-61c8-44a3-ac2d-9678042d2a9d]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T10:15:53.384Z","level":"info","requestId":"e80bd6c7-376c-4c18-8be8-03a99773ea36","message":"[WS] Incoming Message [b11d995a-14ea-4707-8758-ee179a1042f7]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T10:15:53.394Z","level":"info","requestId":"aabc91d4-fd88-4e36-a895-475b2bcc1828","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T10:15:53.402Z","level":"info","requestId":"684c6ff5-7d52-4857-87a9-ad3639fcadfb","message":"[WS] Incoming Message [aabc91d4-fd88-4e36-a895-475b2bcc1828]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T10:52:27.466Z","level":"info","requestId":"b11d995a-14ea-4707-8758-ee179a1042f7","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T10:52:27.473Z","level":"info","requestId":"50a55b72-61c8-44a3-ac2d-9678042d2a9d","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T10:52:27.474Z","level":"info","requestId":"aabc91d4-fd88-4e36-a895-475b2bcc1828","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T11:04:55.579Z","level":"info","requestId":"4acba055-4160-4c25-b477-5b51ede2b82a","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T11:04:56.826Z","level":"info","requestId":"2001de6a-87fd-43a1-9558-8408afc146d2","message":"[WS] Incoming Message [4acba055-4160-4c25-b477-5b51ede2b82a]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T11:04:59.120Z","level":"info","requestId":"21c48d3b-b8fa-47ed-98c8-89a103705c46","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T11:05:00.600Z","level":"info","requestId":"91a6407b-b093-4166-8afc-a4cc9f35ae3f","message":"[WS] Incoming Message [21c48d3b-b8fa-47ed-98c8-89a103705c46]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T11:05:01.089Z","level":"info","requestId":"9445c508-fdf3-40d6-b531-b152b4f102f1","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T11:05:01.102Z","level":"info","requestId":"a69bf700-71b9-4d7b-a34c-72320b11e14f","message":"[WS] Incoming Message [9445c508-fdf3-40d6-b531-b152b4f102f1]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T11:16:10.347Z","level":"info","requestId":"9445c508-fdf3-40d6-b531-b152b4f102f1","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T11:16:10.349Z","level":"info","requestId":"4acba055-4160-4c25-b477-5b51ede2b82a","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T11:16:10.352Z","level":"info","requestId":"21c48d3b-b8fa-47ed-98c8-89a103705c46","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T12:02:21.258Z","level":"info","requestId":"76fc566c-fc7b-402d-acab-85825c740206","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T12:02:21.274Z","level":"info","requestId":"fefe3192-05e0-45fe-8cf3-e3390346e19f","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T12:02:21.387Z","level":"info","requestId":"633c2214-f8b7-473b-b414-168a228c5cd6","message":"[WS] Incoming Message [76fc566c-fc7b-402d-acab-85825c740206]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T12:02:21.487Z","level":"info","requestId":"08a33f4e-bb8c-497b-a612-74b1e34e96c0","message":"[WS] Incoming Message [fefe3192-05e0-45fe-8cf3-e3390346e19f]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T12:02:28.728Z","level":"info","requestId":"81d0e420-ba68-4d05-ad59-98cb8dfbd337","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T12:02:29.839Z","level":"info","requestId":"a7d85be5-8838-4669-b7c8-055e3db0391b","message":"[WS] Incoming Message [81d0e420-ba68-4d05-ad59-98cb8dfbd337]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T12:28:00.409Z","level":"info","requestId":"8900e669-41bd-4d49-856f-a4528d85f5b4","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T12:28:00.448Z","level":"info","requestId":"b092092f-8417-43f0-81f7-a919cb462660","message":"[WS] Incoming Message [8900e669-41bd-4d49-856f-a4528d85f5b4]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T13:14:04.345Z","level":"info","requestId":"8900e669-41bd-4d49-856f-a4528d85f5b4","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T13:15:30.760Z","level":"info","requestId":"81d0e420-ba68-4d05-ad59-98cb8dfbd337","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T13:15:30.771Z","level":"info","requestId":"76fc566c-fc7b-402d-acab-85825c740206","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T13:15:30.782Z","level":"info","requestId":"fefe3192-05e0-45fe-8cf3-e3390346e19f","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T13:15:56.965Z","level":"info","requestId":"a0e2bc86-3b7f-4adc-85fe-ebb821f487c2","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T13:15:57.023Z","level":"info","requestId":"6505eb2b-df1f-4cfd-ac1e-eb8d2d25bc3b","message":"[WS] Incoming Message [a0e2bc86-3b7f-4adc-85fe-ebb821f487c2]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T13:15:57.072Z","level":"info","requestId":"d7abee82-eb25-41a8-b428-1b86905f8dd7","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T13:15:57.075Z","level":"info","requestId":"01dc1e5c-6bef-4d6f-b173-0a32f02bbefe","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T13:15:57.446Z","level":"info","requestId":"78b67f9f-50d0-469c-af04-2122aea3e642","message":"[WS] Incoming Message [d7abee82-eb25-41a8-b428-1b86905f8dd7]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T13:15:57.779Z","level":"info","requestId":"78cc9893-3b7a-4d22-923c-4f27fe5dc72e","message":"[WS] Incoming Message [01dc1e5c-6bef-4d6f-b173-0a32f02bbefe]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T13:28:15.890Z","level":"info","requestId":"a0e2bc86-3b7f-4adc-85fe-ebb821f487c2","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T13:28:15.945Z","level":"info","requestId":"d7abee82-eb25-41a8-b428-1b86905f8dd7","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T13:28:16.012Z","level":"info","requestId":"01dc1e5c-6bef-4d6f-b173-0a32f02bbefe","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T13:28:20.280Z","level":"info","requestId":"4102a1d8-5d72-48aa-9605-7c3afe2f2279","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T13:28:20.309Z","level":"info","requestId":"3653fbc2-3f78-4747-a0f0-1d3da91178ff","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T13:28:20.310Z","level":"info","requestId":"3a2511c5-8a7b-475c-bcaa-74413e7ccc92","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T13:28:20.312Z","level":"info","requestId":"a5c4be87-79d5-499b-9fef-c5abe810218f","message":"[WS] Incoming Message [3a2511c5-8a7b-475c-bcaa-74413e7ccc92]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T13:28:20.313Z","level":"info","requestId":"165cc07b-f9f4-4951-b4e9-42ffa12ee547","message":"[WS] Incoming Message [3653fbc2-3f78-4747-a0f0-1d3da91178ff]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T13:28:20.315Z","level":"info","requestId":"8087ecd0-a543-4756-89e1-82304f531f06","message":"[WS] Incoming Message [4102a1d8-5d72-48aa-9605-7c3afe2f2279]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T13:43:46.971Z","level":"info","requestId":"3a2511c5-8a7b-475c-bcaa-74413e7ccc92","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T13:43:47.676Z","level":"info","requestId":"4102a1d8-5d72-48aa-9605-7c3afe2f2279","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T13:43:47.831Z","level":"info","requestId":"3653fbc2-3f78-4747-a0f0-1d3da91178ff","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T14:04:46.796Z","level":"info","requestId":"921bff8e-c349-4906-b3a5-9df47a65faec","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T14:04:46.811Z","level":"info","requestId":"03edc5e0-0f28-4579-8902-094fe5ed4ab2","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T14:04:46.814Z","level":"info","requestId":"794d5d8f-80ae-46b0-8cce-776222cc47b6","message":"[WS] Incoming Message [921bff8e-c349-4906-b3a5-9df47a65faec]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T14:04:46.815Z","level":"info","requestId":"9267c87e-2656-4cec-ae43-5922a9e7cf08","message":"[WS] Incoming Message [03edc5e0-0f28-4579-8902-094fe5ed4ab2]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T14:04:46.826Z","level":"info","requestId":"559fda3a-0fea-462e-b971-dee94f5f7142","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T14:04:46.828Z","level":"info","requestId":"a6fd2bbb-4542-4258-8528-b5ee2e224bd4","message":"[WS] Incoming Message [559fda3a-0fea-462e-b971-dee94f5f7142]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T14:33:47.983Z","level":"info","requestId":"559fda3a-0fea-462e-b971-dee94f5f7142","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T14:33:48.231Z","level":"info","requestId":"921bff8e-c349-4906-b3a5-9df47a65faec","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T14:33:48.278Z","level":"info","requestId":"03edc5e0-0f28-4579-8902-094fe5ed4ab2","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T16:43:53.236Z","level":"info","requestId":"d80d184d-0163-452e-b5de-5be27fa6f2fd","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T16:43:53.244Z","level":"info","requestId":"e9b99624-ccd0-45bb-904b-6241bec9ebdc","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T16:43:53.271Z","level":"info","requestId":"f669e4dd-c0fa-4616-bacc-e3d59372dc34","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T16:43:53.337Z","level":"info","requestId":"7d8ef28c-7a31-47d7-ac2b-e896838ab315","message":"[WS] Incoming Message [d80d184d-0163-452e-b5de-5be27fa6f2fd]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T16:43:53.341Z","level":"info","requestId":"2bc87cc7-74d3-4512-b380-d8027c1c2b98","message":"[WS] Incoming Message [f669e4dd-c0fa-4616-bacc-e3d59372dc34]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T16:43:53.344Z","level":"info","requestId":"2ed24613-24ab-4a17-adb9-d2022d51271b","message":"[WS] Incoming Message [e9b99624-ccd0-45bb-904b-6241bec9ebdc]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T17:11:24.223Z","level":"info","requestId":"f669e4dd-c0fa-4616-bacc-e3d59372dc34","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T17:11:24.464Z","level":"info","requestId":"d80d184d-0163-452e-b5de-5be27fa6f2fd","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T17:11:24.483Z","level":"info","requestId":"e9b99624-ccd0-45bb-904b-6241bec9ebdc","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T17:13:57.015Z","level":"info","requestId":"b276449f-2b8b-42cf-97d7-fb50a3218e1c","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T17:13:57.023Z","level":"info","requestId":"658ca368-fde4-43d4-83d8-b3a6f708fdc4","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T17:13:57.034Z","level":"info","requestId":"ddeee221-828b-4fba-98cf-56db61d72f6c","message":"[WS] Incoming Message [b276449f-2b8b-42cf-97d7-fb50a3218e1c]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T17:13:57.051Z","level":"info","requestId":"3da79ba1-b7bc-41cc-ac89-9dbbf367626d","message":"[WS] Incoming Message [658ca368-fde4-43d4-83d8-b3a6f708fdc4]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T17:13:57.075Z","level":"info","requestId":"b06da5ad-badb-4f07-a2ca-b0a9828b7fc6","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-21T17:13:57.078Z","level":"info","requestId":"4307ba60-158a-4ba3-82f5-3785ca39d285","message":"[WS] Incoming Message [b06da5ad-badb-4f07-a2ca-b0a9828b7fc6]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-21T18:38:10.709Z","level":"info","requestId":"b06da5ad-badb-4f07-a2ca-b0a9828b7fc6","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T18:38:11.044Z","level":"info","requestId":"b276449f-2b8b-42cf-97d7-fb50a3218e1c","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-21T18:38:11.102Z","level":"info","requestId":"658ca368-fde4-43d4-83d8-b3a6f708fdc4","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T05:27:34.192Z","level":"info","requestId":"222aa6aa-785f-404c-bc32-85c8397f0b79","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T05:27:38.443Z","level":"info","requestId":"e5231ee2-35da-4afd-929d-55b933cd1e3a","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T05:27:38.445Z","level":"info","requestId":"8c9e9696-7549-4f96-aa32-f119e8167f4c","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T05:27:38.562Z","level":"info","requestId":"898319a9-2d6a-45ae-a00b-5c71e6fdb95a","message":"[WS] Incoming Message [222aa6aa-785f-404c-bc32-85c8397f0b79]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T05:27:38.570Z","level":"info","requestId":"0c2d1435-5ef7-4420-acf4-82734be5ae82","message":"[WS] Incoming Message [8c9e9696-7549-4f96-aa32-f119e8167f4c]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T05:27:38.742Z","level":"info","requestId":"5d3b7c30-f8de-4bf7-9470-a1e254edec2d","message":"[WS] Incoming Message [e5231ee2-35da-4afd-929d-55b933cd1e3a]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T05:29:36.127Z","level":"info","requestId":"8c9e9696-7549-4f96-aa32-f119e8167f4c","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T05:29:37.470Z","level":"info","requestId":"13759735-d164-4738-8d1b-a198c7b242cd","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T05:29:38.692Z","level":"info","requestId":"19427887-6df5-43f2-abf3-adea49179eb4","message":"[WS] Incoming Message [13759735-d164-4738-8d1b-a198c7b242cd]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T05:31:44.808Z","level":"info","requestId":"13759735-d164-4738-8d1b-a198c7b242cd","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T05:31:45.255Z","level":"info","requestId":"e5231ee2-35da-4afd-929d-55b933cd1e3a","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T05:31:45.287Z","level":"info","requestId":"222aa6aa-785f-404c-bc32-85c8397f0b79","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T05:31:53.311Z","level":"info","requestId":"d86420a3-bf21-447b-ba70-b718d314c67c","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T05:31:54.616Z","level":"info","requestId":"0a0c2b93-b83f-4838-9de0-3e5118b9aa22","message":"[WS] Incoming Message [d86420a3-bf21-447b-ba70-b718d314c67c]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T05:32:01.895Z","level":"info","requestId":"ce7b2617-02e5-4979-8519-09629e9dd2ae","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T05:32:01.904Z","level":"info","requestId":"cce495b6-9667-488a-bf52-d3d55d4c3ee1","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T05:32:01.964Z","level":"info","requestId":"13e1cd0d-9e2d-401b-897f-1ab1874320e4","message":"[WS] Incoming Message [ce7b2617-02e5-4979-8519-09629e9dd2ae]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T05:32:01.981Z","level":"info","requestId":"a3c01c6b-18c9-4d66-a46e-9c2d60a4bb31","message":"[WS] Incoming Message [cce495b6-9667-488a-bf52-d3d55d4c3ee1]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T05:40:12.380Z","level":"info","requestId":"cce495b6-9667-488a-bf52-d3d55d4c3ee1","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T06:09:06.268Z","level":"info","requestId":"d86420a3-bf21-447b-ba70-b718d314c67c","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T06:09:06.296Z","level":"info","requestId":"ce7b2617-02e5-4979-8519-09629e9dd2ae","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T06:09:24.146Z","level":"info","requestId":"fe62fd9e-c93b-4947-a6dc-e38d4d8cd7cb","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T06:09:24.181Z","level":"info","requestId":"7a38f1ec-0aaa-439d-bf59-c892939145f9","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T06:09:24.319Z","level":"info","requestId":"bc2011da-48b9-4641-83fe-37937897ff89","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T06:09:24.374Z","level":"info","requestId":"bd7c5c0b-231a-4115-bfdd-674eb3978409","message":"[WS] Incoming Message [fe62fd9e-c93b-4947-a6dc-e38d4d8cd7cb]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T06:09:24.411Z","level":"info","requestId":"fe62fd9e-c93b-4947-a6dc-e38d4d8cd7cb","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T06:09:24.425Z","level":"info","requestId":"67dab156-6d5b-40d2-b588-0eb349100696","message":"[WS] Incoming Message [bc2011da-48b9-4641-83fe-37937897ff89]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T06:09:24.432Z","level":"info","requestId":"1e87df2f-4469-4729-840d-95f1295e44c1","message":"[WS] Incoming Message [7a38f1ec-0aaa-439d-bf59-c892939145f9]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T06:09:25.256Z","level":"info","requestId":"24ae6168-c7ef-45f4-91a1-9e7e2e8d06f5","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T06:09:25.548Z","level":"info","requestId":"fba3a0f0-6a84-4bd5-a75f-8a37d544213b","message":"[WS] Incoming Message [24ae6168-c7ef-45f4-91a1-9e7e2e8d06f5]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T06:11:11.312Z","level":"info","requestId":"93d73675-0d31-40b6-adab-78c6a01c2ba4","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T06:11:11.347Z","level":"info","requestId":"cf31fcfa-a175-4e1d-a3b5-bcd1872c8b29","message":"[WS] Incoming Message [93d73675-0d31-40b6-adab-78c6a01c2ba4]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T06:15:20.383Z","level":"info","requestId":"93d73675-0d31-40b6-adab-78c6a01c2ba4","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T06:15:20.400Z","level":"info","requestId":"24ae6168-c7ef-45f4-91a1-9e7e2e8d06f5","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T06:18:00.266Z","level":"info","requestId":"7a38f1ec-0aaa-439d-bf59-c892939145f9","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T06:18:00.299Z","level":"info","requestId":"bc2011da-48b9-4641-83fe-37937897ff89","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T06:18:06.665Z","level":"info","requestId":"6d08af1f-5010-4c9b-b78a-d01e9d196a7f","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T06:18:06.670Z","level":"info","requestId":"2f48084d-4dad-4efc-84d3-05949cb1c961","message":"[WS] Incoming Message [6d08af1f-5010-4c9b-b78a-d01e9d196a7f]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T06:18:06.692Z","level":"info","requestId":"96bea6ff-61b8-4753-b19e-407cff9653b3","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T06:18:06.709Z","level":"info","requestId":"6cec89a5-efa4-4231-b650-76102d02e21a","message":"[WS] Incoming Message [96bea6ff-61b8-4753-b19e-407cff9653b3]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T06:18:06.726Z","level":"info","requestId":"96bea6ff-61b8-4753-b19e-407cff9653b3","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T06:18:06.949Z","level":"info","requestId":"418f37fa-63f8-453c-b3dc-8353cf292c3e","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T06:18:06.962Z","level":"info","requestId":"16b017c2-87d4-4949-a603-947ea20ab432","message":"[WS] Incoming Message [418f37fa-63f8-453c-b3dc-8353cf292c3e]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T06:18:06.999Z","level":"info","requestId":"154817e5-1ada-49f8-a66d-a453bfea2512","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T06:18:07.003Z","level":"info","requestId":"83e7dd84-145c-469e-b797-c5d046e82013","message":"[WS] Incoming Message [154817e5-1ada-49f8-a66d-a453bfea2512]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T06:18:07.074Z","level":"info","requestId":"5ba70cf1-3b53-4da0-9a29-e51523f830c6","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T06:18:07.133Z","level":"info","requestId":"7297536b-7004-4aae-a897-afeb1608a2c6","message":"[WS] Incoming Message [5ba70cf1-3b53-4da0-9a29-e51523f830c6]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T06:30:02.213Z","level":"info","requestId":"6d08af1f-5010-4c9b-b78a-d01e9d196a7f","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T06:30:02.283Z","level":"info","requestId":"418f37fa-63f8-453c-b3dc-8353cf292c3e","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T06:30:02.307Z","level":"info","requestId":"154817e5-1ada-49f8-a66d-a453bfea2512","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T06:30:02.319Z","level":"info","requestId":"5ba70cf1-3b53-4da0-9a29-e51523f830c6","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T06:30:05.330Z","level":"info","requestId":"548006bc-6005-43f6-a98c-1c40a07f1e62","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T06:30:05.493Z","level":"info","requestId":"459a1999-e19b-4dc9-b75d-6a41d6e0491c","message":"[WS] Incoming Message [548006bc-6005-43f6-a98c-1c40a07f1e62]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T06:30:07.132Z","level":"info","requestId":"7e2c812a-a734-44cc-b886-612dcb2e94b3","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T06:30:07.156Z","level":"info","requestId":"16f613a1-9263-4d34-bf55-46cf51f6f2f4","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T06:30:07.158Z","level":"info","requestId":"e9e85fe2-280a-498a-ba8b-9274a46c70e7","message":"[WS] Incoming Message [16f613a1-9263-4d34-bf55-46cf51f6f2f4]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T06:30:07.159Z","level":"info","requestId":"e17cb327-d2ac-4283-8f48-f63e8c81695b","message":"[WS] Incoming Message [7e2c812a-a734-44cc-b886-612dcb2e94b3]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T06:31:12.361Z","level":"info","requestId":"7e2c812a-a734-44cc-b886-612dcb2e94b3","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T06:31:13.397Z","level":"info","requestId":"16f613a1-9263-4d34-bf55-46cf51f6f2f4","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T06:31:13.448Z","level":"info","requestId":"548006bc-6005-43f6-a98c-1c40a07f1e62","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T06:31:14.278Z","level":"info","requestId":"bd344bae-b427-48de-8a26-3e1c58dcfef9","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T06:31:14.297Z","level":"info","requestId":"c712f4e8-08b1-45f6-b388-d7cbf6f905c1","message":"[WS] Incoming Message [bd344bae-b427-48de-8a26-3e1c58dcfef9]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T06:31:17.531Z","level":"info","requestId":"38811e67-8eb1-4450-8d42-cf49a9e571c2","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T06:31:17.547Z","level":"info","requestId":"993074ab-f319-4a78-aec4-437f388d8136","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T06:31:17.548Z","level":"info","requestId":"d423401f-c868-4af8-b581-57be57e09d63","message":"[WS] Incoming Message [38811e67-8eb1-4450-8d42-cf49a9e571c2]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T06:31:17.551Z","level":"info","requestId":"31f41925-9aba-4e5c-86ac-72d68b4ccafb","message":"[WS] Incoming Message [993074ab-f319-4a78-aec4-437f388d8136]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T06:32:16.751Z","level":"info","requestId":"993074ab-f319-4a78-aec4-437f388d8136","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T06:37:26.775Z","level":"info","requestId":"bd344bae-b427-48de-8a26-3e1c58dcfef9","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T06:37:26.814Z","level":"info","requestId":"38811e67-8eb1-4450-8d42-cf49a9e571c2","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T06:37:30.652Z","level":"info","requestId":"16707277-9d8b-4a0d-a53b-a722f93b53f3","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T06:37:30.655Z","level":"info","requestId":"72cc5b5f-e04b-447e-a26c-066961f75bfd","message":"[WS] Incoming Message [16707277-9d8b-4a0d-a53b-a722f93b53f3]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T06:37:31.148Z","level":"info","requestId":"60a7b37b-d6ee-4b4d-9613-1f838c833425","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T06:37:31.151Z","level":"info","requestId":"75334f8c-48d2-49e1-a85c-c2b90a6eeda6","message":"[WS] Incoming Message [60a7b37b-d6ee-4b4d-9613-1f838c833425]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T06:37:31.179Z","level":"info","requestId":"b8caaf7a-acec-4e04-a3ba-1e4adebd95de","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T06:37:31.187Z","level":"info","requestId":"d44998bb-3b0a-4033-9c4e-4f579e7e7be7","message":"[WS] Incoming Message [b8caaf7a-acec-4e04-a3ba-1e4adebd95de]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T06:37:51.197Z","level":"info","requestId":"b8caaf7a-acec-4e04-a3ba-1e4adebd95de","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T07:33:44.658Z","level":"info","requestId":"16707277-9d8b-4a0d-a53b-a722f93b53f3","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T07:33:44.875Z","level":"info","requestId":"60a7b37b-d6ee-4b4d-9613-1f838c833425","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T13:17:16.080Z","level":"info","requestId":"abd9eb0c-9bdc-410b-a3bc-001d30a0024d","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T13:17:16.179Z","level":"info","requestId":"4144236c-a36a-4f21-bbbb-0a8355bb3b37","message":"[WS] Incoming Message [abd9eb0c-9bdc-410b-a3bc-001d30a0024d]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T13:17:16.346Z","level":"info","requestId":"d6eaf937-f030-40d1-9342-3be9b3ac9f7f","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T13:17:16.400Z","level":"info","requestId":"ae00a3f5-1531-4c9d-b4be-cdc228d4cd2a","message":"[WS] Incoming Message [d6eaf937-f030-40d1-9342-3be9b3ac9f7f]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T13:17:18.684Z","level":"info","requestId":"1b5b1082-4884-4f3c-b8de-cf811a23d039","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T13:17:18.694Z","level":"info","requestId":"fc0f527c-6c0b-47bb-9b58-5a46ef694309","message":"[WS] Incoming Message [1b5b1082-4884-4f3c-b8de-cf811a23d039]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T13:58:06.595Z","level":"info","requestId":"1b5b1082-4884-4f3c-b8de-cf811a23d039","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T13:58:06.624Z","level":"info","requestId":"abd9eb0c-9bdc-410b-a3bc-001d30a0024d","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T13:58:06.631Z","level":"info","requestId":"d6eaf937-f030-40d1-9342-3be9b3ac9f7f","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T14:48:01.604Z","level":"info","requestId":"59309728-9083-4f56-9d66-d1efe28e9f42","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T14:48:01.607Z","level":"info","requestId":"fef1606d-3467-4e0c-90bd-e825904dcd31","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T14:48:01.612Z","level":"info","requestId":"eddf3427-9e9e-47ab-ac55-eb6e50e94caf","message":"[WS] Incoming Message [59309728-9083-4f56-9d66-d1efe28e9f42]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T14:48:01.618Z","level":"info","requestId":"17507ef4-2b29-41a6-8b51-028f5f09cbc9","message":"[WS] Incoming Message [fef1606d-3467-4e0c-90bd-e825904dcd31]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T14:48:25.315Z","level":"info","requestId":"60f15443-4fe9-423f-a96c-7f2b6b4023e3","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T14:48:26.789Z","level":"info","requestId":"01cb2d85-e932-413d-9769-b444e6dedc5b","message":"[WS] Incoming Message [60f15443-4fe9-423f-a96c-7f2b6b4023e3]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T14:51:35.303Z","level":"info","requestId":"60f15443-4fe9-423f-a96c-7f2b6b4023e3","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T14:51:35.307Z","level":"info","requestId":"fef1606d-3467-4e0c-90bd-e825904dcd31","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T14:51:35.308Z","level":"info","requestId":"59309728-9083-4f56-9d66-d1efe28e9f42","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T15:55:25.486Z","level":"info","requestId":"0b469b28-cc43-4169-ae53-5027481a0159","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T15:55:25.511Z","level":"info","requestId":"9caac7f5-0f91-4e76-8e4e-ab9f87849b84","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T15:55:25.657Z","level":"info","requestId":"75317ccf-56ec-42a6-b80d-1dbffe0e571f","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T15:55:55.015Z","level":"info","requestId":"e5e8dedc-82b1-442f-af9a-6992f116b1e4","message":"[WS] Incoming Message [9caac7f5-0f91-4e76-8e4e-ab9f87849b84]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T15:55:55.064Z","level":"info","requestId":"236d99d5-43c3-4eb3-805f-13c292ea50e5","message":"[WS] Incoming Message [0b469b28-cc43-4169-ae53-5027481a0159]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T15:56:03.959Z","level":"info","requestId":"9a8c74d2-175f-41f9-86be-1545648410ba","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T15:56:05.103Z","level":"info","requestId":"7a765aa6-e788-4e8a-ab8c-5fcaad275881","message":"[WS] Incoming Message [9a8c74d2-175f-41f9-86be-1545648410ba]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T16:37:25.603Z","level":"info","requestId":"9a8c74d2-175f-41f9-86be-1545648410ba","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T16:37:26.046Z","level":"info","requestId":"9caac7f5-0f91-4e76-8e4e-ab9f87849b84","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T16:37:26.241Z","level":"info","requestId":"0b469b28-cc43-4169-ae53-5027481a0159","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T16:55:30.427Z","level":"info","requestId":"3eb6d163-3928-4d69-bcb8-3612d518b72b","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T16:55:30.788Z","level":"info","requestId":"2462a0a0-da34-44b7-a50d-d4b28c7b8f95","message":"[WS] Incoming Message [3eb6d163-3928-4d69-bcb8-3612d518b72b]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T16:55:30.825Z","level":"info","requestId":"4239a052-5818-40de-9cdb-77f4075ca004","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T16:55:31.034Z","level":"info","requestId":"d28b5976-64cd-4d3c-8f6d-14154a38c23e","message":"[WS] Incoming Message [4239a052-5818-40de-9cdb-77f4075ca004]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T16:55:57.106Z","level":"info","requestId":"02fb1e62-b160-4f22-a7e5-f3817775b04c","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T16:55:57.116Z","level":"info","requestId":"99bde00b-75b5-4349-9de2-ee10275111a8","message":"[WS] Incoming Message [02fb1e62-b160-4f22-a7e5-f3817775b04c]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T16:56:11.707Z","level":"info","requestId":"02fb1e62-b160-4f22-a7e5-f3817775b04c","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T16:56:12.614Z","level":"info","requestId":"48ace908-673e-491b-8f12-aeb1bc2bf3e6","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T16:56:13.302Z","level":"info","requestId":"a4a4f9eb-28e5-424f-bf1b-d407b2fd6916","message":"[WS] Incoming Message [48ace908-673e-491b-8f12-aeb1bc2bf3e6]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T17:12:23.298Z","level":"info","requestId":"48ace908-673e-491b-8f12-aeb1bc2bf3e6","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T17:12:23.306Z","level":"info","requestId":"4239a052-5818-40de-9cdb-77f4075ca004","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T17:12:23.308Z","level":"info","requestId":"3eb6d163-3928-4d69-bcb8-3612d518b72b","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T17:23:45.594Z","level":"info","requestId":"937b96fb-cae3-452f-bdfa-374035e96d52","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T17:23:45.609Z","level":"info","requestId":"a5bef984-dcbc-4f82-8e9f-94c043f074b0","message":"[WS] Incoming Message [937b96fb-cae3-452f-bdfa-374035e96d52]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T17:35:17.750Z","level":"info","requestId":"347c921a-52da-47f3-8e1b-ce0c7148bacb","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T17:35:17.759Z","level":"info","requestId":"fbef858d-59ce-4afc-ab04-c75c6be776e4","message":"[WS] Incoming Message [347c921a-52da-47f3-8e1b-ce0c7148bacb]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T17:40:00.509Z","level":"info","requestId":"347c921a-52da-47f3-8e1b-ce0c7148bacb","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T17:40:01.018Z","level":"info","requestId":"937b96fb-cae3-452f-bdfa-374035e96d52","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T17:54:31.228Z","level":"info","requestId":"d22e8feb-8220-425f-ab95-32c72937b343","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T17:54:41.261Z","level":"info","requestId":"8567baef-f2f2-4d18-8774-0bb3b0f39036","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T17:54:42.093Z","level":"info","requestId":"1254640f-a72e-4d62-a445-c0ff21fa0cb1","message":"[WS] Incoming Message [d22e8feb-8220-425f-ab95-32c72937b343]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T17:54:42.098Z","level":"info","requestId":"fd2775e4-e8b1-47ac-b7f3-678c42b0da85","message":"[WS] Incoming Message [8567baef-f2f2-4d18-8774-0bb3b0f39036]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T17:58:35.649Z","level":"info","requestId":"8567baef-f2f2-4d18-8774-0bb3b0f39036","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T17:58:35.670Z","level":"info","requestId":"d22e8feb-8220-425f-ab95-32c72937b343","userId":"test-user-id","message":"WebSocket session closed","metadata":{}}
+{"timestamp":"2026-03-22T18:00:01.237Z","level":"info","requestId":"9ebe857b-903d-47e4-b209-3e7a3842aef4","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T18:00:01.268Z","level":"info","requestId":"2bb81d75-f665-46ce-893e-715590f4ac68","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T18:00:01.271Z","level":"info","requestId":"f4217a7e-89de-4165-b937-5f373d118554","message":"[WS] Incoming Message [2bb81d75-f665-46ce-893e-715590f4ac68]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T18:00:01.272Z","level":"info","requestId":"d7dcdd8e-01f8-4f08-b105-1c2276a1f49f","message":"[WS] Incoming Message [9ebe857b-903d-47e4-b209-3e7a3842aef4]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T18:00:03.112Z","level":"info","requestId":"28e1a24a-4c4e-4910-96ce-3c1c4d919b71","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T18:00:03.155Z","level":"info","requestId":"b7f395a4-ed42-47bb-980b-3ca12c552033","message":"[WS] Incoming Message [28e1a24a-4c4e-4910-96ce-3c1c4d919b71]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-22T18:19:50.560Z","level":"info","requestId":"8d87fc23-34f4-4909-8e19-02874710b422","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-22T18:19:50.574Z","level":"info","requestId":"de13fd17-da00-42f5-98e1-227b5625b39f","message":"[WS] Incoming Message [8d87fc23-34f4-4909-8e19-02874710b422]:","metadata":{"type":"AUTH"}}
+{"timestamp":"2026-03-23T13:24:06.015Z","level":"info","requestId":"startup","userId":"system","message":"Express server listening on port 4000","metadata":{}}
+{"timestamp":"2026-03-23T13:29:45.632Z","level":"info","requestId":"a7fa15bf-4915-449a-b10e-72d448aa8713","message":"New WebSocket connection initiated","metadata":{}}
+{"timestamp":"2026-03-23T13:29:45.634Z","level":"info","requestId":"4c04a5f6-84e4-4148-90fc-b4811ad373e2","message":"[WS] Incoming Message [a7fa15bf-4915-449a-b10e-72d448aa8713]:","metadata":{"type":"AUTH"}}

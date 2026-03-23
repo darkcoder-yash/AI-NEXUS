@@ -1,55 +1,90 @@
 import { create } from 'zustand';
-import { supabase } from '@/lib/supabase';
+import { supabase } from '@/lib/supabaseClient';
 
-type User = {
+type UserRole = 'user' | 'admin';
+
+type UserProfile = {
   id: string;
-  name: string;
   email: string;
-  role: string;
-  plan: string;
+  role: UserRole;
+  mfa_enabled: boolean;
 };
 
 type AuthState = {
   isAuthenticated: boolean;
-  user: User | null;
-  loginDemo: () => void;
+  user: UserProfile | null;
+  loading: boolean;
+  initialized: boolean;
+  setSession: (session: any) => Promise<void>;
   logout: () => Promise<void>;
-  setUser: (user: User | null) => void;
+  checkMFAStatus: () => Promise<boolean>;
 };
 
 export const useAuthStore = create<AuthState>((set) => ({
   isAuthenticated: false,
   user: null,
-  loginDemo: () => {
-    set({ 
-      isAuthenticated: true, 
-      user: { 
-        id: 'demo-id',
-        name: 'Demo User', 
-        email: 'demo@nexus.ai', 
-        role: 'Viewer', 
-        plan: 'Demo Plan' 
-      } 
-    });
+  loading: true,
+  initialized: false,
+
+  setSession: async (session) => {
+    if (!session?.user) {
+      set({ isAuthenticated: false, user: null, loading: false, initialized: true });
+      return;
+    }
+
+    // Set basic auth state immediately to unblock UI
+    set({ isAuthenticated: true, loading: false });
+
+    try {
+      // Fetch profile in the background
+      const { data: profile } = await supabase
+        .from('profiles')
+        .select('role, mfa_enabled')
+        .eq('id', session.user.id)
+        .single();
+
+      set({
+        initialized: true,
+        user: {
+          id: session.user.id,
+          email: session.user.email!,
+          role: (profile?.role as UserRole) || 'user',
+          mfa_enabled: profile?.mfa_enabled || false,
+        },
+      });
+    } catch (err) {
+      // Fallback to basic user info if profile fetch fails
+      set({
+        initialized: true,
+        user: {
+          id: session.user.id,
+          email: session.user.email!,
+          role: 'user',
+          mfa_enabled: false,
+        }
+      });
+    }
   },
+
+  checkMFAStatus: async () => {
+    const { data, error } = await supabase.auth.mfa.getAuthenticatorAssuranceLevel();
+    if (error) return false;
+    return data.currentLevel === 'aal2';
+  },
+
   logout: async () => {
     await supabase.auth.signOut();
-    set({ isAuthenticated: false, user: null });
+    set({ isAuthenticated: false, user: null, loading: false, initialized: true });
+    window.location.href = '/login';
   },
-  setUser: (user) => set({ user, isAuthenticated: !!user }),
 }));
 
-// Listen for auth changes
-supabase.auth.onAuthStateChange((event, session) => {
-  if (session?.user) {
-    useAuthStore.getState().setUser({
-      id: session.user.id,
-      name: session.user.user_metadata?.name || session.user.email?.split('@')[0] || 'User',
-      email: session.user.email || '',
-      role: 'User',
-      plan: 'Standard'
-    });
-  } else {
-    useAuthStore.getState().setUser(null);
-  }
+// Faster initialization check
+(async () => {
+  const { data: { session } } = await supabase.auth.getSession();
+  useAuthStore.getState().setSession(session);
+})();
+
+supabase.auth.onAuthStateChange((_event, session) => {
+  useAuthStore.getState().setSession(session);
 });

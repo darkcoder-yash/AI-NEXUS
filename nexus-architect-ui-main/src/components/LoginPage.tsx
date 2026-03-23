@@ -1,58 +1,48 @@
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Eye, EyeOff, ArrowRight, Zap, Loader2, ShieldAlert, UserPlus, LogIn } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Zap, Loader2, ShieldAlert, UserPlus, Eye, EyeOff, Mail } from 'lucide-react';
 import { useAuthStore } from '@/store/useAuthStore';
-import { nexusWS, WebSocketEventTypes, useAppStoreOut } from '@/lib/websocket';
 import { supabase } from '@/lib/supabase';
 import { useNavigate } from 'react-router-dom';
 
 export function LoginPage() {
-  const { loginDemo, isAuthenticated } = useAuthStore();
+  const { isAuthenticated } = useAuthStore();
   const navigate = useNavigate();
   const [isSignUp, setIsSignUp] = useState(false);
+  const [useOtp, setUseOtp] = useState(true);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
+  const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
-  
-  const isConnected = useAppStoreOut((state) => state.isConnected);
 
   useEffect(() => {
-    if (isAuthenticated) {
-      navigate('/nexus');
-    }
+    if (isAuthenticated) navigate('/nexus');
   }, [isAuthenticated, navigate]);
-
-  useEffect(() => {
-    if (!nexusWS) return;
-    if (!nexusWS.isConnected()) {
-      nexusWS.connect();
-    }
-  }, []);
 
   const handleAuth = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
+    setMessage('');
     setLoading(true);
 
     try {
-      if (isSignUp) {
-        const { error: signUpError } = await supabase.auth.signUp({
+      if (useOtp) {
+        const { error: authError } = await supabase.auth.signInWithOtp({
           email,
-          password,
+          options: { emailRedirectTo: `${window.location.origin}/auth/callback` }
         });
-        if (signUpError) throw signUpError;
-        setError('Verification email sent. Please check your inbox.');
+        if (authError) throw authError;
+        setMessage('Access link transmitted. Check your neural interface.');
       } else {
-        const { error: signInError } = await supabase.auth.signInWithPassword({
-          email,
-          password,
-        });
-        if (signInError) throw signInError;
-        
-        if (nexusWS && isConnected) {
-          nexusWS.send(WebSocketEventTypes.AUTH, { email, password });
+        if (isSignUp) {
+          const { error: signUpError } = await supabase.auth.signUp({ email, password });
+          if (signUpError) throw signUpError;
+          setMessage('Account initialization started. Verify your email.');
+        } else {
+          const { error: signInError } = await supabase.auth.signInWithPassword({ email, password });
+          if (signInError) throw signInError;
         }
       }
     } catch (err: any) {
@@ -62,127 +52,86 @@ export function LoginPage() {
     }
   };
 
-  const handleDemo = () => {
-    setLoading(true);
-    if (nexusWS && isConnected) {
-      nexusWS.send(WebSocketEventTypes.AUTH, { token: 'STRESS_TEST_TOKEN' });
-    }
-    loginDemo();
+  const signInWithGoogle = async () => {
+    await supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options: { redirectTo: `${window.location.origin}/auth/callback` }
+    });
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-[#020617]">
-      {/* Background Grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
+    <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-slate-50">
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000005_1px,transparent_1px),linear-gradient(to_bottom,#00000005_1px,transparent_1px)] bg-[size:32px_32px]" />
       
-      {/* Ambient glow */}
-      <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-teal-500/5 rounded-full blur-[120px] pointer-events-none animate-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none animate-pulse [animation-delay:2s]" />
-
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="w-full max-w-md mx-4 z-10"
+        className="w-full max-w-[440px] mx-4 z-10"
       >
-        <div className="bg-white/[0.02] border border-white/10 p-10 rounded-[2.5rem] backdrop-blur-3xl shadow-2xl relative overflow-hidden">
-          {/* Header */}
+        <div className="bg-white border border-slate-200 p-10 rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.1)] relative overflow-hidden">
           <div className="text-center space-y-6">
-            <motion.div
-              animate={{ rotateY: 360 }}
-              transition={{ repeat: Infinity, duration: 8, ease: "linear" }}
-              className="w-20 h-20 mx-auto rounded-3xl bg-teal-500/10 flex items-center justify-center border border-teal-500/20 shadow-2xl shadow-teal-500/5 overflow-hidden"
-            >
-              <img src="/logo.png" alt="Nexus AI Logo" className="w-12 h-12 object-contain logo-glow" onError={(e) => e.currentTarget.style.display = 'none'} />
-            </motion.div>
+            <div className="w-20 h-20 mx-auto rounded-3xl bg-teal-500/5 flex items-center justify-center border border-teal-500/10 shadow-sm overflow-hidden">
+              <img src="/logo.png" alt="Nexus AI Logo" className="w-12 h-12 object-contain" />
+            </div>
             <div>
-              <h1 className="text-4xl font-black tracking-tighter text-white">NEXUS <span className="text-teal-400">AI</span></h1>
-              <p className="text-[10px] text-teal-500 uppercase tracking-[0.5em] font-bold mt-3">Quantum Operating Layer</p>
+              <h1 className="text-4xl font-black tracking-tighter text-slate-900">NEXUS <span className="text-teal-600">AI</span></h1>
+              <p className="text-[10px] text-teal-600 uppercase tracking-[0.5em] font-bold mt-3">Quantum Operating Layer</p>
             </div>
           </div>
 
-          <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent my-10" />
+          <div className="h-px bg-slate-100 my-10" />
 
-          {/* Mode Toggle */}
-          <div className="flex p-1 bg-white/5 rounded-2xl mb-8">
-            <button
-              onClick={() => setIsSignUp(false)}
-              className={`flex-1 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all ${!isSignUp ? 'bg-teal-500 text-teal-950' : 'text-slate-500 hover:text-slate-300'}`}
-            >
-              Sign_In
-            </button>
-            <button
-              onClick={() => setIsSignUp(true)}
-              className={`flex-1 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all ${isSignUp ? 'bg-teal-500 text-teal-950' : 'text-slate-500 hover:text-slate-300'}`}
-            >
-              Sign_Up
-            </button>
+          {/* Google Auth */}
+          <button 
+            onClick={signInWithGoogle}
+            className="w-full py-4 rounded-2xl bg-white border border-slate-200 text-slate-700 font-bold text-[10px] uppercase tracking-widest hover:bg-slate-50 transition-all flex items-center justify-center gap-3 mb-6 shadow-sm"
+          >
+            <img src="https://www.google.com/favicon.ico" className="w-4 h-4" alt="Google" />
+            Sign_In_With_Google
+          </button>
+
+          <div className="flex items-center gap-4 mb-6">
+            <div className="h-px bg-slate-100 flex-1" />
+            <span className="text-[8px] text-slate-400 font-bold uppercase tracking-widest">or_use_cipher</span>
+            <div className="h-px bg-slate-100 flex-1" />
           </div>
 
-          {/* Form */}
+          <div className="flex p-1 bg-slate-50 rounded-2xl mb-8 border border-slate-100">
+            <button onClick={() => setUseOtp(true)} className={`flex-1 py-2 rounded-xl text-[8px] font-black uppercase tracking-widest transition-all ${useOtp ? 'bg-white shadow-sm text-teal-600' : 'text-slate-500'}`}>Magic_Link</button>
+            <button onClick={() => setUseOtp(false)} className={`flex-1 py-2 rounded-xl text-[8px] font-black uppercase tracking-widest transition-all ${!useOtp ? 'bg-white shadow-sm text-teal-600' : 'text-slate-500'}`}>Password</button>
+          </div>
+
           <form onSubmit={handleAuth} className="space-y-6">
             <div className="space-y-3">
-              <label className="text-[10px] text-slate-500 uppercase tracking-[0.2em] font-black ml-1">Authentication_ID</label>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="operator@nexus.core"
-                className="w-full bg-white/5 border border-white/5 rounded-2xl px-6 py-4 text-sm outline-none focus:border-teal-500/50 focus:bg-white/[0.08] transition-all placeholder:text-slate-700 font-bold text-white shadow-inner"
-                required
-              />
-            </div>
-            <div className="space-y-3">
-              <label className="text-[10px] text-slate-500 uppercase tracking-[0.2em] font-black ml-1">Access_Cipher</label>
-              <div className="relative">
-                <input
-                  type={showPassword ? 'text' : 'password'}
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  placeholder="••••••••"
-                  className="w-full bg-white/5 border border-white/5 rounded-2xl px-6 py-4 text-sm outline-none focus:border-teal-500/50 focus:bg-white/[0.08] transition-all placeholder:text-slate-700 font-bold text-white shadow-inner pr-14"
-                  required
-                />
-                <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-5 top-1/2 -translate-y-1/2 text-slate-600 hover:text-teal-400 transition-colors">
-                  {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                </button>
-              </div>
+              <label className="text-[10px] text-slate-400 uppercase tracking-[0.2em] font-black ml-1">Authentication_ID</label>
+              <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="operator@nexus.core" className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 text-sm text-slate-900 focus:border-teal-500/50 focus:ring-4 focus:ring-teal-500/5 outline-none transition-all" required />
             </div>
 
-            {error && (
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center justify-center gap-2 text-red-500 font-bold text-[10px] uppercase tracking-widest text-center">
-                <ShieldAlert className="w-3 h-3 flex-shrink-0" />
-                <span>{error}</span>
-              </motion.div>
+            {!useOtp && (
+              <div className="space-y-3">
+                <label className="text-[10px] text-slate-400 uppercase tracking-[0.2em] font-black ml-1">Access_Cipher</label>
+                <div className="relative">
+                  <input type={showPassword ? 'text' : 'password'} value={password} onChange={(e) => setPassword(e.target.value)} placeholder="••••••••" className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 text-sm text-slate-900 focus:border-teal-500/50 focus:ring-4 focus:ring-teal-500/5 outline-none transition-all pr-14" required={!useOtp} />
+                  <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-teal-600 transition-colors">
+                    {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                  </button>
+                </div>
+              </div>
             )}
 
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full py-5 rounded-2xl bg-teal-500 text-teal-950 font-black text-[11px] uppercase tracking-[0.3em] hover:bg-teal-400 shadow-2xl shadow-teal-500/20 transition-all disabled:opacity-20 flex items-center justify-center gap-3 active:scale-[0.98]"
-            >
-              {loading ? (
-                <Loader2 className="w-5 h-5 animate-spin" />
-              ) : (
-                <>
-                  {isSignUp ? 'Initialize_Account' : 'Initialize_Core'}
-                  {isSignUp ? <UserPlus className="w-5 h-5" /> : <ArrowRight className="w-5 h-5" />}
-                </>
-              )}
+            {error && <div className="text-red-500 font-bold text-[10px] uppercase tracking-widest text-center flex items-center justify-center gap-2"><ShieldAlert className="w-3 h-3" /> {error}</div>}
+            {message && <div className="text-teal-600 font-bold text-[10px] uppercase tracking-widest text-center flex items-center justify-center gap-2"><Zap className="w-3 h-3" /> {message}</div>}
+
+            <button type="submit" disabled={loading} className="w-full py-5 rounded-2xl bg-slate-900 text-white font-black text-[11px] uppercase tracking-[0.3em] hover:bg-slate-800 transition-all flex items-center justify-center gap-3 shadow-lg shadow-slate-900/10 active:scale-[0.98]">
+              {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : <>{useOtp ? 'Send_Magic_Link' : (isSignUp ? 'Initialize_Account' : 'Initialize_Core')} <ArrowRight className="w-5 h-5" /></>}
             </button>
           </form>
 
-          <button
-            onClick={handleDemo}
-            disabled={loading}
-            className="w-full mt-6 py-4 rounded-2xl border border-white/5 text-slate-500 font-bold text-[10px] uppercase tracking-[0.2em] hover:bg-white/5 hover:text-slate-300 transition-all disabled:opacity-20 flex items-center justify-center gap-3 active:scale-[0.98]"
-          >
-            <Zap className="w-4 h-4 text-teal-500" /> demo_bypass_link
-          </button>
-        </div>
-        
-        <div className="mt-10 text-center">
-          <p className="text-[10px] text-slate-600 uppercase tracking-[0.4em] font-black opacity-50">Private Neural Architecture v0.1</p>
+          {!useOtp && (
+            <button onClick={() => setIsSignUp(!isSignUp)} className="w-full mt-6 text-[8px] text-slate-400 uppercase tracking-widest hover:text-teal-600 font-bold transition-colors">
+              {isSignUp ? "Already have an account? Login" : "Don't have an account? Sign Up"}
+            </button>
+          )}
         </div>
       </motion.div>
     </div>

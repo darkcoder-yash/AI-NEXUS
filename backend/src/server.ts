@@ -3,11 +3,13 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import { config } from './config.js';
 import { initializeWebSocketServer } from './websocket.js';
-import { adminRouter } from './routes/admin.js';
 import { createClient } from '@supabase/supabase-js';
 import { globalErrorHandler } from './middleware/errorHandler.js';
 import { globalRateLimiter } from './middleware/rateLimiter.js';
 import { StructuredLogger } from './services/logger.js';
+import { adminRouter } from './routes/admin.js';
+import { knowledgeRouter } from './routes/knowledge.js';
+import { authenticate, requireAdmin } from './middleware/auth.js';
 
 const app = express();
 
@@ -38,13 +40,28 @@ app.get('/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
-import { adminRouter } from './routes/admin.js';
-import { knowledgeRouter } from './routes/knowledge.js';
+// Secure API Routes
+app.get('/api/user/profile', authenticate, (req, res) => {
+  res.json({
+    message: "Authorized Nexus access confirmed",
+    user: (req as any).user
+  });
+});
+
+app.get('/api/admin/system-stats', authenticate, requireAdmin, (req, res) => {
+  res.json({
+    message: "Admin metrics accessed",
+    stats: {
+      uptime: process.uptime(),
+      memory: process.memoryUsage(),
+      activeUsers: 42
+    }
+  });
+});
 
 // Global Error Handler (MUST BE LAST)
 app.use('/admin', adminRouter);
 app.use('/api/knowledge', knowledgeRouter);
-// Global Error Handler (MUST BE LAST)
 app.use(globalErrorHandler);
 
 // WebSocket Initialization
