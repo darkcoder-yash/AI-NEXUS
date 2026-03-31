@@ -152,7 +152,7 @@ git clone https://github.com/darkcoder-yash/AI-NEXUS
 
 ### 2. Install dependencies
 
-cd frontend
+cd nexus-architect-ui-main
 npm install
 
 cd ../backend
